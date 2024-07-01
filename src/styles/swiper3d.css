@@ -1,0 +1,117 @@
+/* Swiper3D specific styles */
+.swiper3d-container {
+  max-width: 124rem;
+  padding: 2rem 9rem;
+  margin: 0 auto;
+}
+
+.swiper3d-container .swiper {
+  height: 25.5rem;
+  position: relative;
+}
+
+.swiper3d-container .swiper-slide {
+  width: 37rem;
+  height: 27rem;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .swiper3d-container .swiper {
+    height: 47rem;
+  }
+  .swiper3d-container .swiper-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .swiper3d-container .swiper-slide img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.swiper3d-container .swiper-slide img {
+  width: 37rem;
+  height: 25rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.swiper3d-container .swiper-slide-shadow-left,
+.swiper3d-container .swiper-slide-shadow-right {
+  display: none;
+}
+
+.swiper3d-controler {
+  position: relative;
+  bottom: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper3d-controler .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width: 990px) {
+  .swiper3d-controler .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .swiper3d-controler .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .swiper3d-controler .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .swiper3d-controler .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.swiper3d-controler .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper3d-controler .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+
+.swiper3d-controler .slider-arrow::after {
+  content: "";
+}
+
+.swiper3d-pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem;
+}
+
+.swiper3d-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper3d-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}

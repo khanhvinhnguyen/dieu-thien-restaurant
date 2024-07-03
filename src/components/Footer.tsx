@@ -28,10 +28,10 @@ const Footer = () => {
             <a href="/">
               <p>Trang chủ</p>
             </a>
-            <a href="/">
+            <a href="/about">
               <p>Về chúng tôi</p>
             </a>
-            <a href="/">
+            <a href="/menu">
               <p>Thực đơn</p>
             </a>
             <a href="/order">

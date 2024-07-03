@@ -8,6 +8,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ImageComponent from "@/components/ImageComponent";
 import Swiper3D from "@/components/Swiper3D";
+import intl from "react-intl-universal";
+import SectionImgText from "@/components/SectionImgText";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
@@ -94,25 +96,23 @@ export default function Home() {
             );
           })}
         </Swiper>
-        <div className="slider__text">
+        <div className="banner__text">
           <h4 id="title" className={dancingScript.className}>
             Diệu Thiện
           </h4>
           <p>
             Chọn ăn chay, <br /> Chọn cuộc sống an lành!
           </p>
-          <button className="menu-button">Xem thực đơn</button>
+          <a className="menu-button" href="/menu">
+            Xem thực đơn
+          </a>
         </div>
       </div>
 
       <div className="welcome">
-        <div className="welcome__content">
-          <div className="welcome__text">
-            <h1>
-              Diệu Thiện <br /> hơn cả một nhà hàng chay
-            </h1>
-            <p>
-              Chào mừng quý khách đến với nhà hàng chay của chúng tôi - nơi kết
+        <SectionImgText
+          title={"Diệu Thiện <br /> hơn cả một nhà hàng chay"}
+          text={`Chào mừng quý khách đến với nhà hàng chay của chúng tôi - nơi kết
               hợp hương vị tinh tế và sự sáng tạo để mang đến trải nghiệm ẩm
               thực độc đáo và bổ ích. Tại đây, chúng tôi tự hào giới thiệu đến
               bạn những món ăn chay tinh tế từ những nguyên liệu tươi ngon nhất,
@@ -121,17 +121,13 @@ export default function Home() {
               Hãy đến và khám phá thế giới ẩm thực chay tại nhà hàng của chúng
               tôi, nơi bạn sẽ được thưởng thức những món ăn độc đáo và phong
               phú, đồng thời tận hưởng không khí yên bình và thư giãn. Chúng tôi
-              rất mong được đón tiếp và phục vụ bạn!
-            </p>
-          </div>
-          <ImageComponent
-            src="/images/introduce.svg"
-            alt="welcome"
-            width={0}
-            height={0}
-            styles={{ width: "38.5%", height: "auto" }}
-          />
-        </div>
+              rất mong được đón tiếp và phục vụ bạn!`}
+          src={"/images/introduce.svg"}
+          alt={"welcome"}
+          width={0}
+          height={0}
+          stylesImg={{ width: "38.5%", height: "auto" }}
+        />
       </div>
       <div className="special-menu">
         <h1>Thực đơn đặc biệt</h1>

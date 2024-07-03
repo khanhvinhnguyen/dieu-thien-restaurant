@@ -1,21 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import React, { useContext } from "react";
 import intl from "react-intl-universal";
-import useLanguageStore from "@/stores/languageStore";
-import { initIntl } from "@/utils/intlHelper";
+import { SettingContext } from "./LanguageProvider";
 
 const Header = () => {
-  const { lang, setLang } = useLanguageStore();
-
-  useEffect(() => {
-    initIntl(lang);
-  }, [lang]);
+  const { language, changeLanguage } = useContext(SettingContext);
+  console.log("header", language);
 
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    setLang(event.target.value);
+    console.log("event: ", event.target.value);
+    changeLanguage(event.target.value);
   };
   return (
     <header>
@@ -35,20 +32,20 @@ const Header = () => {
         }}
       >
         <a href="/">Trang chủ</a>
-        <a href="/">Về chúng tôi</a>
-        <a href="/">Thực đơn</a>
+        <a href="/about">Về chúng tôi</a>
+        <a href="/menu">Thực đơn</a>
         <a href="/contact">Liên hệ</a>
       </div>
 
       {/* Language & Order */}
       <div className="header__language_order">
         {/* Language */}
-        <div className="header__button--language">
+        {/* <div className="header__button--language">
           <Image
             src={
-              lang === "vi"
+              language === "vi"
                 ? "/images/flags/Vietnam.svg"
-                : lang === "en"
+                : language === "en"
                 ? "/images/flags/England.svg"
                 : "/images/flags/China.svg"
             }
@@ -57,17 +54,17 @@ const Header = () => {
             alt="lang"
           />
           <div className="custom-select-wrapper">
-            <select value={lang} onChange={handleLanguageChange}>
+            <select value={language} onChange={(e) => handleLanguageChange(e)}>
               <option value="vi">VN</option>
               <option value="en">EN</option>
               <option value="zh">CN</option>
             </select>
           </div>
-        </div>
+        </div> */}
 
         {/* Order */}
         <a href="/order" className="header__button--order">
-          {intl.get("nav.order")}
+          Đặt bàn
         </a>
       </div>
     </header>

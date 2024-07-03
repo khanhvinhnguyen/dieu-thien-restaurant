@@ -89,6 +89,8 @@ footer {
   height: 450px;
   background-color: var(--background-green);
   color: var(--text-color-white);
+  padding-right: 83px;
+  padding-left: 83px;
 
   #copyright {
     display: flex;
@@ -217,7 +219,7 @@ footer {
       height: "auto";
     }
 
-    .slider__text {
+    .banner__text {
       position: absolute;
       top: 30%;
       left: 10%;
@@ -253,6 +255,7 @@ footer {
         color: var(--text-color-green);
         font-weight: 700;
         cursor: pointer;
+        text-decoration: none;
       }
     }
   }
@@ -264,19 +267,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 64px;
-    padding-left: 83px;
-    padding-right: 83px;
-
-    .welcome__content {
-      display: flex;
-      gap: 64px;
-    }
-
-    p {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-    }
   }
 
   .special-menu {
@@ -313,6 +303,29 @@ footer {
   object-fit: cover;
 }
 
+.text--border-tlbr {
+  background-color: var(--background-green);
+  color: var(--text-color-white);
+  border-radius: 100px 20px;
+  object-fit: cover;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 59px 45px;
+  flex-direction: column;
+  position: relative;
+
+  img.avatar {
+    top: -15%;
+    position: absolute;
+  }
+
+  p.userName {
+    margin: 0;
+    align-self: flex-end;
+  }
+}
+
 .three-column-container {
   height: 240px;
   display: flex;
@@ -322,5 +335,66 @@ footer {
   .column {
     flex: 1;
     text-align: center;
+  }
+}
+
+.section {
+  display: flex;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  padding-left: 83px;
+  padding-right: 83px;
+
+  .section__content {
+    display: flex;
+    gap: 64px;
+
+    .section__text {
+      align-content: center;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.about-us {
+  img.banner {
+    object-fit: cover;
+    position: relative;
+  }
+  .div__banner {
+    position: relative;
+
+    .banner__text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 255px;
+      width: 100%;
+      background-color: var(--background-cream);
+      color: var(--text-color-green);
+    }
+  }
+
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: var(--background-cream);
+
+    .feedback__content {
+      display: flex;
+      gap: 16px;
+      text-align: center;
+    }
   }
 }

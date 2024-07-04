@@ -7,6 +7,7 @@
   --background-white: #ffffff;
 
   --text-color-white: #ffffec;
+  --text-color-dark: #31363f;
   --text-color-green: #367b79;
 
   --swiper-bullet-cream: #ffffec;
@@ -99,7 +100,7 @@ footer {
     font-weight: 400;
   }
 
-  .three-column-container.footer {
+  .column-container.footer {
     height: 240px;
     display: flex;
     justify-content: space-between;
@@ -326,7 +327,30 @@ footer {
   }
 }
 
-.three-column-container {
+.text--border {
+  background-color: var(--background-green);
+  color: var(--text-color-white);
+  border-radius: 16px;
+  object-fit: cover;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 59px 45px;
+  flex-direction: column;
+  position: relative;
+
+  img.avatar {
+    top: -15%;
+    position: absolute;
+  }
+
+  p.userName {
+    margin: 0;
+    align-self: flex-end;
+  }
+}
+
+.column-container {
   height: 240px;
   display: flex;
   justify-content: space-between;

@@ -6,12 +6,10 @@ import { SettingContext } from "./LanguageProvider";
 
 const Header = () => {
   const { language, changeLanguage } = useContext(SettingContext);
-  console.log("header", language);
 
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    console.log("event: ", event.target.value);
     changeLanguage(event.target.value);
   };
   return (

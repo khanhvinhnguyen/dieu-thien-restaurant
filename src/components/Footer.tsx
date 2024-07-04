@@ -6,7 +6,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
-      <div className="footer three-column-container">
+      <div className="footer column-container">
         <div className="column1">
           <img id="Logo" src="/images/logo.svg" alt="logo" />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">

@@ -143,7 +143,7 @@ export default function Home() {
           chu đáo nhất
         </p>
         <div
-          className="three-column-container"
+          className="column-container"
           style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
         >
           {orderData.map((item) => {

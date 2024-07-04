@@ -34,7 +34,7 @@ const AboutUs = () => {
           alt={"banner"}
           width={0}
           height={0}
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "auto", display: "block" }}
         />
         <div className="banner__text">
           <p style={{ fontSize: "32px", textAlign: "center" }}>
@@ -94,14 +94,19 @@ Từ lâu việc ăn chay đã là điều khiến cho nhiều người yêu ẩ
           vinh hạnh khi được đồng hành cùng các khách hàng thân yêu
         </p>
         <div
-          className="three-column-container"
+          className="column-container"
           style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
         >
           {feedbackData.map((item) => {
             return (
               <div className="feedback__content">
                 <div className="text--border-tlbr">
-                  <img className="avatar" src="/images/avatar1.svg" alt="avatar" sizes="70" />
+                  <img
+                    className="avatar"
+                    src="/images/avatar1.svg"
+                    alt="avatar"
+                    sizes="70"
+                  />
                   <p className="content">{item.content}</p>
                   <p className="userName">{item.userName}</p>
                 </div>

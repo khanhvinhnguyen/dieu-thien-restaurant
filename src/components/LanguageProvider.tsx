@@ -15,7 +15,6 @@ export const SettingProvider = ({ children }) => {
   }, [language]);
 
   const changeLanguage = (lang: string) => {
-    console.log("context", lang);
     setLanguage(lang);
   };
 

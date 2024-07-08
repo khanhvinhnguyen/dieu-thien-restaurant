@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
     "@next/font": "^14.2.4",
+    "antd": "^5.19.0",
+    "googleapis": "^140.0.1",
     "next": "14.2.4",
     "nodemailer": "^6.9.14",
     "react": "^18",
@@ -21,7 +24,7 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.14.10",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

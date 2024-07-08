@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Controller, useForm, SubmitHandler } from "react-hook-form";
 
 import "@/styles/order.css";
+import "antd/dist/reset.css";
+
 import { send } from "@/lib/sendEmailAction";
 
 type OrderForm = {

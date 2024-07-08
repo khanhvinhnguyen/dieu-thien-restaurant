@@ -1,53 +1,52 @@
 "use client";
-import Image from "next/image";
+import ImageComponent from "@/components/ImageComponent";
+import SectionImgText from "@/components/SectionImgText";
+import Swiper3D from "@/components/Swiper3D";
 import { Dancing_Script } from "@next/font/google";
+import Image from "next/image";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import ImageComponent from "@/components/ImageComponent";
-import Swiper3D from "@/components/Swiper3D";
-import intl from "react-intl-universal";
-import SectionImgText from "@/components/SectionImgText";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 export default function Home() {
   const swiperData = [
     {
-      image: "/images/home_slider1.svg",
+      image: "/images/home-slider/home_slider1.svg",
       alt: "home slider 1",
     },
     {
-      image: "/images/home_slider2.svg",
+      image: "/images/home-slider/home_slider2.svg",
       alt: "home slider 2",
     },
     {
-      image: "/images/home_slider3.svg",
+      image: "/images/home-slider/home_slider3.svg",
       alt: "home slider 3",
     },
   ];
 
   const swiper3Ddata = [
     {
-      image: "/images/specialfood_1.svg",
+      image: "/images/home-slider/specialfood_1.svg",
       alt: "special food 1",
     },
     {
-      image: "/images/specialfood_2.svg",
+      image: "/images/home-slider/specialfood_2.svg",
       alt: "special food 2",
     },
     {
-      image: "/images/specialfood_3.svg",
+      image: "/images/home-slider/specialfood_3.svg",
       alt: "special food 3",
     },
     {
-      image: "/images/specialfood_4.svg",
+      image: "/images/home-slider/specialfood_4.svg",
       alt: "special food 4",
     },
     {
-      image: "/images/specialfood_5.svg",
+      image: "/images/home-slider/specialfood_5.svg",
       alt: "special food 5",
     },
   ];

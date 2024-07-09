@@ -134,7 +134,9 @@ export default function Home() {
       </div>
 
       <div className="order">
-        <h1>Đặt bàn</h1>
+        <h1 id="order" style={{ paddingTop: "8%" }}>
+          Đặt bàn
+        </h1>
         <p>
           Nhà hàng chúng tôi rất vinh hạnh được hỗ trợ quí khách in banner và
           chuẩn bị trang trí bàn ăn dành cho sự <br /> kiện tại quán như sinh

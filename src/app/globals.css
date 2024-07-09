@@ -440,6 +440,7 @@ footer {
   .ant-tabs-tab {
     border: none !important;
     padding: 7% 5rem 7% 10% !important;
+    background: rgb(0 0 0 / 0%) !important;
 
     .ant-tabs-tab-btn {
       display: flex;

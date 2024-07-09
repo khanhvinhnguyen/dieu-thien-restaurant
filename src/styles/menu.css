@@ -84,8 +84,27 @@ h2 {
   height: 100%;
 
   .menu--info {
+    .item-info__img {
+      position: relative;
+    }
+
     img {
       border-radius: 16px;
+    }
+
+    img.item-favorite {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+    }
+
+    p {
+      color: var(--text-color-green);
+
+      &#menu-item--price {
+        font-size: 1.5rem;
+        text-align: end;
+      }
     }
   }
 }

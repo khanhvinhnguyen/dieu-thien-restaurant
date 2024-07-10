@@ -1,33 +1,37 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import SectionImgText from "@/components/SectionImgText";
+import "@/styles/about.css";
+
+const feedbackData = [
+  {
+    avatar: "/images/avatar1.svg",
+    userName: "Chị My",
+    content:
+      "Hài lòng với trải nghiệm tại nhà hàng chay Diệu Thiện, sẽ giới thiệu cho bạn bè",
+  },
+  {
+    avatar: "/images/avatar1.svg",
+    userName: "Chị My",
+    content:
+      "Hài lòng với trải nghiệm tại nhà hàng chay Diệu Thiện, sẽ giới thiệu cho bạn bè",
+  },
+  {
+    avatar: "/images/avatar1.svg",
+    userName: "Chị My",
+    content:
+      "Hài lòng với trải nghiệm tại nhà hàng chay Diệu Thiện, sẽ giới thiệu cho bạn bè",
+  },
+];
 
 const AboutUs = () => {
-  const feedbackData = [
-    {
-      avatar: "/images/avatar1.svg",
-      userName: "Chị My",
-      content:
-        "Hài lòng với trải nghiệm tại nhà hàng chay Diệu Thiện, sẽ giới thiệu cho bạn bè",
-    },
-    {
-      avatar: "/images/avatar1.svg",
-      userName: "Chị My",
-      content:
-        "Hài lòng với trải nghiệm tại nhà hàng chay Diệu Thiện, sẽ giới thiệu cho bạn bè",
-    },
-    {
-      avatar: "/images/avatar1.svg",
-      userName: "Chị My",
-      content:
-        "Hài lòng với trải nghiệm tại nhà hàng chay Diệu Thiện, sẽ giới thiệu cho bạn bè",
-    },
-  ];
+  const t = useTranslations();
 
   return (
     <div className="about-us">
-      <div className="div__banner">
+      <div className="banner">
         <Image
           className="banner"
           src={"/images/aboutUs-banner.svg"}
@@ -37,16 +41,29 @@ const AboutUs = () => {
           style={{ width: "100%", height: "auto", display: "block" }}
         />
         <div className="banner__text">
-          <p style={{ fontSize: "32px", textAlign: "center" }}>
-            Ăn chay là thiện nghiệp <br />
-            Phát khởi từ bi tâm <br />
-            Khẩu chay ý thanh tịnh <br />
-            Đạo hành yên an bình
-          </p>
+          <p
+            style={{ fontSize: "32px", textAlign: "center" }}
+            dangerouslySetInnerHTML={{ __html: t("buddhistScripture") }}
+          ></p>
         </div>
       </div>
 
       <div className="about-us__content" style={{ backgroundColor: `#255442` }}>
+        <SectionImgText
+          title={"Nhà hàng chúng tôi"}
+          text={`Tại nhà hàng chay, bạn sẽ được trải nghiệm hương vị tinh tế của các món ăn chay độc đáo và phong phú, từ các món chay truyền thống đến những sáng tạo hiện đại. 
+<br/><br/>
+Không chỉ là trải nghiệm ẩm thực, mà còn là cơ hội để tận hưởng không gian yên bình và tâm hồn thanh thản trong bữa ăn. 
+<br/><br/>
+Sự phục vụ tận tình và không gian đẹp mắt tạo ra một trải nghiệm ẩm thực chay đáng nhớ, kích thích cả vị giác và tâm hồn.`}
+          src={["/images/aboutUs_1.svg", "/images/aboutUs_2.svg"]}
+          alt={"aboutUs"}
+          width={0}
+          height={0}
+          stylesImg={{ width: "38.5%", height: "auto" }}
+          stylesText={{ color: "#FFFFEC" }}
+        />
+
         <SectionImgText
           title={"Không gian ấm cúng"}
           text={`Nhà hàng chay của chúng tôi là một không gian thanh lịch và ấm cúng, với trang trí tinh tế và sự sắp xếp hài hòa. <br /><br />

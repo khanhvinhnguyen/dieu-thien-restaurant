@@ -1,0 +1,36 @@
+.about-us {
+  img.banner {
+    object-fit: cover;
+    position: relative;
+  }
+  .banner {
+    position: relative;
+
+    .banner__text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 255px;
+      width: 100%;
+      background-color: var(--background-cream);
+      color: var(--text-color-green);
+      align-content: center;
+    }
+  }
+
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: var(--background-cream);
+
+    .feedback__content {
+      display: flex;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+}

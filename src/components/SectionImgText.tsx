@@ -4,7 +4,7 @@ import Image from "next/image";
 interface SectionProps {
   title: string;
   text: string;
-  src: string;
+  src: string[] | string;
   alt: string;
   width: number;
   height: number;
@@ -26,6 +26,35 @@ const SectionImgText = (props: SectionProps) => {
     reverse,
   } = props;
 
+  const renderImages = () => {
+    if (Array.isArray(src)) {
+      // Ensure the src array has no more than 2 images
+      const limitedSrc = src.slice(0, 2);
+      return limitedSrc.map((imageSrc, index) => (
+        <Image
+          key={index}
+          className="image--border"
+          src={imageSrc}
+          alt={`${alt}-${index}`}
+          width={width}
+          height={height}
+          style={stylesImg}
+        />
+      ));
+    } else {
+      return (
+        <Image
+          className="image--border-tlbr"
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          style={stylesImg}
+        />
+      );
+    }
+  };
+
   return (
     <div className="section">
       <div
@@ -36,14 +65,7 @@ const SectionImgText = (props: SectionProps) => {
           <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
           <p dangerouslySetInnerHTML={{ __html: text }}></p>
         </div>
-        <Image
-          className="image--border-tlbr"
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          style={stylesImg}
-        />
+        <div className="section__images">{renderImages()}</div>
       </div>
     </div>
   );

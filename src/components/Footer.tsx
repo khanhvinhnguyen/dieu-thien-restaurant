@@ -1,13 +1,18 @@
 import React from "react";
-import { MdOutlinePlace } from "react-icons/md";
+import { useTranslations } from "next-intl";
 import { BsTelephone } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
+import { MdOutlinePlace } from "react-icons/md";
+import { Link } from "../navigation";
+import "@/styles/footer.css";
 
 const Footer = () => {
+  const t = useTranslations();
+
   return (
     <footer>
-      <div className="footer column-container">
-        <div className="column1">
+      <div className="column-container">
+        <div className="column">
           <img id="Logo" src="/images/logo.svg" alt="logo" />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">
             <MdOutlinePlace />8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương
@@ -21,32 +26,17 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="column2">
-          <p>Điều hướng</p>
-
-          <div className="footer_navigation">
-            <a href="/">
-              <p>Trang chủ</p>
-            </a>
-            <a href="/about">
-              <p>Về chúng tôi</p>
-            </a>
-            <a href="/menu">
-              <p>Thực đơn</p>
-            </a>
-            <a href="/order">
-              <p>Đặt bàn</p>
-            </a>
-            <a href="/contact">
-              <p>Liên hệ</p>
-            </a>
-          </div>
+        <div className="column">
+          <p id="directional">{t("directional")}</p>
+          <Link href="/">{t("home")}</Link>
+          <Link href="/about">{t("aboutUs")}</Link>
+          <Link href="/menu">{t("menu")}</Link>
+          <Link href="/order">{t("order")}</Link>
+          <Link href="/contact">{t("contact")}</Link>
         </div>
-        <div className="column3"></div>
+        <div className="column"></div>
       </div>
-      <p id="copyright" style={{ justifyContent: "center" }}>
-        © Bản quyền thuộc về nhà hàng chay Diệu Thiện
-      </p>
+      <p id="copyright">{t("copyright")}</p>
     </footer>
   );
 };

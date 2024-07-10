@@ -1,17 +1,11 @@
 "use client";
-import Image from "next/image";
-import React, { useContext } from "react";
-import intl from "react-intl-universal";
-import { SettingContext } from "./LanguageProvider";
+import React from "react";
+import { useTranslations } from "next-intl";
+import LocalSwitcher from "./LocalSwitcher";
+import { Link } from "../navigation";
 
 const Header = () => {
-  const { language, changeLanguage } = useContext(SettingContext);
-
-  const handleLanguageChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    changeLanguage(event.target.value);
-  };
+  const t = useTranslations();
   return (
     <header>
       {/* Logo */}
@@ -29,41 +23,21 @@ const Header = () => {
           fontSize: "18px",
         }}
       >
-        <a href="/">Trang chủ</a>
-        <a href="/about">Về chúng tôi</a>
-        <a href="/menu">Thực đơn</a>
-        <a href="/contact">Liên hệ</a>
+        <Link href="/">{t("home")}</Link>
+        <Link href="/about">{t("aboutUs")}</Link>
+        <Link href="/menu">{t("menu")}</Link>
+        <Link href="/contact">{t("contact")}</Link>
       </div>
 
       {/* Language & Order */}
       <div className="header__language_order">
         {/* Language */}
-        {/* <div className="header__button--language">
-          <Image
-            src={
-              language === "vi"
-                ? "/images/flags/Vietnam.svg"
-                : language === "en"
-                ? "/images/flags/England.svg"
-                : "/images/flags/China.svg"
-            }
-            height={24}
-            width={32}
-            alt="lang"
-          />
-          <div className="custom-select-wrapper">
-            <select value={language} onChange={(e) => handleLanguageChange(e)}>
-              <option value="vi">VN</option>
-              <option value="en">EN</option>
-              <option value="zh">CN</option>
-            </select>
-          </div>
-        </div> */}
+        <LocalSwitcher />
 
         {/* Order */}
-        <a href="/order" className="header__button--order">
-          Đặt bàn
-        </a>
+        <Link href="/order" className="header__button--order">
+          {t("order")}
+        </Link>
       </div>
     </header>
   );

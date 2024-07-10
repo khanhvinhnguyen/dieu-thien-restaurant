@@ -1,0 +1,43 @@
+footer {
+  height: 450px;
+  background-color: var(--background-green);
+  color: var(--text-color-cream);
+  align-content: center;
+  padding: 7%;
+
+  .column {
+    display: grid;
+    justify-content: center;
+    justify-items: start;
+    align-content: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      align-self: start;
+      margin-bottom: 1rem;
+    }
+
+    p,
+    a {
+      color: var(--text-color-cream);
+      text-decoration: none;
+      margin-bottom: 1rem;
+      align-self: start;
+
+      svg {
+        margin-right: 1rem;
+      }
+    }
+
+    p#directional {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  #copyright {
+    text-align: center;
+    padding: 1rem;
+  }
+}

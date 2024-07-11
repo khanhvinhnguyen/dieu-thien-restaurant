@@ -27,16 +27,16 @@ const Footer = () => {
         </div>
 
         <div className="column">
-          <p id="directional">{t("directional")}</p>
-          <Link href="/">{t("home")}</Link>
-          <Link href="/about">{t("aboutUs")}</Link>
-          <Link href="/menu">{t("menu")}</Link>
-          <Link href="/order">{t("order")}</Link>
-          <Link href="/contact">{t("contact")}</Link>
+          <p id="directional">{t("general.directional")}</p>
+          <Link href="/">{t("general.home")}</Link>
+          <Link href="/about">{t("general.aboutUs")}</Link>
+          <Link href="/menu">{t("general.menu")}</Link>
+          <Link href="/order">{t("general.order")}</Link>
+          <Link href="/contact">{t("general.contact")}</Link>
         </div>
         <div className="column"></div>
       </div>
-      <p id="copyright">{t("copyright")}</p>
+      <p id="copyright">{t("general.copyright")}</p>
     </footer>
   );
 };

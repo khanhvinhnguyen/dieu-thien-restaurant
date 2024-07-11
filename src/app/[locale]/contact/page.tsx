@@ -1,8 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 import styles from "./contact.module.css";
 
 const ContactPage = () => {
+  const t = useTranslations();
+
   return (
     <div className={styles.contact}>
       <Image
@@ -13,7 +16,7 @@ const ContactPage = () => {
         style={{ width: "100%", height: "auto" }}
       />
       <div className={styles.contactInfo}>
-        <h1 className={styles.title}>Liên hệ với chúng tôi</h1>
+        <h1 className={styles.title}>{t("general.contactUs")}</h1>
         <div className={styles.row}>
           <a
             className={styles.column}
@@ -25,7 +28,7 @@ const ContactPage = () => {
               width={48}
               height={48}
             />
-            <h5>Địa chỉ</h5>
+            <h5>{t("general.address")}</h5>
             <p>8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>
           </a>
           <div className={styles.column}>
@@ -35,12 +38,12 @@ const ContactPage = () => {
               width={48}
               height={48}
             />
-            <h5>Số điện thoại</h5>
+            <h5>{t("general.phoneNumber")}</h5>
             <p>085-677-9886</p>
           </div>
           <a href="mailto:dieuthien@gmail.com" className={styles.column}>
             <Image src={"/icons/note.svg"} alt="email" width={48} height={48} />
-            <h5>Địa chỉ email</h5>
+            <h5>{t("general.email")}</h5>
             <p>dieuthien@gmail.com</p>
           </a>
         </div>

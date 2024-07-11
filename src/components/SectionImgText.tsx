@@ -28,19 +28,22 @@ const SectionImgText = (props: SectionProps) => {
 
   const renderImages = () => {
     if (Array.isArray(src)) {
-      // Ensure the src array has no more than 2 images
       const limitedSrc = src.slice(0, 2);
-      return limitedSrc.map((imageSrc, index) => (
-        <Image
-          key={index}
-          className="image--border"
-          src={imageSrc}
-          alt={`${alt}-${index}`}
-          width={width}
-          height={height}
-          style={stylesImg}
-        />
-      ));
+      return (
+        <div className="section__images">
+          {limitedSrc.map((imageSrc, index) => (
+            <Image
+              key={index}
+              className="image--border"
+              src={imageSrc}
+              alt={`${alt}-${index}`}
+              width={width}
+              height={height}
+              style={stylesImg}
+            />
+          ))}
+        </div>
+      );
     } else {
       return (
         <Image
@@ -65,7 +68,7 @@ const SectionImgText = (props: SectionProps) => {
           <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
           <p dangerouslySetInnerHTML={{ __html: text }}></p>
         </div>
-        <div className="section__images">{renderImages()}</div>
+        {renderImages()}
       </div>
     </div>
   );

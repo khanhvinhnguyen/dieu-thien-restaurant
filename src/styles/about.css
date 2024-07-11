@@ -18,6 +18,11 @@
     }
   }
 
+  .section__text > h1 {
+    text-align: start;
+    margin-bottom: 2rem;
+  }
+
   .feedback {
     display: flex;
     flex-direction: column;
@@ -26,11 +31,20 @@
     padding-top: 64px;
     padding-bottom: 64px;
     background-color: var(--background-cream);
+    background-image: url('/backgrounds/bg-feedback.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
 
     .feedback__content {
       display: flex;
       gap: 16px;
       text-align: center;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 }

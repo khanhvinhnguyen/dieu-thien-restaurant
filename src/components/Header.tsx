@@ -25,10 +25,10 @@ const Header = () => {
           justifyContent:"center"
         }}
       >
-        <Link href="/">{t("home")}</Link>
-        <Link href="/about">{t("aboutUs")}</Link>
-        <Link href="/menu">{t("menu")}</Link>
-        <Link href="/contact">{t("contact")}</Link>
+        <Link href="/">{t("general.home")}</Link>
+        <Link href="/about">{t("general.aboutUs")}</Link>
+        <Link href="/menu">{t("general.menu")}</Link>
+        <Link href="/contact">{t("general.contact")}</Link>
       </div>
 
       {/* Language & Order */}
@@ -38,7 +38,7 @@ const Header = () => {
 
         {/* Order */}
         <Link href="/order" className="header__button--order">
-          {t("order")}
+          {t("general.order")}
         </Link>
       </div>
     </header>

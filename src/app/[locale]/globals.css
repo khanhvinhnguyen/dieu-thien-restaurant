@@ -1,4 +1,4 @@
-@import "~antd/dist/reset.css";
+/* @import "~antd/dist/reset.css"; */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
@@ -105,6 +105,9 @@ header {
   padding: 59px 45px;
   flex-direction: column;
   position: relative;
+  max-width: 450px;
+  min-height: 225px;
+  max-height: 225px;
 
   img.avatar {
     top: -15%;
@@ -173,6 +176,10 @@ header {
 
     .section__text {
       align-content: center;
+    }
+
+    .section__text > h1 {
+      text-align: start;
     }
   }
 
@@ -276,4 +283,16 @@ header {
     filter: brightness(0) saturate(100%) invert(25%) sepia(78%) saturate(253%)
       hue-rotate(105deg) brightness(96%) contrast(98%);
   }
+}
+
+.ant-input,
+.ant-picker {
+  flex: 1 !important;
+  font-size: 16px !important;
+  padding: 0.8rem !important;
+  border: 1px inset light-dark(rgb(118, 118, 118), rgb(133, 133, 133)) !important;
+}
+
+textarea.ant-input {
+  max-height: 262px !important;
 }

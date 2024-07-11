@@ -1,16 +1,79 @@
 {
-  "home": "Home",
-  "aboutUs": "About Us",
-  "menu": "Menu",
-  "viewMenu": "View Menu",
-  "contact": "Contact",
-  "order": "Order",
-  "directional": "Directional",
-  "copyright": "© Copyright belongs to Diệu Thiện vegetarian restaurant",
-  "slogan": "Choose vegetarian, <br /> Choose peaceful life!",
-  "summary": "Diệu Thiện <br/> more than just a vegetarian restaurant",
-  "introduce": "Welcome to our vegetarian restaurant - where we combine delicate flavors and creativity to bring a unique and beneficial culinary experience. Here, we proudly introduce you to refined vegetarian dishes made from the freshest ingredients, prepared with love and dedication.<br/><br/>Come and explore the world of vegetarian cuisine at our restaurant, where you will enjoy unique and rich dishes, while also enjoying a peaceful and relaxing atmosphere. We look forward to welcoming and serving you!",
-  "specialFood": "Special Menu",
-  "orderDesc": "Our restaurant is honored to assist you with banner printing and table decorations for events such as birthdays or parties. Please call ahead to book with us for the best service.",
-  "buddhistScripture": "Vegetarianism is a good deed <br/>It originates from compassion <br/>Vegetarian speech and pure mind <br/>Peaceful conduct"
+  "general": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "menu": "Menu",
+    "viewMenu": "View menu",
+    "contact": "Contact",
+    "contactUs": "Contact us",
+    "order": "Order",
+    "address": "Address",
+    "phoneNumber": "Phone number",
+    "email": "Email",
+    "directional": "Navigation",
+    "copyright": "© Copyright belongs to Dieu Thien vegetarian restaurant"
+  },
+  "homePage": {
+    "slogan": "Choose vegetarian, <br /> Choose a peaceful life!",
+    "summary": "Dieu Thien <br /> is more than a vegetarian restaurant",
+    "introduce": "Welcome to our vegetarian restaurant - where delicate flavors and creativity combine to bring a unique and rewarding culinary experience. Here, we are proud to introduce to you our exquisite vegetarian dishes from the freshest ingredients, prepared with love and passion.<br/><br/>Come and discover the world of vegetarian cuisine at our restaurant, where you will enjoy unique and rich dishes, while enjoying a peaceful and relaxing atmosphere. We look forward to welcoming and serving you!",
+    "specialFood": "Special Menu",
+    "orderDesc": "Our restaurant is honored to support you in printing banners and preparing table decorations for events at the restaurant such as birthdays or parties. Please call us in advance to receive the most attentive service"
+  },
+  "aboutUsPage": {
+    "buddhistScripture": "Vegetarianism is a good deed <br/>Commencement from compassion <br/>Vegetarian speech, pure mind <br/>Peaceful practice",
+    "outRestaurant": "Our restaurant",
+    "outRestaurantDesc": "At the vegetarian restaurant, you will experience the exquisite flavors of unique and rich vegetarian dishes, from traditional vegetarian dishes to modern creations. <br/><br/>Not only is it a culinary experience, but it is also an opportunity to enjoy a peaceful space and a serene soul during the meal. <br/><br/>The attentive service and beautiful space create a memorable vegetarian dining experience, stimulating both the taste buds and the soul.",
+    "cozySpace": "Cozy Space",
+    "cozySpaceDesc": "Our vegetarian restaurant is an elegant and cozy space, with sophisticated decoration and harmonious arrangement. <br /><br />Our diverse and creative menu brings diners a unique and rich vegetarian dining experience. <br /><br />Not only is it a place to enjoy delicious and healthy food, our vegetarian restaurant is also an ideal destination to relax and enjoy natural flavors.",
+    "mission": "Mission",
+    "missionDesc": "With passion in each dish that satisfies both the visual and the taste, a rustic space imbued with traditional Vietnamese flavors and the peace of Buddhism, Dieu Thien wishes to bring diners an experience with truly peaceful emotions that permeate every sense.<br/><br/>For a long time, vegetarianism has been something that makes many food lovers hesitant, with all our sincerity and enthusiasm, we wish to bring a delicious choice regardless of vegetarian or non-vegetarian, along with the desire to make vegetarian dishes become familiar in every meal of Vietnamese people.",
+    "partner": "Dieu Thien's partner",
+    "partnerDesc": "With a dedicated team and enthusiastic associates, every little bit is multiplied The staff at Dieu Thien are meticulous and meticulous in order to bring a completely wholesome and cozy dining experience.",
+    "feedbackCustomer": "Feedback from diners",
+    "feedbackDesc": "With the spirit of listening and always improving and innovating, we are honored to accompany our dear customers"
+  },
+  "menuPage": {
+    "food": "Menu",
+    "beverage": "Beverage",
+    "appetizer": "Appetizer",
+    "roll": "Roll",
+    "mainDish": "Main dish",
+    "hotPot": "Hot pot",
+    "ricePortion": "Rice Portion",
+    "soup": "Soup",
+    "saltDish": "Salty dish",
+    "dessert": "Dessert",
+    "tea": "Creative tea",
+    "juice": "Juice",
+    "coffee": "Cafe",
+    "thaiTea": "Thai Tea",
+    "softDrinks": "Soft drinks",
+    "soda": "Soda"
+  },
+  "orderPage": {
+    "orderNow": "Book a table now!",
+    "howToOrder": "Call us now by phone or fill out the table reservation form on the right, a consultant will support you.",
+    "contactNow": "Contact now",
+    "feedback": "Feedback"
+  },
+  "form": {
+    "userName": "Customer name",
+    "orderDate": "Booking date",
+    "orderTime": "Booking time",
+    "comment": "Notes",
+    "send": "Submit",
+    "invalidEmail": "Please enter a valid email"
+  },
+  "mail": {
+    "subject": "[ORDER] TABLE RESERVATION CONFIRMATION",
+    "greeting": "Dear {userName},",
+    "body": "Thank you for choosing Diệu Thiện Restaurant. We are pleased to confirm your table reservation with the following details:",
+    "nameLabel": "Name",
+    "phoneLabel": "Phone",
+    "reservationLabel": "Reservation Date",
+    "notesLabel": "Notes",
+    "footer": "We look forward to serving you at our restaurant. If you have any questions or need further assistance, please do not hesitate to contact us.",
+    "regards": "Best regards,<br/>Diệu Thiện Restaurant"
+  }
 }

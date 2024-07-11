@@ -1,16 +1,79 @@
 {
-  "home": "主页",
-  "aboutUs": "关于我们",
-  "menu": "菜单",
-  "contact": "联系",
-  "order": "预定",
-  "directional": "导航",
-  "copyright": "© 版权归 Diệu Thiện 素食餐厅所有",
-  "viewMenu": "查看菜单",
-  "slogan": "选择素食，<br /> 选择和平生活！",
-  "summary": "Diệu Thiện <br/> 不仅仅是一家素食餐厅",
-  "introduce": "欢迎来到我们的素食餐厅 - 在这里，我们将细腻的风味与创造力相结合，带来独特且有益的烹饪体验。在这里，我们自豪地向您介绍由最新鲜的食材制成的精美素食菜肴，带着爱和热情精心烹制。<br/><br/>来探索我们的素食餐厅的世界，在这里您将享受独特且丰富的菜肴，同时享受宁静和放松的氛围。我们期待您的光临和服务！",
-  "specialFood": "特别菜单",
-  "orderDesc": "本餐厅非常荣幸能够为您提供横幅印刷和餐桌装饰服务，适用于生日聚会或派对等活动。请提前致电预订，以便我们提供最佳服务。",
-  "buddhistScripture": "吃素是善业<br/>生起慈悲心<br/>素食心清净<br/>修行安宁祥和"
+  "general": {
+    "home": "首页",
+    "aboutUs": "关于我们",
+    "menu": "菜单",
+    "viewMenu": "查看菜单",    
+    "contact": "联系我们",
+    "contactUs": "与我们联系",
+    "order": "订位",
+    "address": "地址",
+    "phoneNumber": "电话号码",
+    "email": "电子邮件",
+    "directional": "导航",
+    "copyright": "© 素食餐厅 Diệu Thiện 版权所有"
+  },
+  "homePage": {
+    "slogan": "选择素食，<br /> 选择安宁生活！",
+    "summary": "Diệu Thiện <br/> 不仅仅是一家素食餐厅",
+    "introduce": "欢迎光临我们的素食餐厅 - 这里融合了精致的风味和创造力，带来独特而有益的饮食体验。在这里，我们自豪地向您介绍由最新鲜的食材制成的精致素食，这些食材都经过了爱与心血的烹制。<br/><br/>请来探索我们餐厅的素食世界，您将在这里品尝到独特而丰富的菜肴，同时享受宁静和放松的氛围。我们期待您的光临与服务！",
+    "specialFood": "特别菜单",
+    "orderDesc": "我们的餐厅很荣幸为您提供横幅打印和用餐桌装饰服务，用于在本店举办的活动，如生日或聚会。请提前致电我们以便得到最周到的服务。"
+  },
+  "aboutUsPage": {
+    "buddhistScripture": "素食是善业 <br/>从慈悲心发起 <br/>素食清净 <br/>道行安宁",
+    "outRestaurant": "我们的餐厅",
+    "outRestaurantDesc": "在素食餐厅，您将体验到传统素食和现代创新菜肴的精致风味。<br/><br/>不仅是饮食体验，更是享受宁静和心灵安宁的机会。<br/><br/>细致的服务和优美的环境创造出难忘的素食体验，激发您的味觉和心灵。",
+    "cozySpace": "温馨的空间",
+    "cozySpaceDesc": "我们的素食餐厅是一个优雅而温馨的空间，装饰精美，布置和谐。<br /><br />我们多样且富有创意的菜单为食客带来独特而丰富的素食体验。<br /><br />不仅是享受美味健康食物的地方，我们的素食餐厅也是一个理想的休闲和享受自然风味的目的地。",
+    "mission": "使命",
+    "missionDesc": "每道菜的用心呈现，不仅满足视觉和味觉，更以传统越南风味和佛教的宁静氛围，为顾客带来祥和的感受。<br/><br/>长期以来，素食对很多美食爱好者来说都是一种挑战，我们以真诚和热情，旨在提供美味的选择，无论是素食还是荤食，并希望让素食成为越南家庭饮食中的常见选择。",
+    "partner": "Diệu Thiện的合作伙伴",
+    "partnerDesc": "在一支充满热情和奉献的团队努力下，每一个细节都被Diệu Thiện的员工精心打磨，以带来完全善意和温馨的用餐体验。",
+    "feedbackCustomer": "顾客反馈",
+    "feedbackDesc": "以倾听和不断改进的精神，我们很荣幸能与尊贵的顾客一起前行。"
+  },
+  "menuPage": {
+    "food": "菜单",
+    "beverage": "饮料",
+    "appetizer": "开胃菜",
+    "roll": "卷类菜肴",
+    "mainDish": "主菜",
+    "hotPot": "火锅",
+    "ricePortion": "米饭",
+    "soup": "汤",
+    "saltDish": "咸菜",
+    "dessert": "甜点",
+    "tea": "创意茶",
+    "juice": "果汁",
+    "coffee": "咖啡",
+    "thaiTea": "泰式茶",
+    "softDrinks": "软饮",
+    "soda": "苏打水"
+  },
+  "orderPage": {
+    "orderNow": "立即订位！",
+    "howToOrder": "请立即通过电话联系我们或填写右侧的订位表格，我们的顾问将为您提供帮助。",
+    "contactNow": "立即联系",
+    "feedback": "反馈"
+  },
+  "form": {
+    "userName": "顾客姓名",
+    "orderDate": "订位日期",
+    "orderTime": "订位时间",
+    "comment": "备注",
+    "send": "提交",
+    "invalidEmail": "请输入有效的电子邮件"
+  },
+  "mail": {
+    "subject": "[订单] 餐桌预订确认",
+    "greeting": "亲爱的 {userName},",
+    "body": "感谢您选择 Diệu Thiện 餐厅。我们很高兴确认您的餐桌预订，详情如下：",
+    "nameLabel": "姓名",
+    "phoneLabel": "电话",
+    "reservationLabel": "预订日期",
+    "notesLabel": "备注",
+    "footer": "我们期待在我们的餐厅为您服务。如果您有任何问题或需要进一步的帮助，请随时与我们联系。",
+    "regards": "此致,<br/>Diệu Thiện 餐厅"
+  }  
 }

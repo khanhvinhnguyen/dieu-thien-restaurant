@@ -103,17 +103,17 @@ export default function Home() {
           <h4 id="title" className={dancingScript.className}>
             Diệu Thiện
           </h4>
-          <p dangerouslySetInnerHTML={{ __html: t("slogan") }} />
+          <p dangerouslySetInnerHTML={{ __html: t("homePage.slogan") }} />
           <a className="menu-button" href="/menu">
-            {t("viewMenu")}
+            {t("general.viewMenu")}
           </a>
         </div>
       </div>
 
       <div className="welcome">
         <SectionImgText
-          title={t("summary")}
-          text={t("introduce")}
+          title={t("homePage.summary")}
+          text={t("homePage.introduce")}
           src={"/images/introduce.svg"}
           alt={"welcome"}
           width={0}
@@ -122,13 +122,13 @@ export default function Home() {
         />
       </div>
       <div className="special-menu">
-        <h1>{t("specialFood")}</h1>
+        <h1>{t("homePage.specialFood")}</h1>
         <Swiper3D data={swiper3Ddata} />
       </div>
 
       <div className="order">
-        <h1 id="order">{t("order")}</h1>
-        <p dangerouslySetInnerHTML={{ __html: t("orderDesc") }} />
+        <h1 id="order">{t("general.order")}</h1>
+        <p dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }} />
         <div
           className="column-container"
           style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}

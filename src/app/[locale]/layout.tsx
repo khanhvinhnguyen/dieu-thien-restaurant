@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
-import "antd/dist/reset.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Noto_Serif } from "next/font/google";
@@ -22,11 +21,9 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={notoSerif.className}>
         <NextIntlClientProvider messages={messages}>
-          <AntdRegistry>
             <Header />
             {children}
             <Footer />
-          </AntdRegistry>
         </NextIntlClientProvider>
       </body>
     </html>

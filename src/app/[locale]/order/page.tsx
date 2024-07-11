@@ -4,7 +4,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
 import "@/styles/order.css";
-import "antd/dist/reset.css";
 
 import { send } from "@/lib/sendEmailAction";
 import { Validate } from "@/utils/validate";

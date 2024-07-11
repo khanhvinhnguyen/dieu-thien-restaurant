@@ -41,8 +41,8 @@ header {
   padding-right: 5.0625rem;
 
   img#Logo {
-    height: 60px;
-    width: 60px;
+    height: 3.5rem;
+    width: 3.5rem;
   }
 
   .header__nav {
@@ -63,7 +63,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.25rem;
 
       select {
         border: none;
@@ -83,6 +83,8 @@ header {
       border-radius: 50px;
       border: none;
       text-decoration: none;
+      width: 8.75rem;
+      text-align: center;
     }
   }
 }

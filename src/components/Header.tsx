@@ -21,6 +21,8 @@ const Header = () => {
           gap: "24px",
           color: "#31363F",
           fontSize: "18px",
+          width:"50%",
+          justifyContent:"center"
         }}
       >
         <Link href="/">{t("home")}</Link>

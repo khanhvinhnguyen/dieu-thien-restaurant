@@ -103,6 +103,9 @@ header {
   padding: 59px 45px;
   flex-direction: column;
   position: relative;
+  max-width: 450px;
+  min-height: 225px;
+  max-height: 225px;
 
   img.avatar {
     top: -15%;
@@ -171,6 +174,10 @@ header {
 
     .section__text {
       align-content: center;
+    }
+
+    .section__text > h1 {
+      text-align: start;
     }
   }
 

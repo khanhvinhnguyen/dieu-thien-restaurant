@@ -1,21 +1,22 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import { Tabs } from "antd";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "@/styles/menu.css";
+import { Validate } from "@/utils/validate";
+import { Tabs } from "antd";
+import "antd/dist/reset.css";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import "antd/dist/reset.css";
-import { Validate } from "@/utils/validate";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const foodMenuTabs = [
   "appetizer",
   "roll",
-  "mainDishes",
+  "mainDish",
   "hotPot",
   "ricePortion",
   "soup",
@@ -100,7 +101,7 @@ const foodMenu = {
       bestSeller: true,
     },
   ],
-  mainDishes: [{}],
+  mainDish: [{}],
   hotPot: [{}],
   ricePortion: [{}],
   soup: [{}],
@@ -160,83 +161,85 @@ const drinkMenu = {
   soda: [{}],
 };
 
-const renderMenuItems = (menu, tabs, thumbsSwiper, setThumbsSwiper) => {
-  return Object.keys(menu).map((category, i) => ({
-    icon: (
-      <img src={tabs[i].icon} className="svg-icon" width={40} height={40} />
-    ),
-    label: category,
-    key: String(i + 1),
-    children: (
-      <div className="menu-list">
-        <h2>{category}</h2>
-        <div className="menu--info">
-          <div className="menu--info__img">
+const Menu = () => {
+  const t = useTranslations("menuPage");
+
+  const [foodThumbsSwiper, setFoodThumbsSwiper] = useState<any>({});
+  const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState<any>({});
+
+  const renderMenuItems = (menu, tabs, thumbsSwiper, setThumbsSwiper) => {
+    return Object.keys(menu).map((category, i) => ({
+      icon: (
+        <img src={tabs[i].icon} className="svg-icon" width={40} height={40} />
+      ),
+      label: t(`${category}`),
+      key: String(i + 1),
+      children: (
+        <div className="menu-list">
+          <h2>{t(`${category}`)}</h2>
+          <div className="menu--info">
+            <div className="menu--info__img">
+              <Swiper
+                loop={true}
+                spaceBetween={10}
+                thumbs={{ swiper: thumbsSwiper || null }}
+                modules={[FreeMode, Thumbs]}
+                className="swiper--item-info"
+              >
+                {menu[category].map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="item-info">
+                      <div className="item-info__img">
+                        <Image
+                          className="swiper--item-img"
+                          src={item.img}
+                          alt="food"
+                          width={450}
+                          height={350}
+                        />
+                        {item.bestSeller && (
+                          <Image
+                            className="item-favorite"
+                            src="/images/bestSeller.svg"
+                            alt="favorite"
+                            width={65}
+                            height={65}
+                          />
+                        )}
+                      </div>
+                      <div className="item-info__text">
+                        <h2 id="menu-item--title">{item.name}</h2>
+                        <p id="menu-item--desc">Thành phần: {item.desc}</p>
+                        <p id="menu-item--price">
+                          {Validate.unit(Number(item.price))}₫
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
             <Swiper
-              loop={true}
+              onSwiper={setThumbsSwiper}
               spaceBetween={10}
-              thumbs={{ swiper: thumbsSwiper || null }}
-              modules={[FreeMode, Thumbs]}
-              className="swiper--item-info"
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              navigation={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="swiper--list-item"
             >
               {menu[category].map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="item-info">
-                    <div className="item-info__img">
-                      <Image
-                        className="swiper--item-img"
-                        src={item.img}
-                        alt="food"
-                        width={450}
-                        height={350}
-                      />
-                      {item.bestSeller && (
-                        <Image
-                          className="item-favorite"
-                          src="/images/bestSeller.svg"
-                          alt="favorite"
-                          width={65}
-                          height={65}
-                        />
-                      )}
-                    </div>
-                    <div className="item-info__text">
-                      <h2 id="menu-item--title">{item.name}</h2>
-                      <p id="menu-item--desc">Thành phần: {item.desc}</p>
-                      <p id="menu-item--price">
-                        {Validate.unit(Number(item.price))}₫
-                      </p>
-                    </div>
-                  </div>
+                  <img src={item.img} height={83} />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            navigation={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="swiper--list-item"
-          >
-            {menu[category].map((item, index) => (
-              <SwiperSlide key={index}>
-                <img src={item.img} height={83} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
         </div>
-      </div>
-    ),
-  }));
-};
-
-const Menu = () => {
-  const [foodThumbsSwiper, setFoodThumbsSwiper] = useState({});
-  const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState({});
+      ),
+    }));
+  };
 
   const foodMenuItems = Object.keys(foodMenu).map((category, i) => ({
     icon: (
@@ -247,13 +250,13 @@ const Menu = () => {
         height={40}
       />
     ),
-    label: category,
+    label: t(`${category}`),
     key: category,
     children: renderMenuItems(
       foodMenu,
       foodMenuTabs,
       foodThumbsSwiper[category],
-      (swiper) => {
+      (swiper: any) => {
         setFoodThumbsSwiper((prev) => ({ ...prev, [category]: swiper }));
       }
     )[i].children,
@@ -268,7 +271,7 @@ const Menu = () => {
         height={40}
       />
     ),
-    label: category,
+    label: t(`${category}`),
     key: category,
     children: renderMenuItems(
       drinkMenu,
@@ -290,13 +293,13 @@ const Menu = () => {
         style={{ width: "100%", height: "auto" }}
       />
       <div className="menu--title">
-        <h1>THỰC ĐƠN</h1>
+        <h1 id="menu--title">{t("food")}</h1>
       </div>
       <div className="menu--content">
         <Tabs tabPosition={"left"} type="card" items={foodMenuItems} />
       </div>
       <div className="menu--title">
-        <h1>NƯỚC UỐNG</h1>
+        <h1 id="menu--title">{t("beverage")}</h1>
       </div>
       <div className="menu--content">
         <Tabs tabPosition={"left"} type="card" items={drinkMenuItems} />

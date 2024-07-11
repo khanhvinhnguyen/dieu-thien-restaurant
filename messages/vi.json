@@ -1,16 +1,68 @@
 {
+  "general": {
     "home": "Trang chủ",
     "aboutUs": "Về chúng tôi",
     "menu": "Thực đơn",
     "viewMenu": "Xem thực đơn",    
     "contact": "Liên hệ",
+    "contactUs": "Liên hệ với chúng tôi",
     "order": "Đặt bàn",
+    "address": "Địa chỉ",
+    "phoneNumber": "Số điện thoại",
+    "email": "Email",
     "directional": "Điều hướng",
-    "copyright": "© Bản quyền thuộc về nhà hàng chay Diệu Thiện",
+    "copyright": "© Bản quyền thuộc về nhà hàng chay Diệu Thiện"
+  },
+  "homePage": {
     "slogan": "Chọn ăn chay, <br /> Chọn cuộc sống an lành!",
     "summary": "Diệu Thiện <br/> hơn cả một nhà hàng chay",
     "introduce": "Chào mừng quý khách đến với nhà hàng chay của chúng tôi - nơi kết hợp hương vị tinh tế và sự sáng tạo để mang đến trải nghiệm ẩm thực độc đáo và bổ ích. Tại đây, chúng tôi tự hào giới thiệu đến bạn những món ăn chay tinh tế từ những nguyên liệu tươi ngon nhất, được chế biến với tình yêu và tâm huyết.<br/><br/>Hãy đến và khám phá thế giới ẩm thực chay tại nhà hàng của chúng tôi, nơi bạn sẽ được thưởng thức những món ăn độc đáo và phong phú, đồng thời tận hưởng không khí yên bình và thư giãn. Chúng tôi rất mong được đón tiếp và phục vụ bạn!",
     "specialFood": "Thực đơn đặc biệt",
-    "orderDesc": "Nhà hàng chúng tôi rất vinh hạnh được hỗ trợ quí khách in banner và chuẩn bị trang trí bàn ăn dành cho sự kiện tại quán như sinh nhật hay liên hoan. Hãy gọi đặt trước với chúng tôi để được phục vụ chu đáo nhất",
-    "buddhistScripture": "Ăn chay là thiện nghiệp <br/>Phát khởi từ bi tâm <br/>Khẩu chay ý thanh tịnh <br/>Đạo hành yên an bình"
+    "orderDesc": "Nhà hàng chúng tôi rất vinh hạnh được hỗ trợ quí khách in banner và chuẩn bị trang trí bàn ăn dành cho sự kiện tại quán như sinh nhật hay liên hoan. Hãy gọi đặt trước với chúng tôi để được phục vụ chu đáo nhất"
+  },
+  "aboutUsPage": {
+    "buddhistScripture": "Ăn chay là thiện nghiệp <br/>Phát khởi từ bi tâm <br/>Khẩu chay ý thanh tịnh <br/>Đạo hành yên an bình",
+    "outRestaurant": "Nhà hãng chúng tôi",
+    "outRestaurantDesc": "Tại nhà hàng chay, bạn sẽ được trải nghiệm hương vị tinh tế của các món ăn chay độc đáo và phong phú, từ các món chay truyền thống đến những sáng tạo hiện đại. <br/><br/>Không chỉ là trải nghiệm ẩm thực, mà còn là cơ hội để tận hưởng không gian yên bình và tâm hồn thanh thản trong bữa ăn. <br/><br/>Sự phục vụ tận tình và không gian đẹp mắt tạo ra một trải nghiệm ẩm thực chay đáng nhớ, kích thích cả vị giác và tâm hồn.",
+    "cozySpace": "Không gian ấm cúng",
+    "cozySpaceDesc": "Nhà hàng chay của chúng tôi là một không gian thanh lịch và ấm cúng, với trang trí tinh tế và sự sắp xếp hài hòa. <br /><br />Thực đơn đa dạng và sáng tạo của chúng tôi mang lại cho thực khách trải nghiệm ẩm thực chay độc đáo và phong phú. <br /><br />Không chỉ là nơi thưởng thức món ăn ngon và lành mạnh, nhà hàng chay của chúng tôi còn là điểm đến lý tưởng để thư giãn và thưởng thức hương vị tự nhiên.",
+    "mission": "Sứ mệnh",
+    "missionDesc": "Với tâm huyết trong từng món ăn thỏa mãn cả phần nhìn và phần vị, không gian mộc mạc đậm phong vị truyền thống Việt Nam cùng sự yên bình từ Phật Giáo, Diệu Thiện mong muốn  mang lại cho quý thực khách một trải nghiệm với những cảm xúc thật an lành len lỏi từng giác quan.<br/><br/>Từ lâu việc ăn chay đã là điều khiến cho nhiều người yêu ẩm thực e dè, chúng tôi với tất cả sự chân thành và nhiệt huyết, mong muốn mang đến một lựa chọn ăn ngon không kể chay hay mặn, cùng với đó là tâm nguyện khiến món chay trở thành điều quen thuộc trong từng bữa ăn của người Việt Nam.",
+    "partner": "Cộng sự của Diệu Thiện",
+    "partnerDesc": "Với một đội ngũ tận tâm cùng những cộng sự nhiệt huyết, từng chút một đều được nhân viên tại nhà Diệu Thiện trau chuốt và tỉ mẫn nhằm đem đến một trải nghiệm thưởng thức  hoàn toàn thiện lành và ấm cúng.",
+    "feedbackCustomer": "Phản hồi từ thực khách",
+    "feedbackDesc": "Với tinh thần lắng nghe và luôn luôn cải thiện đổi mới, chúng tôi rất vinh hạnh khi được đồng hành cùng các khách hàng thân yêu"
+  },
+  "menuPage": {
+    "food": "Thực đơn",
+    "beverage": "Đồ uống",
+    "appetizer": "Khai vị",
+    "roll": "Món cuốn",
+    "mainDish": "Món chính",
+    "hotPot": "Món lẩu",
+    "ricePortion": "Cơm phần",
+    "soup": "Món canh",
+    "saltDish": "Món mặn",
+    "dessert": "Tráng miệng",
+    "tea": "Trà sáng tạo",
+    "juice": "Nước ép",
+    "coffee": "Cafe",
+    "thaiTea": "Trà Thái",
+    "softDrinks": "Nước ngọt",
+    "soda": "Soda"
+  },
+  "orderPage": {
+    "orderNow": "Đặt bàn ngay!",
+    "howToOrder": "Gọi ngay cho chúng tôi qua số điện thoại hoặc điền vào phiếu đặt bàn phía bên phải, sẽ có nhân viên tư vấn hỗ trợ cho bạn.",
+    "contactNow": "Liên hệ ngay",
+    "feedback": "Phản hồi"
+  },
+  "form": {
+    "userName": "Tên khách hàng",
+    "orderDate": "Ngày đặt bàn",
+    "orderTime": "Giờ đặt bàn",
+    "comment": "Ghi chú",
+    "send": "Gửi phiếu"
+  }
+
 }

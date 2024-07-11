@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Controller, useForm, SubmitHandler } from "react-hook-form";
 
 import "@/styles/order.css";
@@ -18,6 +18,8 @@ type OrderForm = {
 };
 
 const OrderPage = () => {
+  const t = useTranslations();
+
   const {
     handleSubmit,
     control,
@@ -43,11 +45,8 @@ const OrderPage = () => {
       />
       <div className="order-content">
         <div className="order-content__left--info">
-          <h1>Đặt bàn ngay!</h1>
-          <p>
-            Gọi ngay cho chúng tôi qua số điện thoại hoặc điền vào phiếu đặt bàn
-            phía bên phải, sẽ có nhân viên tư vấn hỗ trợ cho bạn.
-          </p>
+          <h1>{t("orderPage.orderNow")}</h1>
+          <p>{t("orderPage.howToOrder")}</p>
           <div className="column-container" style={{ gap: "1rem" }}>
             <div className="text--border order-content--contact">
               <div className="avatar order-content--icon">
@@ -58,7 +57,7 @@ const OrderPage = () => {
                   sizes="70"
                 />
               </div>
-              <p className="title">Liên hệ ngay</p>
+              <p className="title">{t("orderPage.contactNow")}</p>
               <p className="content">085-677-9886</p>
             </div>
 
@@ -71,13 +70,13 @@ const OrderPage = () => {
                   sizes="70"
                 />
               </div>
-              <p className="title">Phản hồi</p>
+              <p className="title">{t("orderPage.feedback")}</p>
               <p className="content">dieuthien@gmail.com</p>
             </div>
           </div>
         </div>
         <div className="order-content__right--form">
-          <h2>Đặt bàn</h2>
+          <h2>{t("general.order")}</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-row">
               <Controller
@@ -85,7 +84,7 @@ const OrderPage = () => {
                 name="userName"
                 render={({ field: { onChange, onBlur, value } }) => (
                   <input
-                    placeholder="Tên khách hàng *"
+                    placeholder={t("form.userName") + " *"}
                     name="userName"
                     onBlur={onBlur}
                     value={value}
@@ -100,7 +99,7 @@ const OrderPage = () => {
                 name="phone"
                 render={({ field: { onChange, onBlur, value } }) => (
                   <input
-                    placeholder="Số điện thoại *"
+                    placeholder={t("general.phoneNumber") + " *"}
                     name="phone"
                     required
                     onBlur={onBlur}
@@ -116,7 +115,7 @@ const OrderPage = () => {
                 name="orderDate"
                 render={({ field: { onChange, onBlur } }) => (
                   <input
-                    placeholder="Ngày đặt bàn *"
+                    placeholder={t("form.orderDate") + " *"}
                     name="orderDate"
                     required
                     onBlur={onBlur}
@@ -130,7 +129,7 @@ const OrderPage = () => {
                 name="orderTime"
                 render={({ field: { onChange, onBlur } }) => (
                   <input
-                    placeholder="Giờ đặt bàn *"
+                    placeholder={t("form.orderTime") + " *"}
                     name="orderTime"
                     required
                     onBlur={onBlur}
@@ -144,7 +143,7 @@ const OrderPage = () => {
               name="email"
               render={({ field: { onChange, onBlur, value } }) => (
                 <input
-                  placeholder="Email *"
+                  placeholder={t("general.email") + " *"}
                   name="email"
                   required
                   onBlur={onBlur}
@@ -158,7 +157,7 @@ const OrderPage = () => {
               name="notes"
               render={({ field: { onChange, onBlur, value } }) => (
                 <textarea
-                  placeholder="Ghi chú"
+                  placeholder={t("form.comment") + " *"}
                   name="notes"
                   cols={30}
                   rows={10}
@@ -170,7 +169,11 @@ const OrderPage = () => {
             />
 
             {/* {errors && <span>This field is required</span>} */}
-            <input className="submit-btn" type="submit" value="Gửi phiếu" />
+            <input
+              className="submit-btn"
+              type="submit"
+              value={t("form.send")}
+            />
           </form>
         </div>
       </div>

@@ -9,9 +9,11 @@ const Header = () => {
   return (
     <header>
       {/* Logo */}
-      <a href="/">
-        <img id="Logo" src="/images/logo.svg" alt="logo" />
-      </a>
+      <div className="logo__wrapper">
+        <a href="/">
+          <img id="Logo" src="/images/logo.svg" alt="logo" />
+        </a>
+      </div>
 
       {/* Navigation */}
       <div
@@ -20,9 +22,10 @@ const Header = () => {
           display: "flex",
           gap: "24px",
           color: "#31363F",
-          fontSize: "18px",
-          width:"50%",
-          justifyContent:"center"
+          fontSize: "1.125rem",
+          width: "50%",
+          justifyContent: "center",
+
         }}
       >
         <Link href="/">{t("general.home")}</Link>

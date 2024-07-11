@@ -81,12 +81,13 @@ export default function Home() {
           slidesPerView={1}
           autoplay={{ delay: 2500 }}
           pagination={{ clickable: true }}
-          onSwiper={() => {}}
-          onSlideChange={() => {}}
+          onSwiper={() => { }}
+          onSlideChange={() => { }}
         >
-          {swiperData.map((item) => {
+          {swiperData.map((item, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}
+              >
                 <Image
                   src={item.image}
                   alt={item.alt}
@@ -118,7 +119,7 @@ export default function Home() {
           alt={"welcome"}
           width={0}
           height={0}
-          stylesImg={{ width: "38.5%", height: "auto" }}
+          stylesImg={{ width: "100%", height: "auto" }}
         />
       </div>
       <div className="special-menu">
@@ -133,9 +134,10 @@ export default function Home() {
           className="column-container"
           style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
         >
-          {orderData.map((item) => {
+          {orderData.map((item, index) => {
             return (
-              <div className="column">
+              <div className="column" key={index}
+              >
                 <ImageComponent
                   src={item.image}
                   alt={item.alt}

@@ -10,9 +10,14 @@
   --text-color-cream: #ffffec;
   --text-color-dark: #31363f;
   --text-color-green: #255442;
+  --text-color-yellow: #ce912c;
 
   --swiper-bullet-cream: #ffffec;
   --swiper-bullet-orange: #f8b917;
+
+  --base-font-size: 18px; /* Default base font size */
+
+  --max-content-width: 1600px;
 }
 
 html,
@@ -20,9 +25,11 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100vw;
+  box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Noto Serif", BlinkMacSystemFont, "Noto Serif", Roboto,
     "Noto Serif", "Noto Serif", serif;
+  font-size: var(--base-font-size);
 }
 
 h4 {
@@ -40,20 +47,28 @@ header {
   padding-left: 5.0625rem;
   padding-right: 5.0625rem;
 
-  img#Logo {
-    height: 3.5rem;
-    width: 3.5rem;
+  .logo__wrapper {
+    width: 20%;
+    img#Logo {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
   }
 
   .header__nav {
+    flex: auto;
     a {
       font-weight: 700;
       color: var(--text-color-dark);
       text-decoration: none;
+      &:hover {
+        color: var(--text-color-yellow);
+      }
     }
   }
 
   .header__language_order {
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,12 +100,13 @@ header {
       text-decoration: none;
       width: 8.75rem;
       text-align: center;
+      min-width: fit-content;
     }
   }
 }
 
 .image--border-tlbr {
-  border-radius: 100px 20px;
+  border-radius: 6.25rem 1.25rem;
   object-fit: cover;
 }
 
@@ -144,7 +160,7 @@ header {
 }
 
 .column-container {
-  height: 240px;
+  /* height: 240px; */
   display: flex;
   justify-content: space-between;
   padding: 50px 0px;
@@ -164,6 +180,7 @@ header {
 .section {
   display: flex;
   height: 700px;
+
   justify-content: center;
   align-items: center;
   gap: 64px;
@@ -171,8 +188,10 @@ header {
   padding-right: 83px;
 
   .section__content {
-    display: flex;
-    gap: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    align-items: center;
 
     .section__text {
       align-content: center;
@@ -185,8 +204,8 @@ header {
 
   p {
     font-weight: 500;
-    font-size: 16px;
     line-height: 24px;
+    text-align: justify;
   }
 }
 
@@ -295,4 +314,43 @@ header {
 
 textarea.ant-input {
   max-height: 262px !important;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --base-font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  :root {
+    --base-font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --base-font-size: 12px;
+  }
+  .section {
+    margin: 4rem 0;
+    height: fit-content;
+    padding: 0 3rem;
+    .section__content {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
+}
+@media (max-width: 576px) {
+  :root {
+    --base-font-size: 14px;
+  }
+  .section {
+    margin: 3rem 0;
+    height: fit-content;
+    padding: 0 2rem;
+    .section__content {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
 }

@@ -1,12 +1,29 @@
 "use client";
-import React from "react";
-import { useTranslations } from "next-intl";
-import { Controller, useForm, SubmitHandler } from "react-hook-form";
+import React, { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
 import "@/styles/order.css";
 import "antd/dist/reset.css";
 
 import { send } from "@/lib/sendEmailAction";
+import { Validate } from "@/utils/validate";
+import {
+  Button,
+  DatePicker,
+  GetProps,
+  Input,
+  notification,
+  TimePicker,
+  Tooltip,
+} from "antd";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+
+dayjs.extend(customParseFormat);
+
+const { TextArea } = Input;
+type RangePickerProps = GetProps<typeof DatePicker.RangePicker>;
 
 type OrderForm = {
   userName: string;
@@ -19,19 +36,68 @@ type OrderForm = {
 
 const OrderPage = () => {
   const t = useTranslations();
+  const localActive = useLocale();
+
+  const [loading, setLoading] = useState(false);
 
   const {
     handleSubmit,
     control,
     formState: { errors },
+    getValues,
   } = useForm<OrderForm>();
-  const onSubmit: SubmitHandler<OrderForm> = (data) => {
-    const formData = new FormData();
-    Object.entries(data).forEach(([key, value]) => {
-      formData.append(key, value instanceof Date ? value.toISOString() : value);
-    });
 
-    send(formData);
+  const openNotification = () => {
+    notification.success({
+      message: "Email Sent",
+      description: "Your email has been sent successfully!",
+      placement: "topRight",
+    });
+  };
+  const onSubmit: SubmitHandler<OrderForm> = async (data) => {
+    setLoading(true);
+    const formData = new FormData();
+    const formattedData = {
+      ...data,
+      orderDate: dayjs(data.orderDate).format("DD-MM-YYYY"),
+      orderTime: dayjs(data.orderTime).format("HH:mm"),
+    };
+
+    Object.entries(formattedData).forEach(([key, value]) =>
+      formData.append(key, value as string)
+    );
+
+    const result = await send(formData, localActive);
+    if (result.success) {
+      openNotification();
+    }
+    setLoading(false);
+  };
+
+  const disabledDate: RangePickerProps["disabledDate"] = (current) => {
+    return current && current < dayjs().startOf("day");
+  };
+
+  const disabledTime = (date) => {
+    if (date && date.isSame(dayjs(), "day")) {
+      const now = dayjs();
+      const disabledHours = Array.from({ length: 24 }, (_, i) => i).slice(
+        0,
+        now.hour() + 1
+      );
+      const disabledMinutes = Array.from({ length: 60 }, (_, i) => i).slice(
+        0,
+        now.minute()
+      );
+      return {
+        disabledHours: () => disabledHours,
+        disabledMinutes: () => disabledMinutes,
+      };
+    }
+    return {
+      disabledHours: () => [],
+      disabledMinutes: () => [],
+    };
   };
 
   return (
@@ -83,9 +149,10 @@ const OrderPage = () => {
                 control={control}
                 name="userName"
                 render={({ field: { onChange, onBlur, value } }) => (
-                  <input
-                    placeholder={t("form.userName") + " *"}
+                  <Input
+                    autoComplete="off"
                     name="userName"
+                    placeholder={t("form.userName") + " *"}
                     onBlur={onBlur}
                     value={value}
                     onChange={onChange}
@@ -98,7 +165,9 @@ const OrderPage = () => {
                 control={control}
                 name="phone"
                 render={({ field: { onChange, onBlur, value } }) => (
-                  <input
+                  <Input
+                    autoComplete="off"
+                    type="number"
                     placeholder={t("general.phoneNumber") + " *"}
                     name="phone"
                     required
@@ -113,13 +182,15 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="orderDate"
-                render={({ field: { onChange, onBlur } }) => (
-                  <input
+                rules={{ required: t("form.required") }}
+                render={({ field: { onChange, onBlur, value } }) => (
+                  <DatePicker
+                    disabledDate={disabledDate}
                     placeholder={t("form.orderDate") + " *"}
-                    name="orderDate"
-                    required
                     onBlur={onBlur}
-                    onChange={onChange}
+                    value={value ? dayjs(value) : null}
+                    onChange={(date) => onChange(date ? date.toDate() : null)}
+                    format="YYYY-MM-DD"
                   />
                 )}
               />
@@ -127,37 +198,50 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="orderTime"
-                render={({ field: { onChange, onBlur } }) => (
-                  <input
+                rules={{ required: t("form.required") }}
+                render={({ field: { onChange, onBlur, value } }) => (
+                  <TimePicker
                     placeholder={t("form.orderTime") + " *"}
-                    name="orderTime"
-                    required
+                    use12Hours
+                    format="h:mm a"
                     onBlur={onBlur}
+                    value={value ? dayjs(value) : null}
                     onChange={onChange}
+                    disabledTime={() =>
+                      disabledTime(dayjs(getValues("orderDate")))
+                    }
                   />
                 )}
               />
             </div>
-            <Controller
-              control={control}
-              name="email"
-              render={({ field: { onChange, onBlur, value } }) => (
-                <input
-                  placeholder={t("general.email") + " *"}
-                  name="email"
-                  required
-                  onBlur={onBlur}
-                  value={value}
-                  onChange={onChange}
-                />
-              )}
-            />
+            <Tooltip title={errors.email?.message} open={!!errors.email}>
+              <Controller
+                control={control}
+                name="email"
+                rules={{
+                  required: t("form.required"),
+                  validate: (value) =>
+                    Validate.email(value) || t("form.invalidEmail"),
+                }}
+                render={({ field: { onChange, onBlur, value } }) => (
+                  <Input
+                    autoComplete="off"
+                    placeholder={t("general.email") + " *"}
+                    name="email"
+                    required
+                    onBlur={onBlur}
+                    value={value}
+                    onChange={onChange}
+                  />
+                )}
+              />
+            </Tooltip>
             <Controller
               control={control}
               name="notes"
               render={({ field: { onChange, onBlur, value } }) => (
-                <textarea
-                  placeholder={t("form.comment") + " *"}
+                <TextArea
+                  placeholder={t("form.comment")}
                   name="notes"
                   cols={30}
                   rows={10}
@@ -169,11 +253,14 @@ const OrderPage = () => {
             />
 
             {/* {errors && <span>This field is required</span>} */}
-            <input
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={loading}
               className="submit-btn"
-              type="submit"
-              value={t("form.send")}
-            />
+            >
+              {t("form.send")}
+            </Button>
           </form>
         </div>
       </div>

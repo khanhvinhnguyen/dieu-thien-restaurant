@@ -62,7 +62,18 @@
     "orderDate": "Ngày đặt bàn",
     "orderTime": "Giờ đặt bàn",
     "comment": "Ghi chú",
-    "send": "Gửi phiếu"
-  }
-
+    "send": "Gửi phiếu",
+    "invalidEmail": "Vui lòng nhập email hợp lệ"
+  },
+  "mail": {
+    "subject": "[ĐẶT BÀN] XÁC NHẬN ĐẶT BÀN",
+    "greeting": "Kính gửi {userName},",
+    "body": "Cảm ơn bạn đã chọn Nhà hàng Diệu Thiện. Chúng tôi xin vui mừng xác nhận đặt bàn của bạn với các chi tiết sau:",
+    "nameLabel": "Tên",
+    "phoneLabel": "Điện thoại",
+    "reservationLabel": "Ngày đặt bàn",
+    "notesLabel": "Ghi chú",
+    "footer": "Chúng tôi mong được phục vụ bạn tại nhà hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ thêm, xin đừng ngần ngại liên hệ với chúng tôi.",
+    "regards": "Trân trọng,<br/>Nhà hàng Diệu Thiện"
+  }  
 }

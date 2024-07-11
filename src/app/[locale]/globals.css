@@ -282,3 +282,15 @@ header {
       hue-rotate(105deg) brightness(96%) contrast(98%);
   }
 }
+
+.ant-input,
+.ant-picker {
+  flex: 1 !important;
+  font-size: 16px !important;
+  padding: 0.8rem !important;
+  border: 1px inset light-dark(rgb(118, 118, 118), rgb(133, 133, 133)) !important;
+}
+
+textarea.ant-input {
+  max-height: 262px !important;
+}

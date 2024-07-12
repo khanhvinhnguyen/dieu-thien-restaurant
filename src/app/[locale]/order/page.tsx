@@ -181,9 +181,9 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="orderDate"
-                rules={{ required: t("form.required") }}
                 render={({ field: { onChange, onBlur, value } }) => (
                   <DatePicker
+                    required
                     disabledDate={disabledDate}
                     placeholder={t("form.orderDate") + " *"}
                     onBlur={onBlur}
@@ -197,9 +197,9 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="orderTime"
-                rules={{ required: t("form.required") }}
                 render={({ field: { onChange, onBlur, value } }) => (
                   <TimePicker
+                    required
                     placeholder={t("form.orderTime") + " *"}
                     use12Hours
                     format="h:mm a"

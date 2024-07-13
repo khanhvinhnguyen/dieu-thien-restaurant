@@ -1,0 +1,128 @@
+{
+  "food": {
+    "appetizer": [
+      {
+        "img": "/images/main-dishes/mainDishes_1.svg",
+        "name": "Món chính 1",
+        "desc": "Món chính 1",
+        "price": 55000,
+        "bestSeller": true
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_2.svg",
+        "name": "Món chính 2",
+        "desc": "Món chính 2",
+        "price": 55000,
+        "bestSeller": true
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_3.svg",
+        "name": "Món chính 3",
+        "desc": "Món chính 3",
+        "price": 55000,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_4.svg",
+        "name": "Món chính 4",
+        "desc": "Món chính 4",
+        "price": 55000,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_5.svg",
+        "name": "Món chính 5",
+        "desc": "Món chính 5",
+        "price": 55000,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_6.svg",
+        "name": "Món chính 6",
+        "desc": "Món chính 6",
+        "price": 55000,
+        "bestSeller": false
+      }
+    ],
+    "roll": [
+      {
+        "img": "/images/home-slider/specialfood_1.svg",
+        "name": "Món chính 1",
+        "desc": "Món chính 1",
+        "price": 60000,
+        "bestSeller": true
+      },
+      {
+        "img": "/images/home-slider/specialfood_2.svg",
+        "name": "Món chính 1",
+        "desc": "Món chính 1",
+        "price": 60000,
+        "bestSeller": true
+      },
+      {
+        "img": "/images/home-slider/specialfood_3.svg",
+        "name": "Món chính 1",
+        "desc": "Món chính 1",
+        "price": 60000,
+        "bestSeller": true
+      }
+    ],
+    "mainDish": [{}],
+    "hotPot": [{}],
+    "ricePortion": [{}],
+    "soup": [{}],
+    "saltDish": [{}],
+    "dessert": [{}]
+  },
+  "drink": {
+    "tea": [
+      {
+        "img": "/images/main-dishes/mainDishes_1.svg",
+        "name": "Món chính 1",
+        "desc": "Món chính 1",
+        "price": 55,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_2.svg",
+        "name": "Món chính 2",
+        "desc": "Món chính 2",
+        "price": 55,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_3.svg",
+        "name": "Món chính 3",
+        "desc": "Món chính 3",
+        "price": 55,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_4.svg",
+        "name": "Món chính 4",
+        "desc": "Món chính 4",
+        "price": 55,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_5.svg",
+        "name": "Món chính 5",
+        "desc": "Món chính 5",
+        "price": 55,
+        "bestSeller": false
+      },
+      {
+        "img": "/images/main-dishes/mainDishes_6.svg",
+        "name": "Món chính 6",
+        "desc": "Món chính 6",
+        "price": 55,
+        "bestSeller": false
+      }
+    ],
+    "juice": [{}],
+    "coffee": [{}],
+    "thaiTea": [{}],
+    "softDrinks": [{}],
+    "soda": [{}]
+  }
+}

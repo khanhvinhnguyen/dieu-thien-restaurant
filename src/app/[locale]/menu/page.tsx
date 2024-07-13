@@ -5,7 +5,7 @@ import { Tabs } from "antd";
 import "antd/dist/reset.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -13,152 +13,16 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const foodMenuTabs = [
-  "appetizer",
-  "roll",
-  "mainDish",
-  "hotPot",
-  "ricePortion",
-  "soup",
-  "saltDish",
-  "dessert",
-].map((key) => ({ key, icon: `/icons/${key}.svg` }));
-
-const drinkMenuTabs = [
-  "tea",
-  "juice",
-  "coffee",
-  "thaiTea",
-  "softDrinks",
-  "soda",
-].map((key) => ({ key, icon: `/icons/${key}.svg` }));
-
-const foodMenu = {
-  appetizer: [
-    {
-      img: "/images/main-dishes/mainDishes_1.svg",
-      name: "Món chính 1",
-      desc: "Món chính 1",
-      price: 55000,
-      bestSeller: true,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_2.svg",
-      name: "Món chính 2",
-      desc: "Món chính 2",
-      price: 55000,
-      bestSeller: true,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_3.svg",
-      name: "Món chính 3",
-      desc: "Món chính 3",
-      price: 55000,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_4.svg",
-      name: "Món chính 4",
-      desc: "Món chính 4",
-      price: 55000,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_5.svg",
-      name: "Món chính 5",
-      desc: "Món chính 5",
-      price: 55000,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_6.svg",
-      name: "Món chính 6",
-      desc: "Món chính 6",
-      price: 55000,
-      bestSeller: false,
-    },
-  ],
-  roll: [
-    {
-      img: "/images/home-slider/specialfood_1.svg",
-      name: "Món chính 1",
-      desc: "Món chính 1",
-      price: 60000,
-      bestSeller: true,
-    },
-    {
-      img: "/images/home-slider/specialfood_2.svg",
-      name: "Món chính 1",
-      desc: "Món chính 1",
-      price: 60000,
-      bestSeller: true,
-    },
-    {
-      img: "/images/home-slider/specialfood_3.svg",
-      name: "Món chính 1",
-      desc: "Món chính 1",
-      price: 60000,
-      bestSeller: true,
-    },
-  ],
-  mainDish: [{}],
-  hotPot: [{}],
-  ricePortion: [{}],
-  soup: [{}],
-  saltDish: [{}],
-  dessert: [{}],
+const fetchCategories = async () => {
+  const res = await fetch("/data/category.json");
+  const data = await res.json();
+  return data;
 };
 
-const drinkMenu = {
-  tea: [
-    {
-      img: "/images/main-dishes/mainDishes_1.svg",
-      name: "Món chính 1",
-      desc: "Món chính 1",
-      price: 55,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_2.svg",
-      name: "Món chính 2",
-      desc: "Món chính 2",
-      price: 55,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_3.svg",
-      name: "Món chính 3",
-      desc: "Món chính 3",
-      price: 55,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_4.svg",
-      name: "Món chính 4",
-      desc: "Món chính 4",
-      price: 55,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_5.svg",
-      name: "Món chính 5",
-      desc: "Món chính 5",
-      price: 55,
-      bestSeller: false,
-    },
-    {
-      img: "/images/main-dishes/mainDishes_6.svg",
-      name: "Món chính 6",
-      desc: "Món chính 6",
-      price: 55,
-      bestSeller: false,
-    },
-  ],
-  juice: [{}],
-  coffee: [{}],
-  thaiTea: [{}],
-  softDrinks: [{}],
-  soda: [{}],
+const fetchMenu = async () => {
+  const res = await fetch("/data/menu.json");
+  const data = await res.json();
+  return data;
 };
 
 const Menu = () => {
@@ -166,6 +30,20 @@ const Menu = () => {
 
   const [foodThumbsSwiper, setFoodThumbsSwiper] = useState<any>({});
   const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState<any>({});
+  const [categories, setCategories] = useState({ food: [], drink: [] });
+  const [menu, setMenu] = useState({ food: {}, drink: {} });
+
+  useEffect(() => {
+    const loadData = async () => {
+      const categoryData = await fetchCategories();
+      setCategories(categoryData);
+
+      const menuData = await fetchMenu();
+      setMenu(menuData);
+    };
+
+    loadData();
+  }, []);
 
   const renderMenuItems = (menu, tabs, thumbsSwiper, setThumbsSwiper) => {
     return Object.keys(menu).map((category, i) => ({
@@ -182,7 +60,7 @@ const Menu = () => {
               <Swiper
                 loop={true}
                 spaceBetween={10}
-                thumbs={{ swiper: thumbsSwiper || null }}
+                thumbs={{ swiper: thumbsSwiper[category] || null }}
                 modules={[FreeMode, Thumbs]}
                 className="swiper--item-info"
               >
@@ -220,7 +98,9 @@ const Menu = () => {
               </Swiper>
             </div>
             <Swiper
-              onSwiper={setThumbsSwiper}
+              onSwiper={(swiper) =>
+                setThumbsSwiper((prev) => ({ ...prev, [category]: swiper }))
+              }
               spaceBetween={10}
               slidesPerView={4}
               freeMode={true}
@@ -241,47 +121,19 @@ const Menu = () => {
     }));
   };
 
-  const foodMenuItems = Object.keys(foodMenu).map((category, i) => ({
-    icon: (
-      <img
-        src={foodMenuTabs[i].icon}
-        className="svg-icon"
-        width={40}
-        height={40}
-      />
-    ),
-    label: t(`${category}`),
-    key: category,
-    children: renderMenuItems(
-      foodMenu,
-      foodMenuTabs,
-      foodThumbsSwiper[category],
-      (swiper: any) => {
-        setFoodThumbsSwiper((prev) => ({ ...prev, [category]: swiper }));
-      }
-    )[i].children,
-  }));
+  const foodMenuItems = renderMenuItems(
+    menu.food,
+    categories.food,
+    foodThumbsSwiper,
+    setFoodThumbsSwiper
+  );
 
-  const drinkMenuItems = Object.keys(drinkMenu).map((category, i) => ({
-    icon: (
-      <img
-        src={drinkMenuTabs[i].icon}
-        className="svg-icon"
-        width={40}
-        height={40}
-      />
-    ),
-    label: t(`${category}`),
-    key: category,
-    children: renderMenuItems(
-      drinkMenu,
-      drinkMenuTabs,
-      drinkThumbsSwiper[category],
-      (swiper) => {
-        setDrinkThumbsSwiper((prev) => ({ ...prev, [category]: swiper }));
-      }
-    )[i].children,
-  }));
+  const drinkMenuItems = renderMenuItems(
+    menu.drink,
+    categories.drink,
+    drinkThumbsSwiper,
+    setDrinkThumbsSwiper
+  );
 
   return (
     <div className="menu">

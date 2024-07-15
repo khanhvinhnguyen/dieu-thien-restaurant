@@ -1,5 +1,4 @@
-import { AntdRegistry } from "@ant-design/nextjs-registry";
-import "antd/dist/reset.css";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import "./globals.css";
 
 import { Metadata } from "next";
@@ -21,7 +20,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => (
       />
     </head>
     <body>
-      <AntdRegistry>{children}</AntdRegistry>
+      <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
     </body>
   </html>
 );

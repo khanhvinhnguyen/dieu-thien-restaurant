@@ -1,13 +1,50 @@
 "use client";
-import React from "react";
+import "animate.css";
 import { useTranslations } from "next-intl";
-import LocalSwitcher from "./LocalSwitcher";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
+import LocalSwitcher from "./LocalSwitcher";
 
-const Header = () => {
+type HeaderProps = {
+  scrollTop?: number;
+};
+
+const Header = ({ scrollTop }: HeaderProps) => {
   const t = useTranslations();
+  const [visible, setVisible] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const timerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    handleScroll();
+  }, [scrollTop]);
+
+  const handleScroll = () => {
+    const currentScrollPos = scrollTop!;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50);
+    setPrevScrollPos(currentScrollPos);
+    // Clear the timer if it exists
+    if (timerRef.current !== null) {
+      clearTimeout(timerRef.current);
+    }
+
+    // Set a timer to show the header after 500ms when scrolling up
+    if (prevScrollPos > currentScrollPos) {
+      timerRef.current = window.setTimeout(() => {
+        setVisible(true);
+      }, 500);
+    }
+  };
+
   return (
-    <header>
+    <header
+      className={`animate__animated ${
+        scrollTop! > 5 ? "bg-white" : "bg-transparent"
+      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+      style={{
+        opacity: visible ? 1 : 0
+      }}
+    >
       {/* Logo */}
       <a href="/">
         <img id="Logo" src="/images/logo.svg" alt="logo" />

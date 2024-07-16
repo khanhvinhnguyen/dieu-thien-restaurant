@@ -12,6 +12,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "@/styles/home.css";
+import { Link } from "@/navigation";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 const swiperData = [
@@ -105,9 +106,9 @@ export default function Home() {
             Diệu Thiện
           </h4>
           <p dangerouslySetInnerHTML={{ __html: t("homePage.slogan") }} />
-          <a className="menu-button" href="/menu">
+          <Link className="menu-button" href="/menu">
             {t("general.viewMenu")}
-          </a>
+          </Link>
         </div>
       </div>
 

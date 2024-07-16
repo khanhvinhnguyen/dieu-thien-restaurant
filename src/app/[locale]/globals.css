@@ -1,4 +1,3 @@
-/* @import "~antd/dist/reset.css"; */
 :root {
   --background-cream: #ffffec;
   --background-green: #255442;
@@ -103,6 +102,10 @@ header {
   align-items: center;
   padding-left: 5rem;
   padding-right: 5rem;
+  width: -webkit-fill-available;
+  position: fixed;
+  z-index: 999;
+  transition: opacity 0.5s ease-in-out;
 
   .logo__wrapper {
     width: 20%;
@@ -380,14 +383,9 @@ header {
   }
 }
 
-.ant-input,
-.ant-picker {
-  flex: 1 !important;
-  font-size: 16px !important;
-  padding: 0.8rem !important;
-  border: 1px inset light-dark(rgb(118, 118, 118), rgb(133, 133, 133)) !important;
+.MuiTextField-root {
+  flex: 1;
 }
-
 textarea.ant-input {
   max-height: 262px !important;
 }

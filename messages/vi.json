@@ -3,13 +3,13 @@
     "home": "Trang chủ",
     "aboutUs": "Về chúng tôi",
     "menu": "Thực đơn",
-    "viewMenu": "Xem thực đơn",    
+    "viewMenu": "Xem thực đơn",
     "contact": "Liên hệ",
     "contactUs": "Liên hệ với chúng tôi",
     "order": "Đặt bàn",
     "address": "Địa chỉ",
     "phoneNumber": "Số điện thoại",
-    "email": "Email",
+    "email": "Địa chỉ email",
     "directional": "Điều hướng",
     "copyright": "© Bản quyền thuộc về nhà hàng chay Diệu Thiện"
   },
@@ -22,7 +22,7 @@
   },
   "aboutUsPage": {
     "buddhistScripture": "Ăn chay là thiện nghiệp <br/>Phát khởi từ bi tâm <br/>Khẩu chay ý thanh tịnh <br/>Đạo hành yên an bình",
-    "outRestaurant": "Nhà hãng chúng tôi",
+    "outRestaurant": "Nhà hàng chúng tôi",
     "outRestaurantDesc": "Tại nhà hàng chay, bạn sẽ được trải nghiệm hương vị tinh tế của các món ăn chay độc đáo và phong phú, từ các món chay truyền thống đến những sáng tạo hiện đại. <br/><br/>Không chỉ là trải nghiệm ẩm thực, mà còn là cơ hội để tận hưởng không gian yên bình và tâm hồn thanh thản trong bữa ăn. <br/><br/>Sự phục vụ tận tình và không gian đẹp mắt tạo ra một trải nghiệm ẩm thực chay đáng nhớ, kích thích cả vị giác và tâm hồn.",
     "cozySpace": "Không gian ấm cúng",
     "cozySpaceDesc": "Nhà hàng chay của chúng tôi là một không gian thanh lịch và ấm cúng, với trang trí tinh tế và sự sắp xếp hài hòa. <br /><br />Thực đơn đa dạng và sáng tạo của chúng tôi mang lại cho thực khách trải nghiệm ẩm thực chay độc đáo và phong phú. <br /><br />Không chỉ là nơi thưởng thức món ăn ngon và lành mạnh, nhà hàng chay của chúng tôi còn là điểm đến lý tưởng để thư giãn và thưởng thức hương vị tự nhiên.",
@@ -75,5 +75,5 @@
     "notesLabel": "Ghi chú",
     "footer": "Chúng tôi mong được phục vụ bạn tại nhà hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ thêm, xin đừng ngần ngại liên hệ với chúng tôi.",
     "regards": "Trân trọng,<br/>Nhà hàng Diệu Thiện"
-  }  
+  }
 }

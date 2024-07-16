@@ -4,6 +4,7 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "@/styles/swiper3d.css";
+import { translate } from "googleapis/build/src/apis/translate";
 
 interface Swiper3DProps {
   data: {
@@ -21,7 +22,7 @@ const Swiper3D = (props: Swiper3DProps) => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        autoplay={{ delay: 1500 }}
+        autoplay={{ delay: 2000 }}
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
@@ -31,6 +32,15 @@ const Swiper3D = (props: Swiper3DProps) => {
         }}
         pagination={{ el: ".swiper3d-pagination", clickable: true }}
         modules={[Autoplay, EffectCoverflow, Pagination]}
+        slidesPerGroup={1}
+        spaceBetween={100}
+
+        onSetTranslate={(swiper, translate) => {
+          console.log(swiper)
+          console.log(translate)
+        }}
+
+
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
@@ -42,7 +52,7 @@ const Swiper3D = (props: Swiper3DProps) => {
           <div className="swiper3d-pagination"></div>
         </div>
       </Swiper>
-    </div>
+    </div >
   );
 };
 

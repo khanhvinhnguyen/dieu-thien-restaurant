@@ -62,25 +62,22 @@
     background-color: var(--background-cream);
     justify-content: center;
     align-items: center;
-    gap: 64px;
+    gap: 4rem;
   }
 
   .special-menu {
-    height: 832px;
+    height: 52rem;
     background-color: var(--background-green);
     align-content: center;
 
     h1 {
       padding-top: 5%;
-      color: var(--text-color-cream);
-      font-weight: 700;
-      font-size: 3rem;
       text-align: center;
     }
   }
 
   .order {
-    height: 832px;
+    height: 52rem;
     background-color: var(--background-cream);
     text-align: center;
 
@@ -95,8 +92,10 @@
 
     p {
       margin-top: 0;
+      margin: 0 auto;
       margin-bottom: 1em;
-      padding: 0 25%;
+      text-align: center;
+      max-width: 1000px;
     }
   }
 }

@@ -1,7 +1,7 @@
 /* Swiper3D specific styles */
 .swiper3d-container {
   max-width: 124rem;
-  padding: 2rem 9rem;
+  padding: 2rem 1rem;
   margin: 0 auto;
 }
 
@@ -14,8 +14,23 @@
   width: 37rem;
   height: 27rem;
   position: relative;
+  opacity: 0.5;
+}
+.swiper3d-container .swiper-3d {
+  perspective: 800px;
 }
 
+.swiper3d-container .swiper-slide.swiper-slide-prev,
+.swiper3d-container .swiper-slide.swiper-slide-next {
+  opacity: 0.8;
+}
+
+.swiper3d-container .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.swiper3d-container .swiper-slide.swiper-slide-active img {
+  box-shadow: 3px 3px 8px rgba(255, 255, 236, 0.4);
+}
 @media (max-width: 500px) {
   .swiper3d-container .swiper {
     height: 47rem;
@@ -33,7 +48,7 @@
 .swiper3d-container .swiper-slide img {
   width: 37rem;
   height: 25rem;
-  border-radius: 2rem;
+  border-radius: 1.25rem;
   object-fit: cover;
 }
 

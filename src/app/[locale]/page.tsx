@@ -123,7 +123,7 @@ export default function Home() {
         />
       </div>
       <div className="special-menu">
-        <h1>{t("homePage.specialFood")}</h1>
+        <h1 className="heading1 cream-text">{t("homePage.specialFood")}</h1>
         <Swiper3D data={swiper3Ddata} />
       </div>
 
@@ -132,7 +132,6 @@ export default function Home() {
         <p dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }} />
         <div
           className="column-container"
-          style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
         >
           {orderData.map((item, index) => {
             return (

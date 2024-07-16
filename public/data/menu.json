@@ -2,127 +2,122 @@
   "food": {
     "appetizer": [
       {
-        "img": "/images/main-dishes/mainDishes_1.svg",
-        "name": "Món chính 1",
-        "desc": "Món chính 1",
+        "category": "appetizer",
+        "name": "Mì ý",
         "price": 55000,
-        "bestSeller": true
-      },
+        "desc": "Mì ý",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      }
+    ],
+    "mainDish": [
       {
-        "img": "/images/main-dishes/mainDishes_2.svg",
-        "name": "Món chính 2",
-        "desc": "Món chính 2",
-        "price": 55000,
-        "bestSeller": true
-      },
-      {
-        "img": "/images/main-dishes/mainDishes_3.svg",
-        "name": "Món chính 3",
-        "desc": "Món chính 3",
-        "price": 55000,
+        "category": "mainDish",
+        "name": "Hàu",
+        "price": 56000,
+        "desc": "Hàu",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "img": "/images/main-dishes/mainDishes_4.svg",
-        "name": "Món chính 4",
-        "desc": "Món chính 4",
-        "price": 55000,
+        "category": "mainDish",
+        "name": "Ngũ dị",
+        "price": 57000,
+        "desc": "Ngũ dị",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "img": "/images/main-dishes/mainDishes_5.svg",
-        "name": "Món chính 5",
-        "desc": "Món chính 5",
-        "price": 55000,
+        "category": "mainDish",
+        "name": "Cơm chiên",
+        "price": 58000,
+        "desc": "Cơm chiên",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "img": "/images/main-dishes/mainDishes_6.svg",
-        "name": "Món chính 6",
-        "desc": "Món chính 6",
-        "price": 55000,
+        "category": "mainDish",
+        "name": "Nồi đất ư ư",
+        "price": 59000,
+        "desc": "Nồi đất ư ư",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "category": "mainDish",
+        "name": "Cơm chiên nhưng đổi góc chụp",
+        "price": 60000,
+        "desc": "Cơm chiên nhưng đổi góc chụp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       }
     ],
     "roll": [
       {
-        "img": "/images/home-slider/specialfood_1.svg",
-        "name": "Món chính 1",
-        "desc": "Món chính 1",
-        "price": 60000,
+        "category": "roll",
+        "name": "Cơm chiên nhưng đổi góc chụp",
+        "price": 61000,
+        "desc": "Cơm chiên nhưng đổi góc chụp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_2.svg?alt=media&token=7e45b7a5-98f9-4820-be7d-133437aff9e5",
+        "bestSeller": false
+      },
+      {
+        "category": "roll",
+        "name": "Nồi đất ư ư",
+        "price": 62000,
+        "desc": "Nồi đất ư ư",
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": true
       },
       {
-        "img": "/images/home-slider/specialfood_2.svg",
-        "name": "Món chính 1",
-        "desc": "Món chính 1",
-        "price": 60000,
-        "bestSeller": true
+        "category": "roll",
+        "bestSeller": false
       },
       {
-        "img": "/images/home-slider/specialfood_3.svg",
-        "name": "Món chính 1",
-        "desc": "Món chính 1",
-        "price": 60000,
-        "bestSeller": true
+        "category": "roll",
+        "bestSeller": false
+      },
+      {
+        "category": "roll",
+        "bestSeller": false
       }
-    ],
-    "mainDish": [{}],
-    "hotPot": [{}],
-    "ricePortion": [{}],
-    "soup": [{}],
-    "saltDish": [{}],
-    "dessert": [{}]
+    ]
   },
   "drink": {
     "tea": [
       {
-        "img": "/images/main-dishes/mainDishes_1.svg",
-        "name": "Món chính 1",
-        "desc": "Món chính 1",
-        "price": 55,
-        "bestSeller": false
-      },
-      {
-        "img": "/images/main-dishes/mainDishes_2.svg",
-        "name": "Món chính 2",
-        "desc": "Món chính 2",
-        "price": 55,
-        "bestSeller": false
-      },
-      {
-        "img": "/images/main-dishes/mainDishes_3.svg",
-        "name": "Món chính 3",
-        "desc": "Món chính 3",
-        "price": 55,
-        "bestSeller": false
-      },
-      {
-        "img": "/images/main-dishes/mainDishes_4.svg",
-        "name": "Món chính 4",
-        "desc": "Món chính 4",
-        "price": 55,
-        "bestSeller": false
-      },
-      {
-        "img": "/images/main-dishes/mainDishes_5.svg",
-        "name": "Món chính 5",
-        "desc": "Món chính 5",
-        "price": 55,
-        "bestSeller": false
-      },
-      {
-        "img": "/images/main-dishes/mainDishes_6.svg",
-        "name": "Món chính 6",
-        "desc": "Món chính 6",
-        "price": 55,
-        "bestSeller": false
+        "category": "tea",
+        "name": "Trà",
+        "price": 550000,
+        "desc": "Trà",
+        "bestSeller": true
       }
     ],
-    "juice": [{}],
-    "coffee": [{}],
-    "thaiTea": [{}],
-    "softDrinks": [{}],
-    "soda": [{}]
+    "undefined": [
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      },
+      {
+        "bestSeller": false
+      }
+    ]
   }
 }

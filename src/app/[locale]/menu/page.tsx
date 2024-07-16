@@ -2,9 +2,7 @@
 import "@/styles/menu.css";
 import { Validate } from "@/utils/validate";
 import { Tabs } from "antd";
-import "antd/dist/reset.css";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -68,7 +66,7 @@ const Menu = () => {
                   <SwiperSlide key={index}>
                     <div className="item-info">
                       <div className="item-info__img">
-                        <Image
+                        <img
                           className="swiper--item-img"
                           src={item.img}
                           alt="food"
@@ -76,7 +74,7 @@ const Menu = () => {
                           height={350}
                         />
                         {item.bestSeller && (
-                          <Image
+                          <img
                             className="item-favorite"
                             src="/images/bestSeller.svg"
                             alt="favorite"
@@ -137,7 +135,7 @@ const Menu = () => {
 
   return (
     <div className="menu">
-      <Image
+      <img
         src="/images/menu_banner.svg"
         alt="menu"
         width={0}

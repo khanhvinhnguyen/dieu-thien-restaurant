@@ -36,6 +36,7 @@
   "menuPage": {
     "food": "Menu",
     "beverage": "Beverage",
+    "ingredient": "Ingredients",
     "appetizer": "Appetizer",
     "roll": "Roll",
     "mainDish": "Main dish",

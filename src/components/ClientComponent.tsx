@@ -15,7 +15,6 @@ export default function ClientComponent({
       const scrollTopValue =
         document.documentElement.scrollTop || document.body.scrollTop;
 
-      console.log("scrollTopValue", scrollTopValue);
       setScrollTop(scrollTopValue);
     };
 

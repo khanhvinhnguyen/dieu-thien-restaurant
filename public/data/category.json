@@ -31,6 +31,10 @@
     {
       "key": "dessert",
       "icon": "/icons/dessert.svg"
+    },
+    {
+      "key": "salad",
+      "icon": "/icons/salad.svg"
     }
   ],
   "drink": [

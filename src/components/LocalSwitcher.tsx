@@ -27,15 +27,15 @@ const LocalSwitcher = () => {
             ? "/images/flags/England.svg"
             : "/images/flags/China.svg"
         }
-        height={24}
-        width={32}
+        height={20}
+        width={30}
         alt="lang"
       />
       <div className="custom-select-wrapper">
         <select value={localActive} onChange={(e) => onSelectChange(e)}>
-          <option value="vi">VN</option>
+          <option value="vi">VI</option>
           <option value="en">EN</option>
-          <option value="zh">CN</option>
+          <option value="zh">CHI</option>
         </select>
       </div>
     </div>

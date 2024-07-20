@@ -85,7 +85,10 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="about-us__content" style={{ backgroundColor: `#255442` }}>
+      <div
+        className="about-us__content"
+        style={{ backgroundColor: `#255442`, color: `#fffec` }}
+      >
         {aboutUsData.map(
           (item, index) =>
             item && (
@@ -106,12 +109,9 @@ const AboutUs = () => {
       </div>
 
       <div className="feedback">
-        <h1>{about("feedbackCustomer")}</h1>
-        <p>{about("feedbackDesc")}</p>
-        <div
-          className="column-container"
-          style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
-        >
+        <h1 className="heading1 cream-text">{about("feedbackCustomer")}</h1>
+        <p className="cream-text">{about("feedbackDesc")}</p>
+        <div className="column-container">
           {feedbackData.map((item, index) => {
             return (
               <div className="feedback__content" key={index}>
@@ -123,8 +123,8 @@ const AboutUs = () => {
                       alt="avatar"
                       sizes="70"
                     />
-                    <p className="content">{item.content}</p>
-                    <p className="userName">{item.userName}</p>
+                    <p className="content cream-text">{item.content}</p>
+                    <p className="userName cream-text">{item.userName}</p>
                   </div>
                 </a>
               </div>

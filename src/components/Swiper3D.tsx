@@ -1,9 +1,9 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import "@/styles/swiper3d.css";
+import Image from "next/image";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "@/styles/swiper3d.css";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Swiper3DProps {
   data: {
@@ -34,7 +34,7 @@ const Swiper3D = (props: Swiper3DProps) => {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item.image} alt={item.alt} />
+            <Image src={item.image} alt={item.alt} />
           </SwiperSlide>
         ))}
 

@@ -85,9 +85,9 @@ export default function Home() {
           onSwiper={() => {}}
           onSlideChange={() => {}}
         >
-          {swiperData.map((item) => {
+          {swiperData.map((item, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <Image
                   src={item.image}
                   alt={item.alt}
@@ -134,9 +134,9 @@ export default function Home() {
           className="column-container"
           style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
         >
-          {orderData.map((item) => {
+          {orderData.map((item, index) => {
             return (
-              <div className="column">
+              <div className="column" key={index}>
                 <ImageComponent
                   src={item.image}
                   alt={item.alt}

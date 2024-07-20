@@ -1,7 +1,8 @@
 "use client";
 import "animate.css";
 import { useTranslations } from "next-intl";
-import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "../navigation";
 import LocalSwitcher from "./LocalSwitcher";
 
@@ -15,11 +16,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const timerRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    handleScroll();
-  }, [scrollTop]);
-
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollPos = scrollTop!;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50);
     setPrevScrollPos(currentScrollPos);
@@ -34,7 +31,11 @@ const Header = ({ scrollTop }: HeaderProps) => {
         setVisible(true);
       }, 500);
     }
-  };
+  }, [scrollTop, prevScrollPos]);
+
+  useEffect(() => {
+    handleScroll();
+  }, [scrollTop, handleScroll]);
 
   return (
     <header
@@ -42,12 +43,12 @@ const Header = ({ scrollTop }: HeaderProps) => {
         scrollTop! > 5 ? "bg-white" : "bg-transparent"
       } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
-        opacity: visible ? 1 : 0
+        opacity: visible ? 1 : 0,
       }}
     >
       {/* Logo */}
       <a href="/">
-        <img id="Logo" src="/images/logo.svg" alt="logo" />
+        <Image id="Logo" src="/images/logo.svg" alt="logo" />
       </a>
 
       {/* Navigation */}

@@ -1,20 +1,62 @@
 {
   "food": [
-    { "key": "appetizer", "icon": "/icons/appetizer.svg" },
-    { "key": "roll", "icon": "/icons/roll.svg" },
-    { "key": "mainDish", "icon": "/icons/mainDish.svg" },
-    { "key": "hotPot", "icon": "/icons/hotPot.svg" },
-    { "key": "ricePortion", "icon": "/icons/ricePortion.svg" },
-    { "key": "soup", "icon": "/icons/soup.svg" },
-    { "key": "saltDish", "icon": "/icons/saltDish.svg" },
-    { "key": "dessert", "icon": "/icons/dessert.svg" }
+    {
+      "key": "appetizer",
+      "icon": "/icons/appetizer.svg"
+    },
+    {
+      "key": "roll",
+      "icon": "/icons/roll.svg"
+    },
+    {
+      "key": "mainDish",
+      "icon": "/icons/mainDish.svg"
+    },
+    {
+      "key": "hotPot",
+      "icon": "/icons/hotPot.svg"
+    },
+    {
+      "key": "ricePortion",
+      "icon": "/icons/ricePortion.svg"
+    },
+    {
+      "key": "soup",
+      "icon": "/icons/soup.svg"
+    },
+    {
+      "key": "saltDish",
+      "icon": "/icons/saltDish.svg"
+    },
+    {
+      "key": "dessert",
+      "icon": "/icons/dessert.svg"
+    }
   ],
   "drink": [
-    { "key": "tea", "icon": "/icons/tea.svg" },
-    { "key": "juice", "icon": "/icons/juice.svg" },
-    { "key": "coffee", "icon": "/icons/coffee.svg" },
-    { "key": "thaiTea", "icon": "/icons/thaiTea.svg" },
-    { "key": "softDrinks", "icon": "/icons/softDrinks.svg" },
-    { "key": "soda", "icon": "/icons/soda.svg" }
+    {
+      "key": "tea",
+      "icon": "/icons/tea.svg"
+    },
+    {
+      "key": "juice",
+      "icon": "/icons/juice.svg"
+    },
+    {
+      "key": "coffee",
+      "icon": "/icons/coffee.svg"
+    },
+    {
+      "key": "thaiTea",
+      "icon": "/icons/thaiTea.svg"
+    },
+    {
+      "key": "softdrinks",
+      "icon": "/icons/softdrinks.svg"
+    },
+    {
+      "key": "soda",
+      "icon": "/icons/soda.svg"
+    }
   ]
 }

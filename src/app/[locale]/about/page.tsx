@@ -86,21 +86,23 @@ const AboutUs = () => {
       </div>
 
       <div className="about-us__content" style={{ backgroundColor: `#255442` }}>
-        {aboutUsData.map((item) => {
-          return (
-            <SectionImgText
-              title={item.title}
-              text={item.text}
-              src={item.src}
-              alt={item.alt}
-              reverse={item.reverse}
-              width={0}
-              height={0}
-              stylesImg={{ width: "38.5%", height: "auto" }}
-              stylesText={{ color: "#FFFFEC" }}
-            />
-          );
-        })}
+        {aboutUsData.map(
+          (item, index) =>
+            item && (
+              <SectionImgText
+                key={index}
+                title={item.title}
+                text={item.text}
+                src={item.src}
+                alt={item.alt}
+                reverse={item.reverse}
+                width={0}
+                height={0}
+                stylesImg={{ width: "38.5%", height: "auto" }}
+                stylesText={{ color: "#FFFFEC" }}
+              />
+            )
+        )}
       </div>
 
       <div className="feedback">
@@ -110,12 +112,12 @@ const AboutUs = () => {
           className="column-container"
           style={{ padding: "0 83px", paddingTop: "44px", gap: "36px" }}
         >
-          {feedbackData.map((item) => {
+          {feedbackData.map((item, index) => {
             return (
-              <div className="feedback__content">
+              <div className="feedback__content" key={index}>
                 <a href={item.url}>
                   <div className="text--border-tlbr">
-                    <img
+                    <Image
                       className="avatar"
                       src={item.avatar}
                       alt="avatar"

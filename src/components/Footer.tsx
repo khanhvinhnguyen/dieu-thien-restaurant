@@ -1,10 +1,10 @@
-import React from "react";
+import "@/styles/footer.css";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { BsTelephone } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import { MdOutlinePlace } from "react-icons/md";
 import { Link } from "../navigation";
-import "@/styles/footer.css";
 
 const Footer = () => {
   const t = useTranslations();
@@ -13,7 +13,7 @@ const Footer = () => {
     <footer>
       <div className="column-container">
         <div className="column">
-          <img id="Logo" src="/images/logo.svg" alt="logo" />
+          <Image id="Logo" src="/images/logo.svg" alt="logo" />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">
             <MdOutlinePlace />8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương
           </a>

@@ -16,7 +16,7 @@ const ContactPage = () => {
         style={{ width: "100%", height: "auto" }}
       />
       <div className={styles.contactInfo}>
-        <h1 className={styles.title}>{t("general.contactUs")}</h1>
+        <h1 className="heading1" style={{ marginBottom: `4rem ` }}>{t("general.contactUs")}</h1>
         <div className={styles.row}>
           <a
             className={styles.column}
@@ -28,22 +28,25 @@ const ContactPage = () => {
               width={48}
               height={48}
             />
-            <h5>{t("general.address")}</h5>
+            <h5 className="heading3">{t("general.address")}</h5>
             <p>8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>
           </a>
           <div className={styles.column}>
-            <Image
-              src={"/icons/phone.svg"}
-              alt="phone"
-              width={48}
-              height={48}
-            />
-            <h5>{t("general.phoneNumber")}</h5>
-            <p>085-677-9886</p>
+            <a>
+              <Image
+                src={"/icons/phone.svg"}
+                alt="phone"
+                width={48}
+                height={48}
+              />
+              <h5 className="heading3"> {t("general.phoneNumber")}</h5>
+              <p>085-677-9886</p>
+            </a>
+
           </div>
           <a href="mailto:dieuthien@gmail.com" className={styles.column}>
             <Image src={"/icons/note.svg"} alt="email" width={48} height={48} />
-            <h5>{t("general.email")}</h5>
+            <h5 className="heading3">{t("general.email")}</h5>
             <p>dieuthien@gmail.com</p>
           </a>
         </div>

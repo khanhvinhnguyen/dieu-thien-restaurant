@@ -65,8 +65,8 @@ const SectionImgText = (props: SectionProps) => {
         style={{ flexDirection: reverse ? "row-reverse" : "row" }}
       >
         <div className="section__text" style={stylesText}>
-          <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
-          <p dangerouslySetInnerHTML={{ __html: text }}></p>
+          <h1 style={stylesText} className="heading1" dangerouslySetInnerHTML={{ __html: title }}></h1>
+          <p style={stylesText} dangerouslySetInnerHTML={{ __html: text }}></p>
         </div>
         {renderImages()}
       </div>

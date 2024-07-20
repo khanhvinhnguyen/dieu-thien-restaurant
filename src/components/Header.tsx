@@ -2,7 +2,7 @@
 import "animate.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
 import LocalSwitcher from "./LocalSwitcher";
 
@@ -16,7 +16,11 @@ const Header = ({ scrollTop }: HeaderProps) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const timerRef = useRef<number | null>(null);
 
-  const handleScroll = useCallback(() => {
+  useEffect(() => {
+    handleScroll();
+  }, [scrollTop]);
+
+  const handleScroll = () => {
     const currentScrollPos = scrollTop!;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50);
     setPrevScrollPos(currentScrollPos);
@@ -31,11 +35,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
         setVisible(true);
       }, 500);
     }
-  }, [scrollTop, prevScrollPos]);
-
-  useEffect(() => {
-    handleScroll();
-  }, [scrollTop, handleScroll]);
+  };
 
   return (
     <header
@@ -47,14 +47,26 @@ const Header = ({ scrollTop }: HeaderProps) => {
       }}
     >
       {/* Logo */}
-      <div className="logo__wrapper">
-        <a href="/">
-          <img id="Logo" src="/images/logo.svg" alt="logo" />
-        </a>
-      </div>
+      <a href="/">
+        <Image
+          id="Logo"
+          src="/images/logo.svg"
+          alt="logo"
+          width={60}
+          height={60}
+        />
+      </a>
 
       {/* Navigation */}
-      <div className="header__nav">
+      <div
+        className="header__nav"
+        style={{
+          display: "flex",
+          gap: "24px",
+          color: "#31363F",
+          fontSize: "18px",
+        }}
+      >
         <Link href="/">{t("general.home")}</Link>
         <Link href="/about">{t("general.aboutUs")}</Link>
         <Link href="/menu">{t("general.menu")}</Link>

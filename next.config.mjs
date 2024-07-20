@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['drive.google.com', 'firebasestorage.googleapis.com'],
+    domains: ['drive.google.com', 'firebasestorage.googleapis.com', 'lh3.googleusercontent.com'],
   },
 };
 

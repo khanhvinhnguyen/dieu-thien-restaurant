@@ -143,6 +143,8 @@ const OrderPage = () => {
                   src="/icons/phoneIco.svg"
                   alt="avatar"
                   sizes="70"
+                  width={70}
+                  height={70}
                 />
               </div>
               <p className="title">{t("orderPage.contactNow")}</p>
@@ -156,6 +158,8 @@ const OrderPage = () => {
                   src="/icons/messengerIco.svg"
                   alt="avatar"
                   sizes="70"
+                  width={70}
+                  height={70}
                 />
               </div>
               <p className="title">{t("orderPage.feedback")}</p>

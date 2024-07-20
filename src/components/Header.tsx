@@ -48,13 +48,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
     >
       {/* Logo */}
       <a href="/">
-        <Image
-          id="Logo"
-          src="/images/logo.svg"
-          alt="logo"
-          width={60}
-          height={60}
-        />
+        <Image id="Logo" src="/logo.svg" alt="logo" width={60} height={60} />
       </a>
 
       {/* Navigation */}

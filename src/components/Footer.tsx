@@ -1,7 +1,6 @@
 import "@/styles/footer.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { BsTelephone } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import { MdLocalPhone, MdPlace } from "react-icons/md";
 import { Link } from "../navigation";
@@ -13,13 +12,7 @@ const Footer = () => {
     <footer>
       <div className="column-container">
         <div className="column">
-          <Image
-            id="Logo"
-            src="/images/logo.svg"
-            alt="logo"
-            width={0}
-            height={0}
-          />
+          <Image id="Logo" src="/logo.svg" alt="logo" width={0} height={0} />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">
             <MdPlace />
             <p> 8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>

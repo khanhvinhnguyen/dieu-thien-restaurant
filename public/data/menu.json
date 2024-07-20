@@ -1,121 +1,967 @@
 {
   "food": {
-    "appetizer": [
+    "roll": [
       {
-        "category": "appetizer",
-        "name": "Mì ý",
+        "name": {
+          "vi": "chả giò",
+          "en": "Spring Roll",
+          "zh": "Spring Roll"
+        },
+        "price": 50000,
+        "desc": {
+          "vi": "nhân khoai các loại, cà rốt, mộc nhĩ, bắp, đậu xanh, dùng kèm nước mắm chua ngọt",
+          "en": "Filled with assorted potatoes, carrots, wood ear mushrooms, corn, green beans, served with sweet and sour fish sauce",
+          "zh": "nhân khoai các loại, cà rốt, mộc nhĩ, bắp, đậu xanh, dùng kèm nước mắm chua ngọt"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_2.svg?alt=media&token=7e45b7a5-98f9-4820-be7d-133437aff9e5",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "gỏi cuốn",
+          "en": "Summer Roll",
+          "zh": "Summer Roll "
+        },
+        "price": 50000,
+        "desc": {
+          "vi": "nhân bún tươi, rau thơm các loại, nấm xào thập cẩm dùng kèm xốt đậu phộng",
+          "en": "Fresh vermicelli filling, assorted herbs, mixed stir-fried mushrooms served with peanut sauce",
+          "zh": "nhân bún tươi, rau thơm các loại, nấm xào thập cẩm dùng kèm xốt đậu phộng"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": true
+      },
+      {
+        "name": {
+          "vi": "bì cuốn",
+          "en": "Crystal Autumn Roll",
+          "zh": "Crystal Autumn Roll"
+        },
+        "price": 50000,
+        "desc": {
+          "vi": "nhân khoai các loại, thính, miến, rau thơm các loại, dùng kèm nước mắm chua ngọt",
+          "en": "Filled with assorted potatoes, taro, vermicelli, assorted herbs, served with sweet and sour fish sauce",
+          "zh": "nhân khoai các loại, thính, miến, rau thơm các loại, dùng kèm nước mắm chua ngọt"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "mẹt cuốn",
+          "en": "Veggie Wrap & Roll",
+          "zh": "Veggie Wrap & Roll"
+        },
         "price": 55000,
-        "desc": "Mì ý",
+        "desc": {
+          "vi": "cuốn bành tráng với bún tươi, rau sống các loại, nấm xốt dầu hào, kèm xốt đậu phộng",
+          "en": "Rice paper rolls with fresh vermicelli, assorted raw vegetables, mushrooms in oyster sauce, and peanut sauce",
+          "zh": "cuốn bành tráng với bún tươi, rau sống các loại, nấm xốt dầu hào, kèm xốt đậu phộng"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "bánh xèo",
+          "en": "Vietnamese Pancake",
+          "zh": "Vietnamese Pancake"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nhân giá đỗ, cà rốt, nấm xào thập cẩm, đậu xanh, cuốn bành tráng với rau sống các loại, dùng kèm nước mắm chua ngọt.",
+          "en": "stuffed with bean sprouts, carrots, mixed stir-fried mushrooms, green beans, rolled into rice paper with assorted raw vegetables, served with sweet and sour fish sauce.",
+          "zh": "nhân giá đỗ, cà rốt, nấm xào thập cẩm, đậu xanh, cuốn bành tráng với rau sống các loại, dùng kèm nước mắm chua ngọt."
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "Nấm nướng lá lốt",
+          "en": "Grilled mushrooms rolled in piper lolot",
+          "zh": "Grilled mushrooms rolled in piper lolot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Lá lốt cuộn nấm xào thập cẩm nướng, cuốn bánh tráng với bún tươi, rau sống các loại, dùng kèm mắm nêm chay",
+          "en": "Lolot leaf rolls stir-fried with grilled mixed mushrooms, rice paper rolls with fresh vermicelli, assorted raw vegetables, served with vegetarian seasoning sauce",
+          "zh": "Lá lốt cuộn nấm xào thập cẩm nướng, cuốn bánh tráng với bún tươi, rau sống các loại, dùng kèm mắm nêm chay"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      }
+    ],
+    "hotPot": [
+      {
+        "name": {
+          "vi": "lẩu nấm tiêu xanh",
+          "en": "Green pepper & mushrooms hot pot",
+          "zh": "Green pepper & mushrooms hot pot"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "nước lẩu tiêu xanh ; rau mồng tơi ; rau cải thảo ; rau cải bẹ xanh ; nấm đùi gà ; nấm bào ngư ; nấm kim châm ; đậu hủ non ; dùng kèm nước mắm chay ăn kèm và bún tươi",
+          "en": "green pepper hotpot ; vegetable spinach ; vegetables cabbage ; mustard greens ; chicken drumstick mushrooms ; abalone mushrooms ; enokitake ; Young tofu ; Served with vegetarian fish sauce and fresh vermicelli",
+          "zh": "nước lẩu tiêu xanh ; rau mồng tơi ; rau cải thảo ; rau cải bẹ xanh ; nấm đùi gà ; nấm bào ngư ; nấm kim châm ; đậu hủ non ; dùng kèm nước mắm chay ăn kèm và bún tươi"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "lẩu thái",
+          "en": "Thai hot pot",
+          "zh": "Thai hot pot"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "nước lẩu thái ; rau bắp chuối ; rau cải thảo ; rau muống ; rau cần nước ; nấm đùi gà ; nấm kim châm ; nấm bào ngư ; đậu hủ non dùng kèm với nước mắm chay và bún tươi",
+          "en": "Thai hotpot ; banana vegetables ; vegetables cabbage ; spinach ; Vegetables need water; chicken drumstick mushrooms ; enokitake ; abalone mushrooms ; Soft tofu served with vegetarian fish sauce and fresh vermicelli",
+          "zh": "nước lẩu thái ; rau bắp chuối ; rau cải thảo ; rau muống ; rau cần nước ; nấm đùi gà ; nấm kim châm ; nấm bào ngư ; đậu hủ non dùng kèm với nước mắm chay và bún tươi"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "lẩu sa tế diệu thiện",
+          "en": "Dieu Thien spicy sauce hot pot",
+          "zh": "Dieu Thien spicy sauce hot pot"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "nước lẩu sa tế ; rau mồng tơi ; rau cải thảo ; nấm bào ngư ; nấm đùi gà ; nấm kim châm đen ; đậu hủ ; tàu hủ ki dùng kèm với nước mắm sa tế và bún tươi",
+          "en": "satay hotpot ; vegetable spinach ; vegetables cabbage ; abalone mushrooms ; chicken drumstick mushrooms ; black enoki mushroom ; Tofu ; Tofu ki served with satay fish sauce and fresh vermicelli",
+          "zh": "nước lẩu sa tế ; rau mồng tơi ; rau cải thảo ; nấm bào ngư ; nấm đùi gà ; nấm kim châm đen ; đậu hủ ; tàu hủ ki dùng kèm với nước mắm sa tế và bún tươi"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "lẩu chao",
+          "en": "furmented bean curd hot pot",
+          "zh": "furmented bean curd hot pot"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "nước lẩu chao ; rau mồng tơi ; rau cải thảo ; rau cải bẹ xanh ; nấm đùi gà ; nấm bào ngư ; tàu hủ ki dùng kèm với nước chấm chao chay và bún tươi",
+          "en": "chao hotpot ; vegetable spinach ; vegetables cabbage ; mustard greens ; chicken drumstick mushrooms ; abalone mushrooms ; Tofu ki served with vegetarian dipping sauce and fresh vermicelli",
+          "zh": "nước lẩu chao ; rau mồng tơi ; rau cải thảo ; rau cải bẹ xanh ; nấm đùi gà ; nấm bào ngư ; tàu hủ ki dùng kèm với nước chấm chao chay và bún tươi"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "lẩu kim chi hàn quốc",
+          "en": "korean kimchi hot pot",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "kimchi hotpot ; purple cabbage ; Chinese cabbage ; Abalone mushrooms served with Korean noodles",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "ĐẬU HŨ NON CHIÊN GIÒN CHÀ BÔNG",
+          "en": "Fried Young Tofu with Meat floss",
+          "zh": "Fried Young Tofu with Meat floss"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "đậu hủ non, chà bông chay, rong biển, mỡ hành dùng kèm với mayonnaise tương ớt",
+          "en": "Soft tofu, vegetarian floss, seaweed, onion fat served with mayonnaise and chili sauce",
+          "zh": "đậu hủ non, chà bông chay, rong biển, mỡ hành dùng kèm với mayonnaise tương ớt"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "NẤM bào ngư xốc muối hongkong",
+          "en": "HongKong Salted Oyster Mushrooms",
+          "zh": "HongKong Salted Oyster Mushrooms"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "nấm bào ngư, muối Hong Kong dùng kèm với mayonnaise tương ớt",
+          "en": "abalone mushrooms, Hong Kong salt served with mayonnaise and chili sauce",
+          "zh": "nấm bào ngư, muối Hong Kong dùng kèm với mayonnaise tương ớt"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "ĐẬU NON RONG BIỂN SỐT TERIYAKI",
+          "en": "Seaweed rolled Young Tofu & Teriyaki Sauce",
+          "zh": "Seaweed rolled Young Tofu & Teriyaki Sauce"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "đậu hủ non cuộn rong biển chiên giòn, sốt teriyaki",
+          "en": "Crispy fried seaweed rolled tofu, teriyaki sauce",
+          "zh": "đậu hủ non cuộn rong biển chiên giòn, sốt teriyaki"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "KHOAI TÂY BỌT BIỂN",
+          "en": "spongy spongy potato",
+          "zh": "spongy spongy potato"
+        },
+        "price": 150000,
+        "desc": {
+          "vi": "khoai tây ; chà bông chay ; rong biển dùng với mayonnaise tương ớt",
+          "en": "potato ; vegetarian floss ; Seaweed served with mayonnaise and chili sauce",
+          "zh": "khoai tây ; chà bông chay ; rong biển dùng với mayonnaise tương ớt"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       }
     ],
     "mainDish": [
       {
-        "category": "mainDish",
-        "name": "Hàu",
-        "price": 56000,
-        "desc": "Hàu",
+        "name": {
+          "vi": "cơm chiên rong biển",
+          "en": "fried rice with seaweed",
+          "zh": "fried rice with seaweed"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "cơm, cá mặn chay, chà bông chay, rong biển chay, hành lá (có điều chỉnh)",
+          "en": "rice, vegetarian salted fish, vegetarian floss, vegetarian seaweed, green onions (adjustable)",
+          "zh": "cơm, cá mặn chay, chà bông chay, rong biển chay, hành lá (có điều chỉnh)"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "category": "mainDish",
-        "name": "Ngũ dị",
-        "price": 57000,
-        "desc": "Ngũ dị",
+        "name": {
+          "vi": "cơm chiên thơm kiểu thái",
+          "en": "Thai fried rice with pineapple",
+          "zh": "Thai fried rice with pineapple"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Cơm, thơm, đậu cô ve, cà rốt, bắp Mỹ, hành lá (có thể điều chỉnh)",
+          "en": "Rice, pineapple, green beans, carrots, American corn, green onions (adjustable)",
+          "zh": "Cơm, thơm, đậu cô ve, cà rốt, bắp Mỹ, hành lá (có thể điều chỉnh)"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "category": "mainDish",
-        "name": "Cơm chiên",
-        "price": 58000,
-        "desc": "Cơm chiên",
+        "name": {
+          "vi": "cơm chiên dương châu",
+          "en": "Yang Chow fried rice",
+          "zh": "Yang Chow fried rice"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Cơm chiên dương châu: Cơm, đậu cô ve, cà rốt, bắp Mỹ, hành lá (có thể điều chỉnh)",
+          "en": "Duong Chau fried rice: Rice, green beans, carrots, American corn, green onions (adjustable)",
+          "zh": "Cơm chiên dương châu: Cơm, đậu cô ve, cà rốt, bắp Mỹ, hành lá (có thể điều chỉnh)"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "category": "mainDish",
-        "name": "Nồi đất ư ư",
+        "name": {
+          "vi": "cơm trộn hàn quốc",
+          "en": "korean mixed rice",
+          "zh": "korean mixed rice"
+        },
         "price": 59000,
-        "desc": "Nồi đất ư ư",
+        "desc": {
+          "vi": "Cơm, giá đỗ, bắp cải tím, ớt chuông, bắp Mỹ, đậu phông rim mè, nấm chiên, dùng kèm xốt cơm trộn Hàn Quốc",
+          "en": "Rice, bean sprouts, purple cabbage, bell pepper, American corn, sesame peanuts, fried mushrooms, served with Korean mixed rice sauce",
+          "zh": "Cơm, giá đỗ, bắp cải tím, ớt chuông, bắp Mỹ, đậu phông rim mè, nấm chiên, dùng kèm xốt cơm trộn Hàn Quốc"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "category": "mainDish",
-        "name": "Cơm chiên nhưng đổi góc chụp",
-        "price": 60000,
-        "desc": "Cơm chiên nhưng đổi góc chụp",
+        "name": {
+          "vi": "cơm nấm lúc lắc & canh rau củ",
+          "en": "saute dice mushroom rice & curry soup",
+          "zh": "saute dice mushroom rice & curry soup"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Cơm, nấm đùi gà, ớt chuông, hành tây, tỏi phi, xốt lúc lắc dùng kèm canh rau củ",
+          "en": "Rice, chicken drumstick mushrooms, bell peppers, onions, fried garlic, shake sauce served with vegetable soup",
+          "zh": "Cơm, nấm đùi gà, ớt chuông, hành tây, tỏi phi, xốt lúc lắc dùng kèm canh rau củ"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "cơm cà ri & canh rau củ",
+          "en": "curry rice & veggy soup",
+          "zh": "curry rice & veggy soup"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Cơm, nấm đùi gà, khoai lang, cà rốt, khoai môn, nước cốt dừa, gia vị cà ri, dùng kèm canh rau củ",
+          "en": "Rice, chicken drumstick mushrooms, sweet potatoes, carrots, taro, coconut milk, curry spices, served with vegetable soup",
+          "zh": "Cơm, nấm đùi gà, khoai lang, cà rốt, khoai môn, nước cốt dừa, gia vị cà ri, dùng kèm canh rau củ"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "MIẾN TRỘN",
+          "en": "korean kimchi hot pot",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "miến Hàn Quốc, cải thìa, bắp cải tím, cà rốt, nấm bào ngư chiên, xốt miến trộn.",
+          "en": "Korean vermicelli, bok choy, purple cabbage, carrots, fried abalone mushrooms, mixed vermicelli sauce.",
+          "zh": "miến Hàn Quốc, cải thìa, bắp cải tím, cà rốt, nấm bào ngư chiên, xốt miến trộn."
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "PAD thái",
+          "en": "korean kimchi hot pot",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "hủ tiếu, giá đỗ, hẹ, đậu hũ chiên, nấm chiên, xốt me, dùng kèm lạc rang, ớt, chanh.",
+          "en": "rice noodles, bean sprouts, chives, fried tofu, fried mushrooms, tamarind sauce, served with roasted peanuts, chili, lemon.",
+          "zh": "hủ tiếu, giá đỗ, hẹ, đậu hũ chiên, nấm chiên, xốt me, dùng kèm lạc rang, ớt, chanh."
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "HỦ TIẾU ÁP CHẢO",
+          "en": "korean kimchi hot pot",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Hủ tiếu, ớt chuông, cải thảo, hành tây, cải thài, đậu hũ chiên, nấm chiên, tỏi phi.",
+          "en": "rice noodles, bean sprouts, chives, fried tofu, fried mushrooms, tamarind sauce, served with roasted peanuts, chili, lemon.",
+          "zh": "Hủ tiếu, ớt chuông, cải thảo, hành tây, cải thài, đậu hũ chiên, nấm chiên, tỏi phi."
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "MÌ vàng XÀO THẬP CẨM\nquốc",
+          "en": "korean kimchi hot pot",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "Mì vàng, ớt chuông, cải thảo, hành tây, cải thài, đậu hũ chiên, nấm chiên, hành phi.",
+          "en": "Rice noodles, bell peppers, Chinese cabbage, onions, Chinese cabbage, fried tofu, fried mushrooms, fried garlic.",
+          "zh": "Mì vàng, ớt chuông, cải thảo, hành tây, cải thài, đậu hũ chiên, nấm chiên, hành phi."
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "MÌ Ý SỐT CÀ CHUA NẤM",
+          "en": "korean kimchi hot pot",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 59000,
+        "desc": {
+          "vi": "Mì Ý, nấm đùi gà, sốt cà chua,",
+          "en": "Spaghetti, chicken drumstick mushrooms, tomato sauce,",
+          "zh": "Mì Ý, nấm đùi gà, sốt cà chua,"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       }
     ],
-    "roll": [
+    "soup": [
       {
-        "category": "roll",
-        "name": "Cơm chiên nhưng đổi góc chụp",
-        "price": 61000,
-        "desc": "Cơm chiên nhưng đổi góc chụp",
-        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_2.svg?alt=media&token=7e45b7a5-98f9-4820-be7d-133437aff9e5",
-        "bestSeller": false
-      },
-      {
-        "category": "roll",
-        "name": "Nồi đất ư ư",
-        "price": 62000,
-        "desc": "Nồi đất ư ư",
+        "name": {
+          "vi": "CANH NẤM ĐẬU HỦ RONG BIỂN",
+          "en": "Seaweed Soup with Tofu & Mushrooms",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 50000,
+        "desc": {
+          "vi": "rong biển ; tàu hủ, nấm bào ngư, cà rốt , hành phi ; tiêu, gừng",
+          "en": "seaweed ; tofu, abalone mushrooms, carrots, fried onions; pepper, ginger",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
         "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
-        "bestSeller": true
-      },
-      {
-        "category": "roll",
         "bestSeller": false
       },
       {
-        "category": "roll",
+        "name": {
+          "vi": "CANH CHUA NAM BỘ",
+          "en": "Southern Vietnamese Sweet & Sour Soup",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 50000,
+        "desc": {
+          "vi": "bạc hà, đậu bắp, giá đỗ, cà chua, thơm, các loại rau thơm, tỏi phi",
+          "en": "mint, okra, bean sprouts, tomatoes, pineapple, herbs, fried garlic",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       },
       {
-        "category": "roll",
+        "name": {
+          "vi": "CANH Cải xanh nấu nấm",
+          "en": "Mustard Greens Soup with Mushrooms",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 50000,
+        "desc": {
+          "vi": "rau cải bẹ xanh, nấm bào ngư, gừng, tiêu",
+          "en": "green mustard greens, abalone mushrooms, ginger, pepper",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "SÚP TÓC TIÊN",
+          "en": "Fat Choy Soup",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 39000,
+        "desc": {
+          "vi": "tóc tiên ; bắp mĩ ; cà rốt ; nấm ; đậu que ; hành phi ; tiêu ; ngò rí",
+          "en": "fairy's hair ; American corn ; carrot ; mushroom ; string bean ; fried onion ; pepper ; coriander",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "SÚP NẤM TUYẾT HẠT SEN",
+          "en": "Lotus seed & White Wood-ear Mushroom Soup",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 39000,
+        "desc": {
+          "vi": "nấm tuyết ; hạt sen ; nấm cà rốt ; đậu que ; hành phi ; tiêu; ngò rí .",
+          "en": "White wood-ear mushroom ; Lotus seeds ; carrot mushrooms ; string bean ; fried onion ; pepper; Coriander.",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      }
+    ],
+    "saltDish": [
+      {
+        "name": {
+          "vi": "RAU MUỐNG XÀO TỎI",
+          "en": "Stir-fried Water Spinach with Garlic",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 45000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "RAU MUỐNG XÀO NẤM",
+          "en": "Stir-fried Water Spinach with Mushrooms",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "RAU XÀO THẬP CẨM",
+          "en": "Mixed Stir-fried Veggies",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "RAU LUỘC KHO QUẸT",
+          "en": "Boiled Veggie with Caramelized Salted Sauce ",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "CẢI THÌA SỐT NẤM ĐÔNG CÔ",
+          "en": "Bok-choy with Shiitake Sauce",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "NẤM SỐT TIÊU ĐEN",
+          "en": "Stir-fried Mushroom with Black Pepper Sauce",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 65000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "ĐẬU HỦ SỐT TỨ XUYÊN",
+          "en": "Mapo Tofu ",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "ĐẬU HỦ CHƯNG TƯƠNG",
+          "en": "Steamed Tofu with Salted Soybean Sauce",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "ĐẬU HỦ XỐC SA TẾ",
+          "en": "Satay Tofu",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 55000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "NẤM RƠM KHO TIÊU",
+          "en": "Braised Straw mushroom with Pepper",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 65000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "CHÂN NẤM KHO GỪNG",
+          "en": "Braised Mushroom with Ginger",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 65000,
+        "desc": {
+          "vi": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "en": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      }
+    ],
+    "dessert": [
+      {
+        "name": {
+          "vi": "Chè tuyết yến dưỡng nhan",
+          "en": "Gum Tragacanth Refresh Beauty Sweet Soup",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "Tuyết yếu ; tuyết liên tử ; nhựa đào ; kỷ tử ; táo đỏ ; long nhãn",
+          "en": "Weak snow; snow lotus ; peach resin ; Goji berries ; Red Apple ; Longan",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "Chè hạt sen đông trùng hạ thảo",
+          "en": "Lotus Seed Sweet Soup with Cordyceps",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "hạt sen; kỷ tử ; táo đỏ ; đông trùng hạ thảo",
+          "en": "Lotus seeds; Goji berries ; Red Apple ; Cordyceps",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "Sữa chua dâu tằm",
+          "en": "Mulberry Yogurt",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "sữa chua ; mức dâu tằm ; mức tắc rim ; đá bào",
+          "en": "yogurt ; mulberry level ; rim occlusion level; grinded ice",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "Panna Cotta (Việt quất, chanh dây, ổi, đào, dâu tằm)",
+          "en": "Panna Cotta (Blueberry, Passionfruit, Guava, Peach, Mulberry)",
+          "zh": "korean kimchi hot pot"
+        },
+        "price": 12000,
+        "desc": {
+          "vi": "được nấu từ sữa đậu nành nguyên chất ; gelatin dùng kèm với cái loại mức trái cây",
+          "en": "Made from pure soy milk; Gelatin served with fruit sauce",
+          "zh": "nước lẩu kim chi ; rau bắp cải tím ; rau bắp cải thảo ; nấm bào ngư dùng với mì hàn quốc"
+        },
+        "img": "https://firebasestorage.googleapis.com/v0/b/dieu-thien-restautant.appspot.com/o/mainDishes_1.svg?alt=media&token=ae9d84ce-a6b0-43d4-bfb1-ccad2e974914",
         "bestSeller": false
       }
     ]
   },
   "drink": {
-    "tea": [
+    "coffee": [
       {
-        "category": "tea",
-        "name": "Trà",
-        "price": 550000,
-        "desc": "Trà",
+        "name": {
+          "vi": "Cà phê Đen đá | nóng",
+          "en": "Iced | Hot Black Coffee",
+          "zh": "Iced | Hot Black Coffee"
+        },
+        "price": 20000,
+        "desc": {
+          "vi": "cà phê nguyên chất cùng một chút đường cát",
+          "en": "pure coffee with a little granulated sugar",
+          "zh": "pure coffee with a little granulated sugar"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": true
+      },
+      {
+        "name": {
+          "vi": "Cà phê Sữa đá | nóng",
+          "en": "Iced | Hot Condensed Milk Coffee",
+          "zh": "Iced | Hot Condensed Milk Coffee"
+        },
+        "price": 25000,
+        "desc": {
+          "vi": "cà phê nguyên chất ; sữa đặc",
+          "en": "pure coffee ; condensed milk",
+          "zh": "pure coffee ; condensed milk"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "Bạc xỉu",
+          "en": "White Coffee",
+          "zh": "White Coffee"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "cà phê nguyên chất ; sữa tươi ; sữa đặc",
+          "en": "pure coffee ; Fresh milk ; condensed milk",
+          "zh": "pure coffee ; Fresh milk ; condensed milk"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "Cà phê Kem Muối",
+          "en": "Salted Cream Coffee",
+          "zh": "Salted Cream Coffee"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "cà phê nguyên chất ; sữa đặc ; kem muối",
+          "en": "pure coffee ; condensed milk ; salt cream",
+          "zh": "pure coffee ; condensed milk ; salt cream"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
       }
     ],
-    "undefined": [
+    "juice": [
       {
+        "name": {
+          "vi": "thơm ép",
+          "en": "Pineapple",
+          "zh": "Pineapple"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "nước ép thơm nguyên chất",
+          "en": "pineapple juice",
+          "zh": "pineapple juice"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "cam ép",
+          "en": "Orange",
+          "zh": "Orange"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "nước ép cam nguyên chất",
+          "en": "orange juice",
+          "zh": "orange juice"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "dưa hấu",
+          "en": "Watermelon",
+          "zh": "Watermelon"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "nước ép dưa hấu nguyên chất",
+          "en": "watermelon juice",
+          "zh": "watermelon juice"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "chanh dây",
+          "en": "Passionfruit",
+          "zh": "Passionfruit"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "nước ép chanhc dây cô đặc ; serup chanh dây ; mức chanh dây",
+          "en": "Passion fruit juice; passion fruit syrup; passion fruit jam",
+          "zh": "Passion fruit juice; passion fruit syrup; passion fruit jam"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "chanh dây",
+          "en": "Orange Carrot",
+          "zh": "Orange Carrot"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "mix nước ép nguyên chất của cam và cà rốt",
+          "en": "Mix  orange juice and carrot juice",
+          "zh": "Mix  orange juice and carrot juice"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "thơm cà rốt",
+          "en": "Pineapple Carrot",
+          "zh": "Pineapple Carrot"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "mix nước ép nguyên chất của thơm và cà rốt",
+          "en": "mix  pineapple juice and carrot juice",
+          "zh": "mix  pineapple juice and carrot juice"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      }
+    ],
+    "tea": [
+      {
+        "name": {
+          "vi": "TRÀ THẢO MỘC",
+          "en": "Herbal Tea",
+          "zh": "Herbal Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "bông cúc ; hoa hồng; kỷ tử ; táo đỏ ; đường phèn ; đông trùng hạ thảo ( có thể dùng nóng hoặc lạnh )",
+          "en": "daisies ; rose; Goji berries ;  Apple ; sugar ; Cordyceps (can be used hot or cold)",
+          "zh": "daisies ; rose; Goji berries ;  Apple ; sugar ; Cordyceps (can be used hot or cold)"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "TRÀ ĐÀO CAM SẢ",
+          "en": "Orange Lemongrass Peach Tea",
+          "zh": "Orange Lemongrass Peach Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "sả đập dập ; trà đào ; serup đào ; mức đào ; nước cốt tắc ; đào miếng",
+          "en": "crushed lemongrass; peach tea ; peach syrup ; peach jam ; kumquat juice ;sliced peach",
+          "zh": "crushed lemongrass; peach tea ; peach syrup ; peach jam ; kumquat juice ;sliced peach"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       },
       {
+        "name": {
+          "vi": "TRÀ LÀI LỆ CHI",
+          "en": "Lychee Jasmine Tea",
+          "zh": "Lychee Jasmine Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "serup vải ; vải tươi",
+          "en": "Lychee syrup ; fresh lychee",
+          "zh": "Lychee syrup ; fresh lychee"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "TRÀ ỔI HỒNG",
+          "en": "Pink Guava Tea",
+          "zh": "Pink Guava Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "nước cốt tắc ; mức ổi ; serup ổi ; ổi tươi",
+          "en": "kumquat juice ; guava jam ; guava syrup; fresh guava",
+          "zh": "kumquat juice ; guava jam ; guava syrup; fresh guava"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "TRÀ GỪNG MẬT ONG",
+          "en": "Honey Ginger Hot Tea",
+          "zh": "Honey Ginger Hot Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "trà gừng ; mật ong ; gừng cắt lát",
+          "en": "ginger tea ; honey ; sliced ginger",
+          "zh": "ginger tea ; honey ; sliced ginger"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "TRÀ TẮC XÍ MUỘI",
+          "en": "Sooty Kumquat Tea",
+          "zh": "Sooty Kumquat Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "xí muội ; trà lipton ; nước cốt tắc ; mức tắc rim",
+          "en": "soot ; lipton tea ; kumquat juice ; Kumquat Marmalade",
+          "zh": "soot ; lipton tea ; kumquat juice ; Kumquat Marmalade"
+        },
+        "img": "/images/Logo.svg",
+        "bestSeller": false
+      },
+      {
+        "name": {
+          "vi": "TRÀ LÀI HẠT ĐÁC",
+          "en": "Arenga pinnata Jasmine Tea",
+          "zh": "Arenga pinnata Jasmine Tea"
+        },
+        "price": 35000,
+        "desc": {
+          "vi": "nước ép thơm thêm hạt đác rim thơm",
+          "en": "pineapple juice added with arenga pinnata",
+          "zh": "pineapple juice added with arenga pinnata"
+        },
+        "img": "/images/Logo.svg",
         "bestSeller": false
       }
     ]

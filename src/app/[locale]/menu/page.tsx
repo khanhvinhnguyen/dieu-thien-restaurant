@@ -2,7 +2,7 @@
 import "@/styles/menu.css";
 import { Validate } from "@/utils/validate";
 import { Tabs } from "antd";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -25,6 +25,7 @@ const fetchMenu = async () => {
 
 const Menu = () => {
   const t = useTranslations("menuPage");
+  const localActive = useLocale();
 
   const [foodThumbsSwiper, setFoodThumbsSwiper] = useState<any>({});
   const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState<any>({});
@@ -84,8 +85,10 @@ const Menu = () => {
                         )}
                       </div>
                       <div className="item-info__text">
-                        <h2 id="menu-item--title">{item.name}</h2>
-                        <p id="menu-item--desc">Thành phần: {item.desc}</p>
+                        <h2 id="menu-item--title">{item.name[localActive]}</h2>
+                        <p id="menu-item--desc">
+                          {t("ingredient")}: {item.desc[localActive]}
+                        </p>
                         <p id="menu-item--price">
                           {Validate.unit(Number(item.price))}₫
                         </p>

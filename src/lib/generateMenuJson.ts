@@ -3,10 +3,17 @@ const path = require('path');
 const XLSX = require('xlsx');
 
 type MenuItem = {
-  category: string;
-  name: string;
+  name: {
+    vi: string;
+    en: string;
+    zh: string;
+  };
   price: string;
-  desc: string;
+  desc: {
+    vi: string;
+    en: string;
+    zh: string;
+  },
   img: string;
   bestSeller: boolean;
 };
@@ -27,6 +34,13 @@ const menu: MenuJson = {
   drink: {},
 };
 
+const isValidRow = (row: any): boolean => {
+  const requiredFields = [
+    'Category', 'Name', 'Price', 'Desc', 'Name_en', 'Desc_en', 'Name_zh', 'Desc_zh'
+  ];
+  return requiredFields.every(field => row[field]);
+};
+
 const parseXlsx = () => {
   const workbook = XLSX.readFile(xlsxFilePath);
   const sheetNames = workbook.SheetNames;
@@ -38,16 +52,19 @@ const parseXlsx = () => {
     const lowerSheetName = sheetName.toLowerCase();
 
     jsonData.forEach((row: any) => {
-      const { Category, Name, Price, Desc, Image, Favorite } = row;
+      if (!isValidRow(row)) {
+        return;
+      }
+
+      const { Category, Name, Price, Desc, Image, Favorite, Name_en, Desc_en, Name_zh, Desc_zh } = row;
       const bestSeller = String(Favorite).toLowerCase() === 'true';
 
       const item: MenuItem = {
-        category: Category,
-        name: Name,
-        price: Price,
-        desc: Desc,
-        img: Image,
-        bestSeller,
+        name: { vi: Name, en: Name_en, zh: Name_zh },
+        price: Price || 0,
+        desc: { vi: Desc, en: Desc_en, zh: Desc_zh },
+        img: Image || '/images/Logo.svg',
+        bestSeller
       };
 
       if (lowerSheetName === 'food' || lowerSheetName === 'drink') {

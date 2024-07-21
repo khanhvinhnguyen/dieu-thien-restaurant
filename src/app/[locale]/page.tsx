@@ -101,9 +101,9 @@ export default function Home() {
           })}
         </Swiper>
         <div className="banner__text">
-          <h4 id="title" className={dancingScript.className}>
+          <h1 id="title" className={dancingScript.className}>
             Diệu Thiện
-          </h4>
+          </h1>
           <p dangerouslySetInnerHTML={{ __html: t("homePage.slogan") }} />
           <Link className="menu-button" href="/menu">
             {t("general.viewMenu")}
@@ -123,12 +123,12 @@ export default function Home() {
         />
       </div>
       <div className="special-menu">
-        <h1 className="heading1 cream-text">{t("homePage.specialFood")}</h1>
+        <h2 className="heading1 cream-text">{t("homePage.specialFood")}</h2>
         <Swiper3D data={swiper3Ddata} />
       </div>
 
       <div className="order">
-        <h1 id="order">{t("general.order")}</h1>
+        <h2 id="order">{t("general.order")}</h2>
         <p dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }} />
         <div className="column-container">
           {orderData.map((item, index) => {

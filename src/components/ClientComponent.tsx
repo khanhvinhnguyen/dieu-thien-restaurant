@@ -1,8 +1,8 @@
 "use client";
 
-import Header from "@/components/Header";
 import { MenuProvider } from "@/context/MenuContext";
 import { useEffect, useState } from "react";
+import { Footer, Header } from ".";
 export default function ClientComponent({
   children,
 }: {
@@ -29,6 +29,7 @@ export default function ClientComponent({
     <>
       <Header scrollTop={scrollTop} />
       <MenuProvider>{children}</MenuProvider>
+      <Footer />
     </>
   );
 }

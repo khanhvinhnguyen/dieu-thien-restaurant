@@ -124,13 +124,6 @@ const OrderPage = () => {
 
   return (
     <div className="order-page">
-      <Image
-        src={"/images/bg-order.svg"}
-        alt={"order"}
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto", display: "block" }}
-      />
       <div className="order-content">
         <div className="order-content__left--info">
           <h1>{t("orderPage.orderNow")}</h1>

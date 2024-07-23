@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
-import LocalSwitcher from "./LocalSwitcher";
+import { LocalSwitcher } from ".";
 
 type HeaderProps = {
   scrollTop?: number;

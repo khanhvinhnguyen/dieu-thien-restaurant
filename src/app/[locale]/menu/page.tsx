@@ -1,58 +1,31 @@
 "use client";
+import { useMenu } from "@/context/MenuContext";
 import "@/styles/menu.css";
 import { Validate } from "@/utils/validate";
-import dynamic from "next/dynamic";
 import { Tabs } from "antd";
 import { useLocale, useTranslations } from "next-intl";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useMemo, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-
-// Dynamic imports
-const fetchCategories = async () => {
-  const res = await fetch("/data/category.json");
-  const data = await res.json();
-  return data;
-};
-
-const fetchMenu = async () => {
-  const res = await fetch("/data/menu.json");
-  const data = await res.json();
-  return data;
-};
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Menu = () => {
   const t = useTranslations("menuPage");
   const localActive = useLocale();
+  const { categories, menu } = useMenu();
 
   const [foodThumbsSwiper, setFoodThumbsSwiper] = useState<any>({});
   const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState<any>({});
-  const [categories, setCategories] = useState({ food: [], drink: [] });
-  const [menu, setMenu] = useState({ food: {}, drink: {} });
-
-  useEffect(() => {
-    const loadData = async () => {
-      const categoryData = await fetchCategories();
-      setCategories(categoryData);
-
-      const menuData = await fetchMenu();
-      setMenu(menuData);
-    };
-
-    loadData();
-  }, []);
 
   const renderMenuItems = useMemo(
     () =>
       (
         menu: { [x: string]: any[] },
-        tabs: { icon: string | StaticImport }[],
+        tabs: { icon: string }[],
         thumbsSwiper: { [x: string]: any },
         setThumbsSwiper: {
           (value: any): void;

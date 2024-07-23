@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Header from "@/components/Header";
-
+import { MenuProvider } from "@/context/MenuContext";
+import { useEffect, useState } from "react";
 export default function ClientComponent({
   children,
 }: {
@@ -28,7 +28,7 @@ export default function ClientComponent({
   return (
     <>
       <Header scrollTop={scrollTop} />
-      {children}
+      <MenuProvider>{children}</MenuProvider>
     </>
   );
 }

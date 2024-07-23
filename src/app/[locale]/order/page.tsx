@@ -22,7 +22,8 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
 dayjs.extend(customParseFormat);
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
@@ -124,28 +125,14 @@ const OrderPage = () => {
 
   return (
     <div className="order-page">
-      <Image
-        src={"/images/bg-order.svg"}
-        alt={"order"}
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto", display: "block" }}
-      />
       <div className="order-content">
         <div className="order-content__left--info">
           <h1>{t("orderPage.orderNow")}</h1>
-          <p>{t("orderPage.howToOrder")}</p>
+          <p id="order-description">{t("orderPage.howToOrder")}</p>
           <div className="column-container" style={{ gap: "1rem" }}>
             <div className="text--border order-content--contact">
               <div className="avatar order-content--icon">
-                <Image
-                  className=""
-                  src="/icons/phoneIco.svg"
-                  alt="avatar"
-                  sizes="70"
-                  width={70}
-                  height={70}
-                />
+                <LocalPhoneIcon sx={{ fontSize: 45, color: "white" }} />
               </div>
               <p className="title">{t("orderPage.contactNow")}</p>
               <p className="content">085-677-9886</p>
@@ -153,14 +140,7 @@ const OrderPage = () => {
 
             <div className="text--border order-content--contact">
               <div className="avatar order-content--icon">
-                <Image
-                  className=""
-                  src="/icons/messengerIco.svg"
-                  alt="avatar"
-                  sizes="70"
-                  width={70}
-                  height={70}
-                />
+                <EmailIcon sx={{ fontSize: 45, color: "white" }} />
               </div>
               <p className="title">{t("orderPage.feedback")}</p>
               <p className="content">dieuthien@gmail.com</p>

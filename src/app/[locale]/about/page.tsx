@@ -78,9 +78,7 @@ const AboutUs = () => {
           style={{ width: "100%", height: "auto", display: "block" }}
         />
         <div className="banner__text">
-          <p
-            style={{ fontSize: "32px", textAlign: "center" }}
-            dangerouslySetInnerHTML={{ __html: about("buddhistScripture") }}
+          <p dangerouslySetInnerHTML={{ __html: about("buddhistScripture") }}
           ></p>
         </div>
       </div>
@@ -97,7 +95,7 @@ const AboutUs = () => {
               reverse={item.reverse}
               width={0}
               height={0}
-              stylesImg={{ width: "38.5%", height: "auto" }}
+              stylesImg={{ width: "50%", height: "auto" }}
               stylesText={{ color: "#FFFFEC" }}
             />
           );
@@ -110,9 +108,9 @@ const AboutUs = () => {
         <div
           className="column-container"
         >
-          {feedbackData.map((item) => {
+          {feedbackData.map((item, idx) => {
             return (
-              <div className="feedback__content">
+              <div key={idx} className="feedback__content">
                 <a href={item.url}>
                   <div className="text--border-tlbr">
                     <img

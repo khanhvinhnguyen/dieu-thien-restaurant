@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="column-container">
+      <div className="column-container section__container">
         <div className="column">
           <img id="Logo" src="/images/logo.svg" alt="logo" />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">

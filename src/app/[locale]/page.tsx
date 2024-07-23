@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "@/styles/home.css";
 import { Link } from "@/navigation";
-
+import { motion } from 'framer-motion';
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 const swiperData = [
   {
@@ -112,7 +112,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="welcome">
+      <div
+        className="welcome section"
+
+      >
         <SectionImgText
           title={t("homePage.summary")}
           text={t("homePage.introduce")}
@@ -124,19 +127,41 @@ export default function Home() {
         />
       </div>
       <div className="special-menu">
-        <h1 className="heading1 cream-text">{t("homePage.specialFood")}</h1>
-        <Swiper3D data={swiper3Ddata} />
+        <motion.h1
+          initial={{ opacity: 0, y: -70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
+          className="heading1 cream-text">{t("homePage.specialFood")}</motion.h1>
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+        >
+          <Swiper3D data={swiper3Ddata} />
+        </motion.div>
       </div>
 
-      <div className="order">
-        <h1 id="order">{t("general.order")}</h1>
-        <p dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }} />
+      <div className="order section__container column-layout">
+        <motion.h1
+          initial={{ opacity: 0, y: -70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
+          id="order">{t("general.order")}</motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: -70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
+          dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }} />
         <div
           className="column-container"
         >
           {orderData.map((item, index) => {
             return (
-              <div className="column" key={index}
+              <motion.div
+                initial={{ opacity: 0, y: 120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 * index, delay: 1 * index, ease: 'easeOut' }}
+                className="column" key={index}
               >
                 <ImageComponent
                   src={item.image}
@@ -145,7 +170,7 @@ export default function Home() {
                   height={0}
                   styles={{ width: "100%", height: "auto" }}
                 />
-              </div>
+              </motion.div>
             );
           })}
         </div>

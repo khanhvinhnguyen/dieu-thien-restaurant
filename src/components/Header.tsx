@@ -37,44 +37,45 @@ const Header = ({ scrollTop }: HeaderProps) => {
   };
 
   return (
-    <header
-      className={`animate__animated ${
-        scrollTop! > 5 ? "bg-white" : "bg-transparent"
-      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+    <div
+      className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
+        } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0
       }}
     >
-      {/* Logo */}
-      <div className="logo__wrapper">
-        <a href="/">
-          <img id="Logo" src="/images/logo.svg" alt="logo" />
-        </a>
-      </div>
+      <header>
+        {/* Logo */}
+        <div className="logo__wrapper">
+          <a href="/">
+            <img id="Logo" src="/images/logo.svg" alt="logo" />
+          </a>
+        </div>
 
-      {/* Navigation */}
-      <div
-        className="header__nav"
+        {/* Navigation */}
+        <div
+          className="header__nav"
 
-      >
-        <Link href="/">{t("general.home")}</Link>
-        <Link href="/about">{t("general.aboutUs")}</Link>
-        <Link href="/menu">{t("general.menu")}</Link>
-        <Link href="/order">{t("general.order")}</Link>
-        <Link href="/contact">{t("general.contact")}</Link>
-      </div>
+        >
+          <Link href="/">{t("general.home")}</Link>
+          <Link href="/about">{t("general.aboutUs")}</Link>
+          <Link href="/menu">{t("general.menu")}</Link>
+          <Link href="/order">{t("general.order")}</Link>
+          <Link href="/contact">{t("general.contact")}</Link>
+        </div>
 
-      {/* Language & Order */}
-      <div className="header__language_order">
-        {/* Language */}
-        <LocalSwitcher />
+        {/* Language & Order */}
+        <div className="header__language_order">
+          {/* Language */}
+          <LocalSwitcher />
 
-        {/* Order */}
-        <Link href="/order" className="header__button--order">
-          {t("general.order")}
-        </Link>
-      </div>
-    </header>
+          {/* Order */}
+          <Link href="/order" className="header__button--order">
+            {t("general.order")}
+          </Link>
+        </div>
+      </header>
+    </div>
   );
 };
 

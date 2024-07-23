@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 interface SectionProps {
   title: string;
@@ -12,6 +13,8 @@ interface SectionProps {
   stylesText?: React.CSSProperties;
   reverse?: boolean;
 }
+
+
 
 const SectionImgText = (props: SectionProps) => {
   const {
@@ -34,12 +37,12 @@ const SectionImgText = (props: SectionProps) => {
           {limitedSrc.map((imageSrc, index) => (
             <Image
               key={index}
-              className="image--border"
+              className={index == 0 ? "double image--border lower--image" : "double image--border higher--image"}
               src={imageSrc}
               alt={`${alt}-${index}`}
               width={width}
               height={height}
-              style={stylesImg}
+
             />
           ))}
         </div>
@@ -52,7 +55,6 @@ const SectionImgText = (props: SectionProps) => {
           alt={alt}
           width={width}
           height={height}
-          style={stylesImg}
         />
       );
     }
@@ -62,13 +64,29 @@ const SectionImgText = (props: SectionProps) => {
     <div className="section">
       <div
         className="section__content"
-        style={{ flexDirection: reverse ? "row-reverse" : "row" }}
+        style={{ direction: reverse ? "rtl" : "ltr" }}
       >
-        <div className="section__text" style={stylesText}>
-          <h1 style={stylesText} className="heading1" dangerouslySetInnerHTML={{ __html: title }}></h1>
-          <p style={stylesText} dangerouslySetInnerHTML={{ __html: text }}></p>
+        <div className="section__text"
+          style={stylesText}>
+          <motion.h1 style={stylesText} className="heading1" dangerouslySetInnerHTML={{ __html: title }}
+            initial={{ opacity: 0, y: -70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
+          ></motion.h1>
+          <motion.p style={stylesText} dangerouslySetInnerHTML={{ __html: text }}
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
+          ></motion.p>
         </div>
-        {renderImages()}
+
+        <motion.div
+          initial={{ opacity: 0, x: 120, y: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
+        >
+          {renderImages()}
+        </motion.div>
       </div>
     </div>
   );

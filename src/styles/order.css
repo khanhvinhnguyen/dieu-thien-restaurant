@@ -3,6 +3,7 @@
 }
 
 .order-content {
+  max-width: var(--max-content-width);
   width: 80%;
   height: 75%;
   position: absolute;
@@ -64,6 +65,7 @@
     text-align: center;
     padding: 0 1rem;
     align-content: space-around;
+    max-height: 700px;
 
     form {
       display: grid;

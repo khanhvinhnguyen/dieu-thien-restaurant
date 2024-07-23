@@ -12,9 +12,14 @@
       transform: translateY(-50%);
       height: 255px;
       width: 100%;
-      background-color: var(--background-cream);
+      background-color: var(--background-cream-50);
       color: var(--text-color-green);
       align-content: center;
+      p {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2.25rem;
+      }
     }
   }
 
@@ -31,7 +36,7 @@
     padding-top: 64px;
     padding-bottom: 64px;
     background-color: var(--background-cream);
-    background-image: url('/backgrounds/bg-feedback.svg');
+    background-image: url("/backgrounds/bg-feedback.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

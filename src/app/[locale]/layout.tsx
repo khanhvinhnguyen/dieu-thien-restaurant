@@ -4,8 +4,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Noto_Serif } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 
-const notoSerif = Noto_Serif({ subsets: ["latin"] });
+const notoSerif = Noto_Serif({ subsets: ["vietnamese"] });
 
 export default async function LocaleLayout({
   children,

@@ -2,13 +2,19 @@
 import React, { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-
+import Image from "next/image";
 import "@/styles/order.css";
 
 import { send } from "@/lib/sendEmailAction";
 import { Validate } from "@/utils/validate";
 
-import { Button, TextField, Box, Snackbar } from "@mui/material";
+import {
+  Button,
+  TextField,
+  Box,
+  Snackbar,
+  CircularProgress,
+} from "@mui/material";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -118,7 +124,7 @@ const OrderPage = () => {
 
   return (
     <div className="order-page">
-      <img
+      <Image
         src={"/images/bg-order.svg"}
         alt={"order"}
         width={0}
@@ -132,11 +138,13 @@ const OrderPage = () => {
           <div className="column-container" style={{ gap: "1rem" }}>
             <div className="text--border order-content--contact">
               <div className="avatar order-content--icon">
-                <img
+                <Image
                   className=""
                   src="/icons/phoneIco.svg"
                   alt="avatar"
                   sizes="70"
+                  width={70}
+                  height={70}
                 />
               </div>
               <p className="title">{t("orderPage.contactNow")}</p>
@@ -145,11 +153,13 @@ const OrderPage = () => {
 
             <div className="text--border order-content--contact">
               <div className="avatar order-content--icon">
-                <img
+                <Image
                   className=""
                   src="/icons/messengerIco.svg"
                   alt="avatar"
                   sizes="70"
+                  width={70}
+                  height={70}
                 />
               </div>
               <p className="title">{t("orderPage.feedback")}</p>
@@ -220,13 +230,6 @@ const OrderPage = () => {
                       value={value ? dayjs(value) : null}
                       minDate={today}
                       defaultValue={dayjs(new Date())}
-                      renderInput={(params) => (
-                        <TextField
-                          {...params}
-                          placeholder={t("form.orderDate")}
-                          fullWidth
-                        />
-                      )}
                     />
                   </LocalizationProvider>
                 )}
@@ -238,24 +241,12 @@ const OrderPage = () => {
                 render={({ field: { onChange, onBlur, value } }) => (
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <TimePicker
-                      required
-                      clearable
                       label={t("form.orderTime")}
                       ampm={false}
                       onChange={onChange}
                       value={value ? dayjs() : null}
                       defaultValue={dayjs().add(30, "m")}
-                      renderInput={(params) => (
-                        <TextField
-                          {...params}
-                          placeholder={t("form.orderTime")}
-                          fullWidth
-                        />
-                      )}
                       disablePast
-                      // shouldDisableTime={() =>
-                      //   disabledTime(dayjs(getValues("orderDate")))
-                      // }
                     />
                   </LocalizationProvider>
                 )}
@@ -305,10 +296,19 @@ const OrderPage = () => {
               className="submit-btn"
               variant="contained"
               type="submit"
-              loading={loading}
               disabled={loading || !isTimeValid}
             >
-              {t("form.send")}
+              {loading ? (
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <CircularProgress
+                    size={24}
+                    sx={{ color: "white", marginRight: "8px" }}
+                  />
+                  {t("form.send")}
+                </Box>
+              ) : (
+                t("form.send")
+              )}
             </Button>
           </form>
           <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>

@@ -1,7 +1,8 @@
 "use client";
 import "animate.css";
 import { useTranslations } from "next-intl";
-import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
 import LocalSwitcher from "./LocalSwitcher";
 
@@ -41,7 +42,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
       className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
         } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
-        opacity: visible ? 1 : 0
+        opacity: visible ? 1 : 0,
       }}
     >
       <header>
@@ -56,6 +57,22 @@ const Header = ({ scrollTop }: HeaderProps) => {
         <div
           className="header__nav"
 
+        >
+          <Link href="/">{t("general.home")}</Link>
+          <Link href="/about">{t("general.aboutUs")}</Link>
+          <Link href="/menu">{t("general.menu")}</Link>
+          <Link href="/order">{t("general.order")}</Link>
+          <Link href="/contact">{t("general.contact")}</Link>
+        </div>
+        {/* Navigation */}
+        <div
+          className="header__nav"
+          style={{
+            display: "flex",
+            gap: "24px",
+            color: "#31363F",
+            fontSize: "18px",
+          }}
         >
           <Link href="/">{t("general.home")}</Link>
           <Link href="/about">{t("general.aboutUs")}</Link>

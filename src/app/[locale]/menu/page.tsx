@@ -3,6 +3,8 @@ import "@/styles/menu.css";
 import { Validate } from "@/utils/validate";
 import { Tabs } from "antd";
 import { useLocale, useTranslations } from "next-intl";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -44,10 +46,25 @@ const Menu = () => {
     loadData();
   }, []);
 
-  const renderMenuItems = (menu, tabs, thumbsSwiper, setThumbsSwiper) => {
+  const renderMenuItems = (
+    menu: { [x: string]: any[] },
+    tabs: { icon: string | StaticImport }[],
+    thumbsSwiper: { [x: string]: any },
+    setThumbsSwiper: {
+      (value: any): void;
+      (value: any): void;
+      (arg0: (prev: any) => any): void;
+    }
+  ) => {
     return Object.keys(menu).map((category, i) => ({
       icon: (
-        <img src={tabs[i].icon} className="svg-icon" width={40} height={40} />
+        <Image
+          src={tabs[i].icon}
+          alt={category}
+          className="svg-icon"
+          width={40}
+          height={40}
+        />
       ),
       label: t(`${category}`),
       key: String(i + 1),
@@ -67,7 +84,7 @@ const Menu = () => {
                   <SwiperSlide key={index}>
                     <div className="item-info">
                       <div className="item-info__img">
-                        <img
+                        <Image
                           className="swiper--item-img"
                           src={item.img}
                           alt="food"
@@ -75,7 +92,7 @@ const Menu = () => {
                           height={350}
                         />
                         {item.bestSeller && (
-                          <img
+                          <Image
                             className="item-favorite"
                             src="/images/bestSeller.svg"
                             alt="favorite"
@@ -100,7 +117,10 @@ const Menu = () => {
             </div>
             <Swiper
               onSwiper={(swiper) =>
-                setThumbsSwiper((prev) => ({ ...prev, [category]: swiper }))
+                setThumbsSwiper((prev: any) => ({
+                  ...prev,
+                  [category]: swiper,
+                }))
               }
               spaceBetween={10}
               slidesPerView={4}
@@ -112,7 +132,12 @@ const Menu = () => {
             >
               {menu[category].map((item, index) => (
                 <SwiperSlide key={index}>
-                  <img src={item.img} height={83} />
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    width={100}
+                    height={83}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -138,7 +163,7 @@ const Menu = () => {
 
   return (
     <div className="menu">
-      <img
+      <Image
         src="/images/menu_banner.svg"
         alt="menu"
         width={0}

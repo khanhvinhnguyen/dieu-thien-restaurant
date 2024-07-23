@@ -113,11 +113,13 @@ const AboutUs = () => {
               <div key={idx} className="feedback__content">
                 <a href={item.url}>
                   <div className="text--border-tlbr">
-                    <img
+                    <Image
                       className="avatar"
                       src={item.avatar}
                       alt="avatar"
-                      sizes="70"
+                      width={0}
+                      height={0}
+                      style={{ width: "70px", height: "70px" }}
                     />
                     <p className="content cream-text">{item.content}</p>
                     <p className="userName cream-text">{item.userName}</p>

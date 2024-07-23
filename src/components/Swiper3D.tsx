@@ -1,10 +1,10 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import "@/styles/swiper3d.css";
+import Image from "next/image";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "@/styles/swiper3d.css";
-import { translate } from "googleapis/build/src/apis/translate";
 
 interface Swiper3DProps {
   data: {
@@ -34,17 +34,10 @@ const Swiper3D = (props: Swiper3DProps) => {
         modules={[Autoplay, EffectCoverflow, Pagination]}
         slidesPerGroup={1}
         spaceBetween={100}
-
-        onSetTranslate={(swiper, translate) => {
-          console.log(swiper)
-          console.log(translate)
-        }}
-
-
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item.image} alt={item.alt} />
+            <Image src={item.image} alt={item.alt} width={0} height={0} />
           </SwiperSlide>
         ))}
 
@@ -52,7 +45,7 @@ const Swiper3D = (props: Swiper3DProps) => {
           <div className="swiper3d-pagination"></div>
         </div>
       </Swiper>
-    </div >
+    </div>
   );
 };
 

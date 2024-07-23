@@ -19,7 +19,6 @@ export default function ClientComponent({
     };
 
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
 

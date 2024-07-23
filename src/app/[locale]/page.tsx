@@ -87,8 +87,7 @@ export default function Home() {
         >
           {swiperData.map((item, index) => {
             return (
-              <SwiperSlide key={index}
-              >
+              <SwiperSlide key={index}>
                 <Image
                   src={item.image}
                   alt={item.alt}
@@ -102,9 +101,9 @@ export default function Home() {
           })}
         </Swiper>
         <div className="banner__text">
-          <h4 id="title" className={dancingScript.className}>
+          <h1 id="title" className={dancingScript.className}>
             Diệu Thiện
-          </h4>
+          </h1>
           <p dangerouslySetInnerHTML={{ __html: t("homePage.slogan") }} />
           <Link className="menu-button" href="/menu">
             {t("general.viewMenu")}

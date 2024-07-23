@@ -63,9 +63,15 @@ const Header = ({ scrollTop }: HeaderProps) => {
       >
         <Link href="/">{t("general.home")}</Link>
         <Link href="/about">{t("general.aboutUs")}</Link>
-        <Link href="/menu">{t("general.menu")}</Link>
-        <Link href="/order">{t("general.order")}</Link>
-        <Link href="/contact">{t("general.contact")}</Link>
+        <Link href="/menu" prefetch={true}>
+          {t("general.menu")}
+        </Link>
+        <Link href="/order" prefetch={true}>
+          {t("general.order")}
+        </Link>
+        <Link href="/contact" prefetch={true}>
+          {t("general.contact")}
+        </Link>
       </div>
 
       {/* Language & Order */}

@@ -17,38 +17,38 @@ import { Link } from "@/navigation";
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 const swiperData = [
   {
-    image: "/images/home-slider/home_slider1.svg",
+    image: "/images/home_slider1.svg",
     alt: "home slider 1",
   },
   {
-    image: "/images/home-slider/home_slider2.svg",
+    image: "/images/home_slider2.svg",
     alt: "home slider 2",
   },
   {
-    image: "/images/home-slider/home_slider3.svg",
+    image: "/images/home_slider3.svg",
     alt: "home slider 3",
   },
 ];
 
 const swiper3Ddata = [
   {
-    image: "/images/home-slider/specialfood_1.svg",
+    image: "/images/specialfood_1.svg",
     alt: "special food 1",
   },
   {
-    image: "/images/home-slider/specialfood_2.svg",
+    image: "/images/specialfood_2.svg",
     alt: "special food 2",
   },
   {
-    image: "/images/home-slider/specialfood_3.svg",
+    image: "/images/specialfood_3.svg",
     alt: "special food 3",
   },
   {
-    image: "/images/home-slider/specialfood_4.svg",
+    image: "/images/specialfood_4.svg",
     alt: "special food 4",
   },
   {
-    image: "/images/home-slider/specialfood_5.svg",
+    image: "/images/specialfood_5.svg",
     alt: "special food 5",
   },
 ];

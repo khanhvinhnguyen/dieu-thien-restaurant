@@ -82,7 +82,7 @@ const parseXlsx = () => {
         name: { vi: Name, en: Name_en, zh: Name_zh },
         price: Price || 0,
         desc: { vi: Desc, en: Desc_en, zh: Desc_zh },
-        img: Image || '/images/Logo.svg',
+        img: Image || '/logo.svg',
         bestSeller
       };
 

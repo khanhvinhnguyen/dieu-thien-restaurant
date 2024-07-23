@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   images: {
     domains: ['drive.google.com', 'firebasestorage.googleapis.com', 'lh3.googleusercontent.com'],
+    dangerouslyAllowSVG: true,
   },
 };
 

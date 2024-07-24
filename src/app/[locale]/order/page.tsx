@@ -41,6 +41,11 @@ type OrderForm = {
   notes: string;
 };
 
+type Locale = "vi" | "en" | "zh";
+const isValidLocale = (locale: string): locale is Locale => {
+  return ["vi", "en", "zh"].includes(locale);
+};
+
 const OrderPage = () => {
   const t = useTranslations();
   const localActive = useLocale();
@@ -79,9 +84,13 @@ const OrderPage = () => {
       formData.append(key, value as string)
     );
 
-    const result = await send(formData, localActive);
-    if (result.success) {
-      setOpen(true);
+    if (isValidLocale(localActive)) {
+      const result = await send(formData, localActive);
+      if (result.success) {
+        setOpen(true);
+      }
+    } else {
+      console.error("Invalid locale:", localActive);
     }
     setLoading(false);
   };

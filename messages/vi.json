@@ -64,7 +64,11 @@
     "orderTime": "Giờ đặt bàn",
     "comment": "Ghi chú",
     "send": "Gửi phiếu",
-    "invalidEmail": "Vui lòng nhập email hợp lệ"
+    "required": "Bắt buộc",
+    "invalidEmail": "Vui lòng nhập email hợp lệ",
+    "invalidDate": "Không thể chọn ngày trong quá khứ",
+    "invalidTime": "Vui lòng đặt bàn trước tối thiểu 30 phút",
+    "sendEmailSuccess": "Email đã được gửi: Email của bạn đã được gửi thành công!"
   },
   "metadata": {
     "template": "Nhà hàng Diệu Thiện",

@@ -64,7 +64,11 @@
     "orderTime": "Booking time",
     "comment": "Notes",
     "send": "Submit",
-    "invalidEmail": "Please enter a valid email"
+    "required": "Required",
+    "invalidEmail": "Please enter a valid email",
+    "invalidDate": "Cannot select a date in the past",
+    "invalidTime": "Please book at least 30 minutes in advance",
+    "sendEmailSuccess": "Email Sent: Your email has been sent successfully!"
   },
   "metadata": {
     "template": "Dieu Thien Restaurant",

@@ -5,17 +5,17 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Dieu Thien Restaurant",
-    default: "Unique Vegetarian Flavors | Dieu Thien Restaurant",
+    template: "%s | Nhà hàng Diệu Thiện",
+    default: "Hương vị chay độc đáo | Nhà hàng Diệu Thiện",
   },
   description:
-    "Experience unique and rich vegetarian dishes at our restaurant, blending traditional and modern flavors. Enjoy a peaceful atmosphere, attentive service, and a beautifully designed space for a memorable dining experience that delights both the taste buds and the soul.",
+    "Trải nghiệm những món chay độc đáo và phong phú tại nhà hàng chúng tôi, hòa quyện giữa hương vị truyền thống và hiện đại. Tận hưởng bầu không khí yên bình, phục vụ chu đáo và không gian được thiết kế đẹp mắt, mang đến trải nghiệm ăn uống đáng nhớ, làm say mê cả vị giác lẫn tâm hồn.",
   openGraph: {
-    title: "Unique Vegetarian Flavors | Dieu Thien Restaurant",
+    title: "Hương vị chay độc đáo | Nhà hàng Diệu Thiện",
     description:
-      "Experience unique and rich vegetarian dishes at our restaurant, blending traditional and modern flavors. Enjoy a peaceful atmosphere, attentive service, and a beautifully designed space for a memorable dining experience that delights both the taste buds and the soul.",
+      "Trải nghiệm những món chay độc đáo và phong phú tại nhà hàng chúng tôi, hòa quyện giữa hương vị truyền thống và hiện đại. Tận hưởng bầu không khí yên bình, phục vụ chu đáo và không gian được thiết kế đẹp mắt, mang đến trải nghiệm ăn uống đáng nhớ, làm say mê cả vị giác lẫn tâm hồn.",
     url: "https://dieu-thien.vercel.app/",
-    siteName: "Dieu Thien Restaurant",
+    siteName: "Nhà hàng Diệu Thiện",
     images: [
       {
         url: "https://lh3.ggpht.com/p/AF1QipPP-6pqrJZMGdEaHUGvNSE4HiXVt_q05T-3x3VG=s1024",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         height: 600,
       },
     ],
-    locale: "en-US",
+    locale: "vi-VN",
     type: "website",
   },
 };

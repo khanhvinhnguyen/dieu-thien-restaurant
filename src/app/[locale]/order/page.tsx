@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import Image from "next/image";
 import "@/styles/order.css";
 
 import { send } from "@/lib/sendEmailAction";
@@ -87,28 +86,6 @@ const OrderPage = () => {
       setOpen(true);
     }
     setLoading(false);
-  };
-
-  const disabledTime = (date: dayjs.Dayjs) => {
-    if (date && date.isSame(dayjs(), "day")) {
-      const now = dayjs();
-      const disabledHours = Array.from({ length: 24 }, (_, i) => i).slice(
-        0,
-        now.hour() + 1
-      );
-      const disabledMinutes = Array.from({ length: 60 }, (_, i) => i).slice(
-        0,
-        now.minute()
-      );
-      return {
-        disabledHours: () => disabledHours,
-        disabledMinutes: () => disabledMinutes,
-      };
-    }
-    return {
-      disabledHours: () => [],
-      disabledMinutes: () => [],
-    };
   };
 
   const orderDate = watch("orderDate");
@@ -198,10 +175,7 @@ const OrderPage = () => {
                 control={control}
                 name="orderDate"
                 render={({ field: { onChange, onBlur, value } }) => (
-                  <LocalizationProvider
-                    dateAdapter={AdapterDayjs}
-                    adapterLocale="vi"
-                  >
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                       disablePast
                       label={t("form.orderDate")}
@@ -219,13 +193,16 @@ const OrderPage = () => {
                 control={control}
                 name="orderTime"
                 render={({ field: { onChange, onBlur, value } }) => (
-                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <LocalizationProvider
+                    dateAdapter={AdapterDayjs}
+                    adapterLocale={localActive}
+                  >
                     <TimePicker
                       label={t("form.orderTime")}
                       ampm={false}
-                      onChange={onChange}
-                      value={value ? dayjs() : null}
-                      defaultValue={dayjs().add(30, "m")}
+                      onChange={(time) => onChange(time ? time.toDate() : null)}
+                      value={value ? dayjs(value) : dayjs().add(30, "m")}
+                      minTime={dayjs().add(30, "m")}
                       disablePast
                     />
                   </LocalizationProvider>

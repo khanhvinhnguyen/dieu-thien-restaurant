@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 
 const loadLocale = (locale: string) => {
-  const filePath = path.resolve(__dirname, `../lang/${locale}.json`);
+  const filePath = path.resolve(__dirname, `../../lang/${locale}.json`);
   console.log(`Checking for locale file at: ${filePath}`);
   if (!fs.existsSync(filePath)) {
     throw new Error(`Locale file not found: ${filePath}`);

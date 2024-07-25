@@ -1,8 +1,9 @@
 import "@/styles/footer.css";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import PlaceIcon from "@mui/icons-material/Place";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { FaFacebookSquare } from "react-icons/fa";
-import { MdLocalPhone, MdPlace } from "react-icons/md";
 import { Link } from "../navigation";
 
 const Footer = () => {
@@ -14,15 +15,15 @@ const Footer = () => {
         <div className="column">
           <Image id="Logo" src="/logo.svg" alt="logo" width={0} height={0} />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">
-            <MdPlace />
+            <PlaceIcon />
             <p> 8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>
           </a>
           <a>
-            <MdLocalPhone />
+            <LocalPhoneIcon />
             <p>085-677-9886</p>
           </a>
           <a href="https://facebook.com/chaydieuthien">
-            <FaFacebookSquare />
+            <FacebookIcon />
             <p> https://facebook.com/chaydieuthien</p>
           </a>
         </div>

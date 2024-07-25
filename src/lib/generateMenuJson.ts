@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
+const axios = require('axios');
+require('dotenv').config();
+
+const { GOOGLE_SHEET_URL } = process.env;
+if (!GOOGLE_SHEET_URL) {
+  throw new Error('GOOGLE_SHEET_URL is not defined in the environment variables');
+}
 
 type MenuItem = {
   name: {
@@ -24,6 +31,15 @@ type Menu = {
 
 type MenuJson = {
   [sheetName: string]: Menu;
+};
+
+const downloadXlsxFile = async (url: string, filePath: string) => {
+  const response = await axios({
+    url,
+    method: 'GET',
+    responseType: 'arraybuffer',
+  });
+  fs.writeFileSync(filePath, response.data);
 };
 
 const xlsxFilePath = path.resolve(__dirname, '../../public/data/menu.xlsx');
@@ -101,8 +117,10 @@ const writeJson = () => {
   fs.writeFileSync(categoryJsonFilePath, JSON.stringify(categories, null, 2), 'utf-8');
 };
 
-const generateMenuJson = () => {
+const generateMenuJson = async () => {
+
   try {
+    await downloadXlsxFile(GOOGLE_SHEET_URL, xlsxFilePath);
     parseXlsx();
     writeJson();
     console.log('Excel file has been converted to JSON');

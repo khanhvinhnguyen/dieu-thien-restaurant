@@ -64,17 +64,16 @@
     "orderTime": "Booking time",
     "comment": "Notes",
     "send": "Submit",
-    "invalidEmail": "Please enter a valid email"
+    "required": "Required",
+    "invalidEmail": "Please enter a valid email",
+    "invalidDate": "Cannot select a date in the past",
+    "invalidTime": "Please book at least 30 minutes in advance",
+    "sendEmailSuccess": "Email Sent: Your email has been sent successfully!"
   },
-  "mail": {
-    "subject": "[ORDER] TABLE RESERVATION CONFIRMATION",
-    "greeting": "Dear {userName},",
-    "body": "Thank you for choosing Diệu Thiện Restaurant. We are pleased to confirm your table reservation with the following details:",
-    "nameLabel": "Name",
-    "phoneLabel": "Phone",
-    "reservationLabel": "Reservation Date",
-    "notesLabel": "Notes",
-    "footer": "We look forward to serving you at our restaurant. If you have any questions or need further assistance, please do not hesitate to contact us.",
-    "regards": "Best regards,<br/>Diệu Thiện Restaurant"
+  "metadata": {
+    "template": "Dieu Thien Restaurant",
+    "title": "Unique Vegetarian Flavors | Dieu Thien Restaurant",
+    "desc": "Experience unique and rich vegetarian dishes at our restaurant, blending traditional and modern flavors. Enjoy a peaceful atmosphere, attentive service, and a beautifully designed space for a memorable dining experience that delights both the taste buds and the soul.",
+    "locale": "en-US"
   }
 }

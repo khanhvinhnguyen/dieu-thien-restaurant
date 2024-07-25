@@ -64,17 +64,16 @@
     "orderTime": "Giờ đặt bàn",
     "comment": "Ghi chú",
     "send": "Gửi phiếu",
-    "invalidEmail": "Vui lòng nhập email hợp lệ"
+    "required": "Bắt buộc",
+    "invalidEmail": "Vui lòng nhập email hợp lệ",
+    "invalidDate": "Không thể chọn ngày trong quá khứ",
+    "invalidTime": "Vui lòng đặt bàn trước tối thiểu 30 phút",
+    "sendEmailSuccess": "Email đã được gửi: Email của bạn đã được gửi thành công!"
   },
-  "mail": {
-    "subject": "[ĐẶT BÀN] XÁC NHẬN ĐẶT BÀN",
-    "greeting": "Kính gửi {userName},",
-    "body": "Cảm ơn bạn đã chọn Nhà hàng Diệu Thiện. Chúng tôi xin vui mừng xác nhận đặt bàn của bạn với các chi tiết sau:",
-    "nameLabel": "Tên",
-    "phoneLabel": "Điện thoại",
-    "reservationLabel": "Ngày đặt bàn",
-    "notesLabel": "Ghi chú",
-    "footer": "Chúng tôi mong được phục vụ bạn tại nhà hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ thêm, xin đừng ngần ngại liên hệ với chúng tôi.",
-    "regards": "Trân trọng,<br/>Nhà hàng Diệu Thiện"
+  "metadata": {
+    "template": "Nhà hàng Diệu Thiện",
+    "title": "Hương vị chay độc đáo | Nhà hàng Diệu Thiện",
+    "desc": "Trải nghiệm những món chay độc đáo và phong phú tại nhà hàng chúng tôi, hòa quyện giữa hương vị truyền thống và hiện đại. Tận hưởng bầu không khí yên bình, phục vụ chu đáo và không gian được thiết kế đẹp mắt, mang đến trải nghiệm ăn uống đáng nhớ, làm say mê cả vị giác lẫn tâm hồn." ,
+    "locale": "vi-VN"
   }
 }

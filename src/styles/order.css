@@ -64,11 +64,11 @@
 
   .order-content__right--form {
     width: 50%;
-    height: 100%;
+    height: max-content;
     background-color: var(--background-white);
     border-radius: 1rem;
     text-align: center;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     align-content: space-around;
     max-height: 700px;
 
@@ -105,6 +105,10 @@
 
     textarea {
       border-radius: 8px;
+    }
+
+    span.error {
+      color: red;
     }
   }
 }

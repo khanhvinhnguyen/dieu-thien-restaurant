@@ -1,29 +1,28 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import Image from "next/image";
 import "@/styles/order.css";
+import { useLocale, useTranslations } from "next-intl";
+import React, { useEffect, useState } from "react";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
 import { send } from "@/lib/sendEmailAction";
 import { Validate } from "@/utils/validate";
 
+import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import {
-  Button,
-  TextField,
   Box,
-  Snackbar,
+  Button,
   CircularProgress,
+  Snackbar,
+  TextField,
 } from "@mui/material";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import EmailIcon from "@mui/icons-material/Email";
 dayjs.extend(customParseFormat);
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
@@ -42,10 +41,14 @@ type OrderForm = {
   notes: string;
 };
 
+type Locale = "vi" | "en" | "zh";
+const isValidLocale = (locale: string): locale is Locale => {
+  return ["vi", "en", "zh"].includes(locale);
+};
+
 const OrderPage = () => {
   const t = useTranslations();
   const localActive = useLocale();
-  const today = dayjs();
 
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -55,7 +58,6 @@ const OrderPage = () => {
     handleSubmit,
     control,
     formState: { errors },
-    getValues,
     watch,
   } = useForm<OrderForm>();
 
@@ -82,33 +84,15 @@ const OrderPage = () => {
       formData.append(key, value as string)
     );
 
-    const result = await send(formData, localActive);
-    if (result.success) {
-      setOpen(true);
+    if (isValidLocale(localActive)) {
+      const result = await send(formData, localActive);
+      if (result.success) {
+        setOpen(true);
+      }
+    } else {
+      console.error("Invalid locale:", localActive);
     }
     setLoading(false);
-  };
-
-  const disabledTime = (date: dayjs.Dayjs) => {
-    if (date && date.isSame(dayjs(), "day")) {
-      const now = dayjs();
-      const disabledHours = Array.from({ length: 24 }, (_, i) => i).slice(
-        0,
-        now.hour() + 1
-      );
-      const disabledMinutes = Array.from({ length: 60 }, (_, i) => i).slice(
-        0,
-        now.minute()
-      );
-      return {
-        disabledHours: () => disabledHours,
-        disabledMinutes: () => disabledMinutes,
-      };
-    }
-    return {
-      disabledHours: () => [],
-      disabledMinutes: () => [],
-    };
   };
 
   const orderDate = watch("orderDate");
@@ -154,6 +138,9 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="userName"
+                rules={{
+                  required: t("form.required"),
+                }}
                 render={({ field: { onChange, onBlur, value } }) => (
                   <TextField
                     autoComplete="off"
@@ -172,6 +159,9 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="phone"
+                rules={{
+                  required: t("form.required"),
+                }}
                 render={({ field: { onChange, onBlur, value } }) => (
                   <TextField
                     autoComplete="off"
@@ -197,10 +187,22 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="orderDate"
-                render={({ field: { onChange, onBlur, value } }) => (
+                rules={{
+                  required: t("form.required"),
+                  validate: (value) => {
+                    if (
+                      !value ||
+                      !dayjs(value).isAfter(dayjs().subtract(1, "d"))
+                    ) {
+                      return t("form.invalidDate");
+                    }
+                    return true;
+                  },
+                }}
+                render={({ field: { onChange, value } }) => (
                   <LocalizationProvider
                     dateAdapter={AdapterDayjs}
-                    adapterLocale="vi"
+                    adapterLocale={localActive}
                   >
                     <DatePicker
                       disablePast
@@ -208,8 +210,7 @@ const OrderPage = () => {
                       format="DD/MM/YYYY"
                       onChange={(date) => onChange(date ? date.toDate() : null)}
                       value={value ? dayjs(value) : null}
-                      minDate={today}
-                      defaultValue={dayjs(new Date())}
+                      minDate={dayjs()}
                     />
                   </LocalizationProvider>
                 )}
@@ -218,14 +219,26 @@ const OrderPage = () => {
               <Controller
                 control={control}
                 name="orderTime"
+                rules={{
+                  required: t("form.required"),
+                  validate: (value) => {
+                    if (!value || !dayjs(value).isAfter(dayjs().add(30, "m"))) {
+                      return t("form.invalidTime");
+                    }
+                    return true;
+                  },
+                }}
                 render={({ field: { onChange, onBlur, value } }) => (
-                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <LocalizationProvider
+                    dateAdapter={AdapterDayjs}
+                    adapterLocale={localActive}
+                  >
                     <TimePicker
                       label={t("form.orderTime")}
                       ampm={false}
-                      onChange={onChange}
-                      value={value ? dayjs() : null}
-                      defaultValue={dayjs().add(30, "m")}
+                      onChange={(time) => onChange(time ? time.toDate() : null)}
+                      value={value ? dayjs(value) : dayjs().add(30, "m")}
+                      minTime={dayjs().add(30, "m")}
                       disablePast
                     />
                   </LocalizationProvider>
@@ -272,6 +285,16 @@ const OrderPage = () => {
               )}
             />
 
+            {errors.email && (
+              <span className="error">{t("form.invalidEmail")}</span>
+            )}
+            {errors.orderDate && (
+              <span className="error">{t("form.invalidDate")}</span>
+            )}
+            {errors.orderTime && (
+              <span className="error">{t("form.invalidTime")}</span>
+            )}
+
             <Button
               className="submit-btn"
               variant="contained"
@@ -291,13 +314,18 @@ const OrderPage = () => {
               )}
             </Button>
           </form>
-          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          >
             <Alert
               onClose={handleClose}
               severity="success"
               sx={{ width: "100%" }}
             >
-              {t("Email Sent: Your email has been sent successfully!")}
+              {t("form.sendEmailSuccess")}
             </Alert>
           </Snackbar>
         </div>

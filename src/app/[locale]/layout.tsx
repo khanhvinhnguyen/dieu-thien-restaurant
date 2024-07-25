@@ -1,8 +1,8 @@
+import { ClientComponent } from "@/components";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Noto_Serif } from "next/font/google";
 import "./globals.css";
-import { ClientComponent } from "@/components";
 
 const notoSerif = Noto_Serif({ subsets: ["vietnamese"] });
 

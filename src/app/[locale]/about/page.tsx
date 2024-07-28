@@ -78,36 +78,39 @@ const AboutUs = () => {
           style={{ width: "100%", height: "auto", display: "block" }}
         />
         <div className="banner__text">
-          <p dangerouslySetInnerHTML={{ __html: about("buddhistScripture") }}
+          <p
+            dangerouslySetInnerHTML={{ __html: about("buddhistScripture") }}
           ></p>
         </div>
       </div>
 
-      <div className="about-us__content" style={{ backgroundColor: `#255442`, color: `#fffec` }}>
-        {aboutUsData.map((item, idx) => {
-          return (
-            <SectionImgText
-              key={idx}
-              title={item.title}
-              text={item.text}
-              src={item.src}
-              alt={item.alt}
-              reverse={item.reverse}
-              width={0}
-              height={0}
-              stylesImg={{ width: "50%", height: "auto" }}
-              stylesText={{ color: "#FFFFEC" }}
-            />
-          );
-        })}
+      <div
+        className="about-us__content"
+        style={{ backgroundColor: `#255442`, color: `#fffec` }}
+      >
+        {aboutUsData.map(
+          (item, idx) =>
+            item && (
+              <SectionImgText
+                key={idx}
+                title={item.title}
+                text={item.text}
+                src={item.src}
+                alt={item.alt}
+                reverse={item.reverse}
+                width={0}
+                height={0}
+                stylesImg={{ width: "38.5%", height: "auto" }}
+                stylesText={{ color: "#FFFFEC" }}
+              />
+            )
+        )}
       </div>
 
       <div className="feedback">
         <h1 className="heading1 cream-text">{about("feedbackCustomer")}</h1>
         <p className="cream-text">{about("feedbackDesc")}</p>
-        <div
-          className="column-container"
-        >
+        <div className="column-container">
           {feedbackData.map((item, idx) => {
             return (
               <div key={idx} className="feedback__content">

@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: React.PropsWithChildren) => (
   <html>
     <head>
+      <link rel="icon" href="/logo.svg" />
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap"

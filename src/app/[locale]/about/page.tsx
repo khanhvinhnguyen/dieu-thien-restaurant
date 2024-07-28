@@ -90,10 +90,10 @@ const AboutUs = () => {
         style={{ backgroundColor: `#255442`, color: `#fffec` }}
       >
         {aboutUsData.map(
-          (item, index) =>
+          (item, idx) =>
             item && (
               <SectionImgText
-                key={index}
+                key={idx}
                 title={item.title}
                 text={item.text}
                 src={item.src}

@@ -56,17 +56,6 @@ const Header = ({ scrollTop }: HeaderProps) => {
         {/* Navigation */}
         <div
           className="header__nav"
-
-        >
-          <Link href="/">{t("general.home")}</Link>
-          <Link href="/about">{t("general.aboutUs")}</Link>
-          <Link href="/menu">{t("general.menu")}</Link>
-          <Link href="/order">{t("general.order")}</Link>
-          <Link href="/contact">{t("general.contact")}</Link>
-        </div>
-        {/* Navigation */}
-        <div
-          className="header__nav"
           style={{
             display: "flex",
             gap: "24px",

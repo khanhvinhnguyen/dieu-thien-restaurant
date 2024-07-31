@@ -12,10 +12,12 @@ const ContactPage = () => {
   return (
     <div className={styles.contact}>
       <Image
-        src={"/images/contact.svg"}
+                  loading="eager"
+
+        src={"/images/contact.png"}
         alt={"logo"}
-        width={0}
-        height={0}
+        width={1024}
+        height={700}
         style={{ width: "100%", height: "auto" }}
       />
       <div className={styles.contactInfo}>

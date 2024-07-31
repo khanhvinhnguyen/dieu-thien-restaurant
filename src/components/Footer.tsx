@@ -13,7 +13,7 @@ const Footer = () => {
     <footer>
       <div className="column-container section__container">
         <div className="column">
-          <Image id="Logo" src="/logo.svg" alt="logo" width={0} height={0} />
+          <Image id="Logo" src="/logo.svg" alt="logo" width={80} height={80} />
           <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">
             <PlaceIcon />
             <p> 8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>

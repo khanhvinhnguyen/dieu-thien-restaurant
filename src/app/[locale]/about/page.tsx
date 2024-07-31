@@ -70,11 +70,12 @@ const AboutUs = () => {
     <div className="about-us">
       <div className="banner">
         <Image
+          loading="eager"
           className="banner"
-          src={"/images/aboutUs-banner.svg"}
+          src={"/images/bg-aboutUs.png"}
           alt={"banner"}
-          width={0}
-          height={0}
+          width={1024}
+          height={768}
           style={{ width: "100%", height: "auto", display: "block" }}
         />
         <div className="banner__text">
@@ -98,8 +99,8 @@ const AboutUs = () => {
                 src={item.src}
                 alt={item.alt}
                 reverse={item.reverse}
-                width={0}
-                height={0}
+                width={555}
+                height={350}
                 stylesImg={{ width: "38.5%", height: "auto" }}
                 stylesText={{ color: "#FFFFEC" }}
               />
@@ -120,9 +121,8 @@ const AboutUs = () => {
                       className="avatar"
                       src={item.avatar}
                       alt="avatar"
-                      width={0}
-                      height={0}
-                      style={{ width: "70px", height: "70px" }}
+                      width={70}
+                      height={70}
                     />
                     <p className="content cream-text">{item.content}</p>
                     <p className="userName cream-text">{item.userName}</p>

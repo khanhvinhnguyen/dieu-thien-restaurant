@@ -91,10 +91,8 @@ export default function Home() {
                   loading="eager"
                   src={item.image}
                   alt={item.alt}
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
+                  width={1024}
+                  height={768}
                 />
               </SwiperSlide>
             );
@@ -117,8 +115,8 @@ export default function Home() {
           text={t("homePage.introduce")}
           src={"/images/introduce.svg"}
           alt={"welcome"}
-          width={0}
-          height={0}
+          width={555}
+          height={415}
           stylesImg={{ width: "100%", height: "auto" }}
         />
       </div>

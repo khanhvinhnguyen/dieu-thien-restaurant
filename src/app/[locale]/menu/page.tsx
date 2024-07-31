@@ -145,10 +145,11 @@ const Menu = () => {
   return (
     <div className="menu">
       <Image
+        loading="eager"
         src="/images/menu.png"
         alt="menu"
-        width={0}
-        height={0}
+        width={1024}
+        height={768}
         style={{ width: "100%", height: "auto" }}
       />
       <div className="menu--title">

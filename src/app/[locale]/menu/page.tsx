@@ -145,7 +145,7 @@ const Menu = () => {
   return (
     <div className="menu">
       <Image
-        src="/images/menu_banner.svg"
+        src="/images/menu.png"
         alt="menu"
         width={0}
         height={0}

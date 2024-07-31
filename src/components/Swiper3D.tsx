@@ -37,7 +37,13 @@ const Swiper3D = (props: Swiper3DProps) => {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <Image src={item.image} alt={item.alt} width={0} height={0} />
+            <Image
+              src={item.image}
+              alt={item.alt}
+              width={600}
+              height={500}
+              objectFit="cover"
+            />
           </SwiperSlide>
         ))}
 

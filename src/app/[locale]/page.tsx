@@ -1,5 +1,4 @@
 "use client";
-import ImageComponent from "@/components/ImageComponent";
 import SectionImgText from "@/components/SectionImgText";
 import Swiper3D from "@/components/Swiper3D";
 import { Dancing_Script } from "@next/font/google";
@@ -17,38 +16,38 @@ import { motion } from "framer-motion";
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 const swiperData = [
   {
-    image: "/images/home_slider1.svg",
+    image: "/images/home-intro_1.png",
     alt: "home slider 1",
   },
   {
-    image: "/images/home_slider2.svg",
+    image: "/images/home-intro_2.png",
     alt: "home slider 2",
   },
   {
-    image: "/images/home_slider3.svg",
+    image: "/images/home-intro_3.png",
     alt: "home slider 3",
   },
 ];
 
 const swiper3Ddata = [
   {
-    image: "/images/specialfood_1.svg",
+    image: "/images/specialfood_1.png",
     alt: "special food 1",
   },
   {
-    image: "/images/specialfood_2.svg",
+    image: "/images/specialfood_2.png",
     alt: "special food 2",
   },
   {
-    image: "/images/specialfood_3.svg",
+    image: "/images/specialfood_3.png",
     alt: "special food 3",
   },
   {
-    image: "/images/specialfood_4.svg",
+    image: "/images/specialfood_4.png",
     alt: "special food 4",
   },
   {
-    image: "/images/specialfood_5.svg",
+    image: "/images/specialfood_5.png",
     alt: "special food 5",
   },
 ];
@@ -170,12 +169,11 @@ export default function Home() {
                 className="column"
                 key={index}
               >
-                <ImageComponent
+                <Image
                   src={item.image}
                   alt={item.alt}
-                  width={0}
-                  height={0}
-                  styles={{ width: "100%", height: "auto" }}
+                  width={400}
+                  height={300}
                 />
               </motion.div>
             );

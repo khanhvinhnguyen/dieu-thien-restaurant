@@ -1,7 +1,7 @@
 .order-page {
   position: relative;
   background-color: var(--background-green);
-  background-image: url("/images/bg-order.svg");
+  background-image: url("/images/bg-order.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

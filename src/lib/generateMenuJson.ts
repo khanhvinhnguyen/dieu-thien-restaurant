@@ -56,7 +56,11 @@ const menu: MenuJson = {
 
 const isValidRow = (row: any): boolean => {
   const requiredFields = [
-    'Category', 'Name', 'Price', 'Desc', 'Name_en', 'Desc_en', 'Name_zh', 'Desc_zh'
+    'Category', 
+    'Name', 
+    'Name_en', 
+    'Name_zh', 
+    'Price', 
   ];
   return requiredFields.every(field => row[field]);
 };

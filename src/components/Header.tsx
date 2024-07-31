@@ -39,8 +39,9 @@ const Header = ({ scrollTop }: HeaderProps) => {
 
   return (
     <div
-      className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
-        } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+      className={`animate__animated header__container section__container cream-bg ${
+        scrollTop! > 5 ? "bg-white" : "bg-transparent"
+      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0,
       }}
@@ -49,7 +50,13 @@ const Header = ({ scrollTop }: HeaderProps) => {
         {/* Logo */}
         <div className="logo__wrapper">
           <a href="/">
-            <img id="Logo" src="/images/logo.svg" alt="logo" />
+            <Image
+              id="Logo"
+              src="/logo.svg"
+              alt="logo"
+              width={60}
+              height={60}
+            />
           </a>
         </div>
 

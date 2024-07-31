@@ -184,16 +184,16 @@ header {
   }
 
   .header__language_order {
+    display: flex !important;
     width: 20%;
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
 
     .header__button--language {
-      display: flex;
+      display: flex !important;
       justify-content: center;
-      align-items: center;
+      align-items: center !important;
       gap: 0.25rem;
 
       select {

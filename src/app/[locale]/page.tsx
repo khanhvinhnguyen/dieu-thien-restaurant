@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "@/styles/home.css";
 import { Link } from "@/navigation";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 const swiperData = [
   {
@@ -82,13 +82,14 @@ export default function Home() {
           slidesPerView={1}
           autoplay={{ delay: 2500 }}
           pagination={{ clickable: true }}
-          onSwiper={() => { }}
-          onSlideChange={() => { }}
+          onSwiper={() => {}}
+          onSlideChange={() => {}}
         >
           {swiperData.map((item, index) => {
             return (
               <SwiperSlide key={index}>
                 <Image
+                  loading="eager"
                   src={item.image}
                   alt={item.alt}
                   width={0}
@@ -111,10 +112,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className="welcome section"
-
-      >
+      <div className="welcome section">
         <SectionImgText
           title={t("homePage.summary")}
           text={t("homePage.introduce")}
@@ -129,12 +127,15 @@ export default function Home() {
         <motion.h1
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
-          className="heading1 cream-text">{t("homePage.specialFood")}</motion.h1>
+          transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
+          className="heading1 cream-text"
+        >
+          {t("homePage.specialFood")}
+        </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
         >
           <Swiper3D data={swiper3Ddata} />
         </motion.div>
@@ -144,23 +145,30 @@ export default function Home() {
         <motion.h1
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
-          id="order">{t("general.order")}</motion.h1>
+          transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
+          id="order"
+        >
+          {t("general.order")}
+        </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.25, ease: 'easeOut' }}
-          dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }} />
-        <div
-          className="column-container"
-        >
+          transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
+          dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }}
+        />
+        <div className="column-container">
           {orderData.map((item, index) => {
             return (
               <motion.div
                 initial={{ opacity: 0, y: 120 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 * index, delay: 1 * index, ease: 'easeOut' }}
-                className="column" key={index}
+                transition={{
+                  duration: 1 * index,
+                  delay: 1 * index,
+                  ease: "easeOut",
+                }}
+                className="column"
+                key={index}
               >
                 <ImageComponent
                   src={item.image}

@@ -115,7 +115,7 @@ const AboutUs = () => {
           {feedbackData.map((item, idx) => {
             return (
               <div key={idx} className="feedback__content">
-                <a href={item.url}>
+                <a href={item.url} rel="noopener noreferrer" target="_blank">
                   <div className="text--border-tlbr">
                     <Image
                       className="avatar"

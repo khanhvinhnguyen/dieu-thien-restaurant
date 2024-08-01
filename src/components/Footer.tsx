@@ -14,7 +14,11 @@ const Footer = () => {
       <div className="column-container section__container">
         <div className="column">
           <Image id="Logo" src="/logo.svg" alt="logo" width={80} height={80} />
-          <a href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6">
+          <a
+            href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <PlaceIcon />
             <p> 8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>
           </a>
@@ -22,7 +26,11 @@ const Footer = () => {
             <LocalPhoneIcon />
             <p>085-677-9886</p>
           </a>
-          <a href="https://facebook.com/chaydieuthien">
+          <a
+            href="https://facebook.com/chaydieuthien"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FacebookIcon />
             <p> https://facebook.com/chaydieuthien</p>
           </a>

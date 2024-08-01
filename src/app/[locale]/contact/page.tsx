@@ -27,6 +27,8 @@ const ContactPage = () => {
           <a
             className={styles.column}
             href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <PlaceIcon sx={{ fontSize: 48 }} />
             <h5 className="heading3">{t("general.address")}</h5>
@@ -39,7 +41,12 @@ const ContactPage = () => {
               <p>085-677-9886</p>
             </a>
           </div>
-          <a href="mailto:dieuthien@gmail.com" className={styles.column}>
+          <a
+            href="mailto:dieuthien@gmail.com"
+            className={styles.column}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <EmailIcon sx={{ fontSize: 48 }} />
             <h5 className="heading3">{t("general.email")}</h5>
             <p>dieuthien@gmail.com</p>

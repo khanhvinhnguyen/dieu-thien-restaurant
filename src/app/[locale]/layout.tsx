@@ -1,4 +1,5 @@
 import { ClientComponent } from "@/components";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Noto_Serif } from "next/font/google";
@@ -19,7 +20,10 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={notoSerif.className}>
         <NextIntlClientProvider messages={messages}>
-          <ClientComponent>{children}</ClientComponent>
+          <ClientComponent>
+            {children}
+            <SpeedInsights />
+          </ClientComponent>
         </NextIntlClientProvider>
       </body>
     </html>

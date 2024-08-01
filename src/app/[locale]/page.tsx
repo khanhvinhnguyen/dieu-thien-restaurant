@@ -54,15 +54,15 @@ const swiper3Ddata = [
 
 const orderData = [
   {
-    image: "/images/order1.svg",
+    image: "/images/home-order_1.png",
     alt: "order 1",
   },
   {
-    image: "/images/order2.svg",
+    image: "/images/home-order_2.png",
     alt: "order 2",
   },
   {
-    image: "/images/order3.svg",
+    image: "/images/home-order_3.png",
     alt: "order 3",
   },
 ];

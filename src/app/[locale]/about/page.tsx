@@ -45,14 +45,14 @@ const AboutUs = () => {
     {
       title: about("cozySpace"),
       text: about("cozySpaceDesc"),
-      src: "/images/introduce.svg",
+      src: "/images/aboutUs-cozySpace.png",
       alt: "aboutUs",
       reverse: true,
     },
     {
       title: about("mission"),
       text: about("missionDesc"),
-      src: "/images/introduce.svg",
+      src: "/images/aboutUs-mission.png",
       alt: "aboutUs",
       reverse: false,
     },
@@ -60,7 +60,7 @@ const AboutUs = () => {
     {
       title: about("partner"),
       text: about("partnerDesc"),
-      src: "/images/introduce.svg",
+      src: "/images/aboutUs-partner.png",
       alt: "aboutUs",
       reverse: true,
     },

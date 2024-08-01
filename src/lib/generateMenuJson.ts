@@ -1,3 +1,4 @@
+// src/lib/generateMenuJson.ts
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
@@ -25,12 +26,18 @@ type MenuItem = {
   bestSeller: boolean;
 };
 
+type Category = {
+  icon: string;
+  items: MenuItem[];
+};
+
 type Menu = {
-  [categoryName: string]: MenuItem[];
+  [categoryName: string]: Category;
 };
 
 type MenuJson = {
-  [sheetName: string]: Menu;
+  food: Menu;
+  drink: Menu;
 };
 
 const downloadXlsxFile = async (url: string, filePath: string) => {
@@ -45,7 +52,6 @@ const downloadXlsxFile = async (url: string, filePath: string) => {
 const xlsxFilePath = path.resolve(__dirname, '../../public/data/menu.xlsx');
 const menuJsonFilePath = path.resolve(__dirname, '../../public/data/menu.json');
 const categoryJsonFilePath = path.resolve(__dirname, '../../public/data/category.json');
-
 
 const categories: { [key: string]: { key: string; icon: string }[] } = {};
 
@@ -108,9 +114,12 @@ const parseXlsx = () => {
 
       if (lowerSheetName === 'food' || lowerSheetName === 'drink') {
         if (!menu[lowerSheetName][Category]) {
-          menu[lowerSheetName][Category] = [];
+          menu[lowerSheetName][Category] = {
+            icon: `/icons/${Category}.svg`,
+            items: []
+          };
         }
-        menu[lowerSheetName][Category].push(item);
+        menu[lowerSheetName][Category].items.push(item);
       }
     });
   });
@@ -122,7 +131,6 @@ const writeJson = () => {
 };
 
 const generateMenuJson = async () => {
-
   try {
     await downloadXlsxFile(GOOGLE_SHEET_URL, xlsxFilePath);
     parseXlsx();

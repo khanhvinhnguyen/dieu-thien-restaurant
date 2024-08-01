@@ -238,8 +238,6 @@ header {
   flex-direction: column;
   position: relative;
   max-width: 450px;
-  min-height: 225px;
-  max-height: 225px;
 
   img.avatar {
     top: -15%;
@@ -383,6 +381,8 @@ header {
       display: flex;
       gap: 16px;
       text-align: center;
+      min-height: 225px;
+      max-height: 225px;
     }
   }
 }

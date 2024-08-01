@@ -29,7 +29,7 @@
     "mission": "Sứ mệnh",
     "missionDesc": "Với tâm huyết trong từng món ăn thỏa mãn cả phần nhìn và phần vị, không gian mộc mạc đậm phong vị truyền thống Việt Nam cùng sự yên bình từ Phật Giáo, Diệu Thiện mong muốn  mang lại cho quý thực khách một trải nghiệm với những cảm xúc thật an lành len lỏi từng giác quan.<br/><br/>Từ lâu việc ăn chay đã là điều khiến cho nhiều người yêu ẩm thực e dè, chúng tôi với tất cả sự chân thành và nhiệt huyết, mong muốn mang đến một lựa chọn ăn ngon không kể chay hay mặn, cùng với đó là tâm nguyện khiến món chay trở thành điều quen thuộc trong từng bữa ăn của người Việt Nam.",
     "partner": "Cộng sự của Diệu Thiện",
-    "partnerDesc": "Với một đội ngũ tận tâm cùng những cộng sự nhiệt huyết, từng chút một đều được nhân viên tại nhà Diệu Thiện trau chuốt và tỉ mẫn nhằm đem đến một trải nghiệm thưởng thức  hoàn toàn thiện lành và ấm cúng.",
+    "partnerDesc": "Với một đội ngũ tận tâm cùng những cộng sự nhiệt huyết, từng chút một đều được nhân viên tại nhà Diệu Thiện trau chuốt và tỉ mẫn nhằm đem đến một trải nghiệm thưởng thức hoàn toàn thiện lành và ấm cúng.",
     "feedbackCustomer": "Phản hồi từ thực khách",
     "feedbackDesc": "Với tinh thần lắng nghe và luôn luôn cải thiện đổi mới, chúng tôi rất vinh hạnh khi được đồng hành cùng các khách hàng thân yêu"
   },
@@ -50,7 +50,7 @@
     "juice": "Nước ép",
     "coffee": "Cafe",
     "thaiTea": "Trà Thái",
-    "softDrinks": "Nước ngọt",
+    "softdrinks": "Nước ngọt",
     "soda": "Soda"
   },
   "orderPage": {

@@ -12,8 +12,7 @@ const ContactPage = () => {
   return (
     <div className={styles.contact}>
       <Image
-                  loading="eager"
-
+        loading="eager"
         src={"/images/contact.png"}
         alt={"logo"}
         width={1024}

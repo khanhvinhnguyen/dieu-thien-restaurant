@@ -50,6 +50,10 @@
 
     a {
       text-decoration: none;
+
+      p.content {
+        min-height: 80px;
+      }
     }
   }
 }

@@ -114,19 +114,19 @@ const Header = ({ scrollTop }: HeaderProps) => {
           <div className="header__mobile-menu">
             <ul>
               <Link href="/">
-                <li onClick={() => setNav(false)}>Home</li>
+                <li onClick={() => setNav(false)}>{t("general.home")}</li>
               </Link>
               <Link href="/#about">
-                <li onClick={() => setNav(false)}>About</li>
+                <li onClick={() => setNav(false)}>{t("general.aboutUs")}</li>
               </Link>
               <Link href="/#skills">
-                <li onClick={() => setNav(false)}>Skills</li>
+                <li onClick={() => setNav(false)}>{t("general.menu")}</li>
               </Link>
               <Link href="/#projects">
-                <li onClick={() => setNav(false)}>Projects</li>
+                <li onClick={() => setNav(false)}>{t("general.order")}</li>
               </Link>
               <Link href="/#contact">
-                <li onClick={() => setNav(false)}>Contact</li>
+                <li onClick={() => setNav(false)}>{t("general.contact")}</li>
               </Link>
             </ul>
           </div>

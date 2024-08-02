@@ -102,7 +102,7 @@ const Menu = () => {
                     }))
                   }
                   spaceBetween={10}
-                  slidesPerView={4}
+                  slidesPerView="auto"
                   freeMode={true}
                   watchSlidesProgress={true}
                   navigation={true}

@@ -19,12 +19,11 @@ const Footer = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <PlaceIcon />
-            <p> 8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương</p>
+            <PlaceIcon />8 DA1-2, Mỹ Phước, Bến Cát, Bình Dương
           </a>
-          <a>
+          <a href="callto:0856779886">
             <LocalPhoneIcon />
-            <p>085-677-9886</p>
+            085-677-9886
           </a>
           <a
             href="https://facebook.com/chaydieuthien"
@@ -32,7 +31,7 @@ const Footer = () => {
             target="_blank"
           >
             <FacebookIcon />
-            <p> https://facebook.com/chaydieuthien</p>
+            https://facebook.com/chaydieuthien
           </a>
         </div>
 
@@ -66,6 +65,7 @@ const Footer = () => {
           <div className="video-responsive">
             <iframe
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100090392966682%2Fvideos%2F1384123925702576%2F&show_text=false&width=560&t=0"
+              title="video"
               width="410"
               height="240"
               scrolling="no"

@@ -31,7 +31,11 @@ const LocalSwitcher = () => {
         alt="lang"
       />
       <div className="custom-select-wrapper">
-        <select value={localActive} onChange={(e) => onSelectChange(e)}>
+        <select
+          aria-label="lang"
+          value={localActive}
+          onChange={(e) => onSelectChange(e)}
+        >
           <option value="vi">VI</option>
           <option value="en">EN</option>
           <option value="zh">CHI</option>

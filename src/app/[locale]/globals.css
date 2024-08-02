@@ -137,7 +137,9 @@ header {
   position: fixed;
   z-index: 999;
   transition: opacity 0.5s ease-in-out;
-
+  .menu-icon {
+    display: none;
+  }
   .logo__wrapper {
     width: 20%;
     img#Logo {
@@ -170,7 +172,7 @@ header {
         transition: opacity 300ms, transform 300ms;
       }
       &:hover {
-        color: var(--text-color-yellow);
+        /* color: var(--text-color-yellow); */
 
         &:after {
           opacity: 1;
@@ -214,7 +216,7 @@ header {
       border-radius: 50px;
       border: none;
       text-decoration: none;
-      width: 8.75rem;
+      width: fit-content;
       text-align: center;
       min-width: fit-content;
     }
@@ -476,6 +478,14 @@ textarea.ant-input {
       column-gap: 2rem;
     }
   }
+  header {
+    padding: 0 1.5rem;
+    .logo__wrapper,
+    .header__language_order {
+      width: auto;
+      min-width: 15%;
+    }
+  }
 }
 @media (max-width: 991px) {
   :root {
@@ -483,12 +493,16 @@ textarea.ant-input {
   }
   header {
     padding: 0 1.5rem;
-    width: 100%;
-    .header__nav {
-      display: none;
+    .logo__wrapper {
+      width: 10%;
+      min-width: fit-content;
     }
+
     .header__language_order {
       width: auto;
+    }
+    .header__button--order {
+      display: none;
     }
   }
   .section {
@@ -499,6 +513,32 @@ textarea.ant-input {
 @media (max-width: 768px) {
   :root {
     --base-font-size: 12px;
+  }
+  header {
+    .header__nav {
+      visibility: hidden;
+    }
+    .side_bar {
+      position: fixed;
+      flex-direction: column;
+      top: 0px;
+      background: rgba(255, 255, 236, 0.9);
+      width: 100%;
+      left: 0px;
+      height: 100vh;
+      text-align: center;
+      visibility: hidden;
+    }
+
+    .s .header__button--order {
+      display: none;
+    }
+    .menu-icon {
+      display: inline;
+    }
+  }
+  h1.menu--title {
+    font-size: 1.75rem !important;
   }
   .section {
     margin: 4rem 0;
@@ -514,6 +554,7 @@ textarea.ant-input {
   :root {
     --base-font-size: 14px;
   }
+
   .section {
     margin: 3rem 0;
     height: fit-content;

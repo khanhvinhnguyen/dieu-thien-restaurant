@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
 import { LocalSwitcher } from ".";
-
+import Menu from "@mui/icons-material/Menu";
 type HeaderProps = {
   scrollTop?: number;
 };
@@ -13,6 +13,7 @@ type HeaderProps = {
 const Header = ({ scrollTop }: HeaderProps) => {
   const t = useTranslations();
   const [visible, setVisible] = useState(false);
+  const [sidebarVisible, setSideBarVisible] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const timerRef = useRef<number | null>(null);
 
@@ -37,11 +38,14 @@ const Header = ({ scrollTop }: HeaderProps) => {
     }
   };
 
+  const toggleSideBar = () => {
+    setSideBarVisible(!sidebarVisible)
+  }
+
   return (
     <div
-      className={`animate__animated header__container section__container cream-bg ${
-        scrollTop! > 5 ? "bg-white" : "bg-transparent"
-      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+      className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
+        } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0,
       }}
@@ -62,13 +66,9 @@ const Header = ({ scrollTop }: HeaderProps) => {
 
         {/* Navigation */}
         <div
-          className="header__nav"
-          style={{
-            display: "flex",
-            gap: "24px",
-            color: "#31363F",
-            fontSize: "18px",
-          }}
+          className="header__nav side_bar"
+          onClick={toggleSideBar}
+          style={{ visibility: sidebarVisible ? "visible" : 'hidden' }}
         >
           <Link href="/">{t("general.home")}</Link>
           <Link href="/about">{t("general.aboutUs")}</Link>
@@ -92,6 +92,12 @@ const Header = ({ scrollTop }: HeaderProps) => {
           <Link href="/order" className="header__button--order">
             {t("general.order")}
           </Link>
+
+          <div className="menu-icon" onClick={toggleSideBar}
+          >
+            <Menu />
+          </div>
+
         </div>
       </header>
     </div>

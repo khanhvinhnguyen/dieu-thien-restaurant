@@ -18,6 +18,8 @@
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
 
   .order-content__left--info {
     width: 50%;

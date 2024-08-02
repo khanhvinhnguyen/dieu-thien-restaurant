@@ -22,7 +22,7 @@ img {
   height: 100px;
 }
 
-h1#menu--title {
+h1.menu--title {
   margin: 0;
   font-size: 2.5rem;
   padding: 1rem 5rem;
@@ -129,5 +129,28 @@ h2 {
 @media (max-width: 1650px) {
   .menu--content {
     padding: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu--title {
+    width: auto;
+    height: 50px;
+  }
+  h1.menu--title {
+    font-size: 1.6rem !important;
+    width: 30%;
+    height: 25px;
+    padding: 1rem 2rem;
+    width: auto;
+  }
+  .section {
+    margin: 4rem 0;
+    height: fit-content;
+    padding: 0 3rem;
+    .section__content {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
   }
 }

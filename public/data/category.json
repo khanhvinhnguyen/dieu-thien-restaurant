@@ -29,12 +29,12 @@
       "icon": "/icons/saltDish.svg"
     },
     {
-      "key": "dessert",
-      "icon": "/icons/dessert.svg"
-    },
-    {
       "key": "salad",
       "icon": "/icons/salad.svg"
+    },
+    {
+      "key": "dessert",
+      "icon": "/icons/dessert.svg"
     }
   ],
   "drink": [
@@ -55,8 +55,8 @@
       "icon": "/icons/thaiTea.svg"
     },
     {
-      "key": "softdrinks",
-      "icon": "/icons/softdrinks.svg"
+      "key": "softdrink",
+      "icon": "/icons/softdrink.svg"
     },
     {
       "key": "soda",

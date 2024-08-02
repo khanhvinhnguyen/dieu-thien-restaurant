@@ -144,17 +144,18 @@ const Menu = () => {
     <div className="menu">
       <Image
         loading="eager"
-        src="/images/menu.png"
+        src={"/images/menu.png"}
         alt="menu"
         width={1024}
         height={768}
         style={{ width: "100%", height: "auto" }}
       />
+
       <div className="menu--title">
         <h1 className="menu--title">{t("food")}</h1>
       </div>
       <div className="menu--content">
-        <Tabs tabPosition={"left"} type="card" items={foodMenuItems} />
+        <Tabs tabPosition={"top"} type="card" items={foodMenuItems} />
       </div>
       <div className="menu--title">
         <h1 className="menu--title">{t("beverage")}</h1>

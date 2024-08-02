@@ -63,6 +63,7 @@
     "userName": "Tên khách hàng",
     "orderDate": "Ngày đặt bàn",
     "orderTime": "Giờ đặt bàn",
+    "participantNumber": "Số khách tham gia",
     "comment": "Ghi chú",
     "send": "Gửi phiếu",
     "required": "Bắt buộc",

@@ -9,6 +9,7 @@ const loadLocale = {
     "nameLabel": "Tên",
     "phoneLabel": "Điện thoại",
     "reservationLabel": "Ngày đặt bàn",
+    "participantNumber": "Số khách tham dự",
     "notesLabel": "Ghi chú",
     "footer": "Chúng tôi mong được phục vụ bạn tại nhà hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ thêm, xin đừng ngần ngại liên hệ với chúng tôi.",
     "regards": "Trân trọng,<br/>Nhà hàng Diệu Thiện"
@@ -20,6 +21,7 @@ const loadLocale = {
     "nameLabel": "Name",
     "phoneLabel": "Phone",
     "reservationLabel": "Reservation Date",
+    "participantNumber": "Number of guests",
     "notesLabel": "Notes",
     "footer": "We look forward to serving you at our restaurant. If you have any questions or need further assistance, please do not hesitate to contact us.",
     "regards": "Best regards,<br/>Diệu Thiện Restaurant"
@@ -31,6 +33,7 @@ const loadLocale = {
     "nameLabel": "姓名",
     "phoneLabel": "电话",
     "reservationLabel": "预订日期",
+    "participantNumber": "来宾人数",
     "notesLabel": "备注",
     "footer": "我们期待在我们的餐厅为您服务。如果您有任何问题或需要进一步的帮助，请随时与我们联系。",
     "regards": "此致,<br/>Diệu Thiện 餐厅"
@@ -57,6 +60,7 @@ export const send = async (formData: FormData, locale: Locale) => {
             <li><strong>${template.nameLabel}:</strong> ${formData.get('userName')}</li>
             <li><strong>${template.phoneLabel}:</strong> ${formData.get('phone')}</li>
             <li><strong>${template.reservationLabel}:</strong> ${formData.get('orderDate')} ${formData.get('orderTime')}</li>
+            <li><strong>${template.participantNumber}:</strong> ${formData.get('participantNumber')}</li>
             <li><strong>${template.notesLabel}:</strong> ${formData.get('notes')}</li>
           </ul>
           <p>${template.footer}</p>

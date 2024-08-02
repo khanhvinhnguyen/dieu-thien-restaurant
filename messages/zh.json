@@ -63,6 +63,7 @@
     "userName": "顾客姓名",
     "orderDate": "订位日期",
     "orderTime": "订位时间",
+    "participantNumber": "来宾人数",
     "comment": "备注",
     "send": "提交",
     "required": "必填",

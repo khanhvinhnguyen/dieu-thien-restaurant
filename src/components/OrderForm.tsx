@@ -34,6 +34,7 @@ type OrderForm = {
   orderDate: Date;
   orderTime: Date;
   email: string;
+  participantNumber: number;
   notes: string;
 };
 
@@ -215,28 +216,57 @@ const OrderFormComponent = () => {
             )}
           />
         </Box>
-        <Controller
-          control={control}
-          name="email"
-          rules={{
-            required: t("form.required"),
-            validate: (value) =>
-              Validate.email(value) || t("form.invalidEmail"),
-          }}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextField
-              autoComplete="off"
-              label={t("general.email")}
-              placeholder={t("general.email")}
-              name="email"
-              required
-              onBlur={onBlur}
-              value={value}
-              onChange={onChange}
-              fullWidth
-            />
-          )}
-        />
+        <Box className="form-row">
+          <Controller
+            control={control}
+            name="email"
+            rules={{
+              required: t("form.required"),
+              validate: (value) =>
+                Validate.email(value) || t("form.invalidEmail"),
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <TextField
+                autoComplete="off"
+                label={t("general.email")}
+                placeholder={t("general.email")}
+                name="email"
+                required
+                onBlur={onBlur}
+                value={value}
+                onChange={onChange}
+                fullWidth
+              />
+            )}
+          />
+          <Controller
+            control={control}
+            name="participantNumber"
+            rules={{
+              required: t("form.required"),
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <TextField
+                autoComplete="off"
+                type="number"
+                label={t("form.participantNumber")}
+                placeholder={t("form.participantNumber")}
+                name="participantNumber"
+                required
+                onBlur={onBlur}
+                value={value}
+                onChange={onChange}
+                InputProps={{
+                  inputProps: {
+                    min: 1,
+                  },
+                }}
+                fullWidth
+              />
+            )}
+          />
+        </Box>
+
         <Controller
           control={control}
           name="notes"

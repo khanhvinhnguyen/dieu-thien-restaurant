@@ -29,27 +29,22 @@
 
 .column {
   width: 285px;
-  height: 190px;
+  height: fit-content;
   opacity: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--text-color-green);
+  text-decoration: none;
 }
 
 .column h5 {
   margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .column p {
   text-align: center;
-  max-width: 160px;
+  max-width: 200px;
   height: 100%;
-}
-
-a.column {
-  margin-top: 5px;
-  font-size: 1em;
-  text-decoration: none;
-  color: var(--text-color-green);
 }

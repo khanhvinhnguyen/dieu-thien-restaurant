@@ -5,15 +5,16 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
 import { LocalSwitcher } from ".";
-import Menu from "@mui/icons-material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+
 type HeaderProps = {
   scrollTop?: number;
 };
 
 const Header = ({ scrollTop }: HeaderProps) => {
   const t = useTranslations();
+  const [nav, setNav] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [sidebarVisible, setSideBarVisible] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const timerRef = useRef<number | null>(null);
 
@@ -38,19 +39,24 @@ const Header = ({ scrollTop }: HeaderProps) => {
     }
   };
 
-  const toggleSideBar = () => {
-    setSideBarVisible(!sidebarVisible)
-  }
+  const handleNav = () => {
+    setNav(!nav);
+  };
 
   return (
-    <div
-      className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
-        } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+    <header
+      className={`animate__animated header__container section__container cream-bg ${
+        scrollTop! > 5 ? "bg-white" : "bg-transparent"
+      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0,
       }}
     >
-      <header>
+      {/* Desktop */}
+      <div
+        className="navbar_desktop header__container section__container cream-bg"
+        style={{ display: "flex", opacity: visible ? 1 : 0 }}
+      >
         {/* Logo */}
         <div className="logo__wrapper">
           <a href="/">
@@ -65,22 +71,12 @@ const Header = ({ scrollTop }: HeaderProps) => {
         </div>
 
         {/* Navigation */}
-        <div
-          className="header__nav side_bar"
-          onClick={toggleSideBar}
-          style={{ visibility: sidebarVisible ? "visible" : 'hidden' }}
-        >
+        <div className="header__nav">
           <Link href="/">{t("general.home")}</Link>
           <Link href="/about">{t("general.aboutUs")}</Link>
-          <Link href="/menu" prefetch={true}>
-            {t("general.menu")}
-          </Link>
-          <Link href="/order" prefetch={true}>
-            {t("general.order")}
-          </Link>
-          <Link href="/contact" prefetch={true}>
-            {t("general.contact")}
-          </Link>
+          <Link href="/menu">{t("general.menu")}</Link>
+          <Link href="/order">{t("general.order")}</Link>
+          <Link href="/contact">{t("general.contact")}</Link>
         </div>
 
         {/* Language & Order */}
@@ -92,15 +88,62 @@ const Header = ({ scrollTop }: HeaderProps) => {
           <Link href="/order" className="header__button--order">
             {t("general.order")}
           </Link>
+        </div>
 
-          <div className="menu-icon" onClick={toggleSideBar}
-          >
-            <Menu />
+        <div className="navbar_menu-icon" onClick={handleNav}>
+          <MenuIcon sx={{ fontSize: 28 }} />
+        </div>
+      </div>
+
+      {/* Mobile */}
+      <div className={nav ? "header__overlay" : "header__overlay-hidden"}>
+        <div
+          className={
+            nav ? "header__mobile" : "header__mobile header__mobile-hidden"
+          }
+        >
+          {/* Logo */}
+          <div className="header__mobile-logo">
+            <Link href="/">
+              <Image src={"/logo.svg"} alt="" width="87" height="35" />
+            </Link>
+            <div className="header__mobile-close" onClick={handleNav}></div>
           </div>
 
+          {/* Navigation */}
+          <div className="header__mobile-menu">
+            <ul>
+              <Link href="/">
+                <li onClick={() => setNav(false)}>{t("general.home")}</li>
+              </Link>
+              <Link href="/#about">
+                <li onClick={() => setNav(false)}>{t("general.aboutUs")}</li>
+              </Link>
+              <Link href="/#skills">
+                <li onClick={() => setNav(false)}>{t("general.menu")}</li>
+              </Link>
+              <Link href="/#projects">
+                <li onClick={() => setNav(false)}>{t("general.order")}</li>
+              </Link>
+              <Link href="/#contact">
+                <li onClick={() => setNav(false)}>{t("general.contact")}</li>
+              </Link>
+            </ul>
+          </div>
+
+          {/* Language & Order */}
+          <div className="header__language_order">
+            {/* Language */}
+            <LocalSwitcher />
+
+            {/* Order */}
+            <Link href="/order" className="header__button--order">
+              {t("general.order")}
+            </Link>
+          </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 

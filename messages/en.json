@@ -63,6 +63,7 @@
     "userName": "Customer name",
     "orderDate": "Booking date",
     "orderTime": "Booking time",
+    "participantNumber": "Number of guests",
     "comment": "Notes",
     "send": "Submit",
     "required": "Required",

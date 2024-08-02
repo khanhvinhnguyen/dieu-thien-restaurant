@@ -24,14 +24,16 @@ const Swiper3D = (props: Swiper3DProps) => {
         loop={true}
         autoplay={{ delay: 2000 }}
         slidesPerView={"auto"}
+        initialSlide={2}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 3,
+          depth: 300,
+          modifier: 1,
+          slideShadows: false,
         }}
         pagination={{ el: ".swiper3d-pagination", clickable: true }}
-        modules={[Autoplay, EffectCoverflow, Pagination]}
+        modules={[Autoplay, EffectCoverflow]}
         slidesPerGroup={1}
         spaceBetween={100}
       >
@@ -46,10 +48,6 @@ const Swiper3D = (props: Swiper3DProps) => {
             />
           </SwiperSlide>
         ))}
-
-        <div className="swiper3d-controler">
-          <div className="swiper3d-pagination"></div>
-        </div>
       </Swiper>
     </div>
   );

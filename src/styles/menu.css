@@ -97,6 +97,10 @@ h2 {
   }
 }
 
+.swiper--list-item .swiper-slide-thumb-active {
+  opacity: 1 !important;
+}
+
 .menu-list {
   height: 100%;
 

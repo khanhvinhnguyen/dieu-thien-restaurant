@@ -60,6 +60,7 @@ body {
 .section__container.cream-bg {
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   background-color: var(--background-cream);
 }
 .section__container.yellow-bg {
@@ -110,29 +111,31 @@ h4 {
 }
 .header__container {
   width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  padding: 0 1rem;
+}
+
+.header__wrapper {
+  z-index: 10;
   height: 75px;
-  background-color: var(--background-cream);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  width: -webkit-fill-available;
   position: fixed;
-  z-index: 999;
-  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  max-width: var(--max-content-width);
+  background-color: var(--background-cream);
 }
 header {
   margin: 0 auto;
-  width: 100%;
-  max-width: var(--max-content-width);
+  width: 100vw;
+  box-sizing: border-box;
   height: 75px;
   background-color: var(--background-cream);
+  background-color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
   width: -webkit-fill-available;
   position: fixed;
   z-index: 999;
@@ -156,6 +159,7 @@ header {
     font-size: 1.125rem;
     width: 50%;
     justify-content: center;
+    align-items: center;
     a {
       font-weight: 700;
       color: var(--text-color-dark);
@@ -188,7 +192,7 @@ header {
   .header__language_order {
     display: flex !important;
     width: 20%;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 1.5rem;
 
@@ -219,6 +223,8 @@ header {
       width: fit-content;
       text-align: center;
       min-width: fit-content;
+      width: 130px;
+      box-sizing: border-box;
     }
   }
 
@@ -228,6 +234,10 @@ header {
   @media screen and (max-width: 768px) {
     .navbar_menu-icon {
       display: flex;
+      align-items: center;
+    }
+    .header__language_order {
+      margin-right: 1rem;
     }
   }
 
@@ -241,7 +251,8 @@ header {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 11;
 
     .header__mobile {
       position: fixed;
@@ -249,9 +260,10 @@ header {
       top: 0;
       width: 75%;
       height: 100vh;
-      background-color: #ecf0f3;
+      background-color: rgba(255, 255, 236, 0.9);
       padding: 10px;
       transition: left 0.5s ease-in;
+      z-index: 2;
 
       &.header__mobile-hidden {
         left: -100%;
@@ -260,7 +272,7 @@ header {
       .header__mobile-logo {
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
 
         & img {
@@ -270,27 +282,34 @@ header {
       }
 
       .header__mobile-close {
-        display: inline-block;
+        /* display: inline-block;
         padding: 12px;
         border-radius: 50%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
+        cursor: pointer; */
+
+        padding: 2rem 1rem;
+        color: var(--text-color-green);
       }
 
       .header__mobile-menu {
         margin-top: 16px;
         border-bottom: 1px solid #ccc;
         padding-bottom: 16px;
-
+        a {
+          text-decoration: none;
+          color: var(--text-color-green);
+        }
         ul {
           list-style: none;
-          padding: 0;
+          padding: 0 2rem;
 
           li {
             padding: 16px 0;
-            font-size: 1rem;
+            font-size: 1.25rem;
             text-transform: uppercase;
             cursor: pointer;
+            font-weight: bold;
           }
         }
       }
@@ -382,8 +401,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 64px;
-  padding-left: 5.2rem;
-  padding-right: 5.2rem;
 
   .section__content {
     display: grid;
@@ -561,6 +578,12 @@ textarea.ant-input {
       min-width: 15%;
     }
   }
+  .order-content {
+    padding: 0 2rem;
+  }
+  .order-page {
+    height: 160vh !important;
+  }
 }
 @media (max-width: 991px) {
   :root {
@@ -605,7 +628,7 @@ textarea.ant-input {
       visibility: hidden;
     }
 
-    .s .header__button--order {
+    .header__button--order {
       display: none;
     }
     .menu-icon {
@@ -623,6 +646,13 @@ textarea.ant-input {
       grid-template-columns: 1fr;
       row-gap: 2rem;
     }
+  }
+  .order-page {
+    height: 150vh !important  ;
+  }
+  .order-content {
+    justify-content: center;
+    width: 100%;
   }
 }
 @media (max-width: 576px) {

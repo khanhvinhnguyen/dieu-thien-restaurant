@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
 import { LocalSwitcher } from ".";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 
 type HeaderProps = {
   scrollTop?: number;
@@ -45,53 +46,54 @@ const Header = ({ scrollTop }: HeaderProps) => {
 
   return (
     <header
-      className={`animate__animated header__container section__container cream-bg ${
-        scrollTop! > 5 ? "bg-white" : "bg-transparent"
-      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+      className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
+        } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0,
       }}
     >
-      {/* Desktop */}
-      <div
-        className="navbar_desktop header__container section__container cream-bg"
-        style={{ display: "flex", opacity: visible ? 1 : 0 }}
-      >
-        {/* Logo */}
-        <div className="logo__wrapper">
-          <a href="/">
-            <Image
-              id="Logo"
-              src="/logo.svg"
-              alt="logo"
-              width={60}
-              height={60}
-            />
-          </a>
-        </div>
+      <div className="header__wrapper">
+        {/* Desktop */}
+        <div
+          className="navbar_desktop header__container section__container cream-bg"
+          style={{ display: "flex", opacity: visible ? 1 : 0 }}
+        >
+          {/* Logo */}
+          <div className="logo__wrapper">
+            <a href="/">
+              <Image
+                id="Logo"
+                src="/logo.svg"
+                alt="logo"
+                width={60}
+                height={60}
+              />
+            </a>
+          </div>
 
-        {/* Navigation */}
-        <div className="header__nav">
-          <Link href="/">{t("general.home")}</Link>
-          <Link href="/about">{t("general.aboutUs")}</Link>
-          <Link href="/menu">{t("general.menu")}</Link>
-          <Link href="/order">{t("general.order")}</Link>
-          <Link href="/contact">{t("general.contact")}</Link>
-        </div>
+          {/* Navigation */}
+          <div className="header__nav">
+            <Link href="/">{t("general.home")}</Link>
+            <Link href="/about">{t("general.aboutUs")}</Link>
+            <Link href="/menu">{t("general.menu")}</Link>
+            <Link href="/order">{t("general.order")}</Link>
+            <Link href="/contact">{t("general.contact")}</Link>
+          </div>
 
-        {/* Language & Order */}
-        <div className="header__language_order">
-          {/* Language */}
-          <LocalSwitcher />
+          {/* Language & Order */}
+          <div className="header__language_order">
+            {/* Language */}
+            <LocalSwitcher />
 
-          {/* Order */}
-          <Link href="/order" className="header__button--order">
-            {t("general.order")}
-          </Link>
-        </div>
+            {/* Order */}
+            <Link href="/order" className="header__button--order">
+              {t("general.order")}
+            </Link>
+          </div>
 
-        <div className="navbar_menu-icon" onClick={handleNav}>
-          <MenuIcon sx={{ fontSize: 28 }} />
+          <div className="navbar_menu-icon" onClick={handleNav}>
+            <MenuIcon sx={{ fontSize: 28 }} />
+          </div>
         </div>
       </div>
 
@@ -104,10 +106,12 @@ const Header = ({ scrollTop }: HeaderProps) => {
         >
           {/* Logo */}
           <div className="header__mobile-logo">
-            <Link href="/">
+            {/* <Link href="/">
               <Image src={"/logo.svg"} alt="" width="87" height="35" />
-            </Link>
-            <div className="header__mobile-close" onClick={handleNav}></div>
+            </Link> */}
+            <div className="header__mobile-close" onClick={handleNav}>
+              <CloseIcon />
+            </div>
           </div>
 
           {/* Navigation */}
@@ -116,16 +120,16 @@ const Header = ({ scrollTop }: HeaderProps) => {
               <Link href="/">
                 <li onClick={() => setNav(false)}>{t("general.home")}</li>
               </Link>
-              <Link href="/#about">
+              <Link href="/about">
                 <li onClick={() => setNav(false)}>{t("general.aboutUs")}</li>
               </Link>
-              <Link href="/#skills">
+              <Link href="/menu">
                 <li onClick={() => setNav(false)}>{t("general.menu")}</li>
               </Link>
-              <Link href="/#projects">
+              <Link href="/order">
                 <li onClick={() => setNav(false)}>{t("general.order")}</li>
               </Link>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <li onClick={() => setNav(false)}>{t("general.contact")}</li>
               </Link>
             </ul>
@@ -134,7 +138,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
           {/* Language & Order */}
           <div className="header__language_order">
             {/* Language */}
-            <LocalSwitcher />
+            {/* <LocalSwitcher /> */}
 
             {/* Order */}
             <Link href="/order" className="header__button--order">

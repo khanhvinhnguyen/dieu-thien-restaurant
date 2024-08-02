@@ -35,7 +35,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="column">
+        {/* <div className="column">
           <p className="body-md footer-nav-title" id="directional">
             {t("general.directional")}
           </p>
@@ -60,7 +60,7 @@ const Footer = () => {
             {" "}
             <Link href="/contact">{t("general.contact")}</Link>
           </p>
-        </div>
+        </div> */}
         <div className="column">
           <div className="video-responsive">
             <iframe

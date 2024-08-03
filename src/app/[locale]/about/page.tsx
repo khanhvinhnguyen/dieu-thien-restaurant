@@ -109,8 +109,8 @@ const AboutUs = () => {
       </div>
 
       <div className="feedback">
-        <h1 className="heading1 cream-text">{about("feedbackCustomer")}</h1>
-        <p className="cream-text">{about("feedbackDesc")}</p>
+        <h1 className="heading1 green-text">{about("feedbackCustomer")}</h1>
+        <p className="green-text">{about("feedbackDesc")}</p>
         <div className="column-container">
           {feedbackData.map((item, idx) => {
             return (

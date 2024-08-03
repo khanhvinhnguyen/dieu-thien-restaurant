@@ -5,6 +5,8 @@
 
     span.swiper-pagination-bullet {
       background: var(--swiper-bullet-cream);
+      width: 1rem;
+      height: 1rem;
     }
 
     span.swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -21,7 +23,7 @@
       top: 30%;
       left: 10%;
       color: var(--text-color-cream);
-      display: flex !important;
+      display: flex;
       flex-direction: column;
       align-items: center;
       z-index: 1;
@@ -58,7 +60,7 @@
   }
 
   .welcome {
-    display: flex !important;
+    display: flex;
     min-height: fit-content;
     background-color: var(--background-cream);
     justify-content: center;
@@ -77,7 +79,7 @@
   }
 
   .order {
-    height: 52rem;
+    min-height: 52rem;
     background-color: var(--background-cream);
     text-align: center;
 
@@ -85,7 +87,7 @@
       font-weight: 700;
       font-size: 46px;
       text-align: center;
-      margin-top: 0;
+      margin-top: 2rem;
       color: var(--text-color-green);
     }
 
@@ -99,6 +101,7 @@
 
     .column-container {
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
   }
 }

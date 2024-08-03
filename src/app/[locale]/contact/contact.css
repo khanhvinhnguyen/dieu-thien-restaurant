@@ -4,12 +4,11 @@
   color: var(--text-color-green);
   margin: 0;
   padding: 0;
-
-  .contactInfo {
-    height: 700px;
-    align-content: center;
-    text-align: center;
-  }
+}
+.contactInfo {
+  height: 700px;
+  align-content: center;
+  text-align: center;
 }
 
 .title {
@@ -19,10 +18,10 @@
   margin-bottom: 64px;
 }
 .contact-item {
-  display: flex !important;
+  display: flex;
 }
 .row {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   gap: 20px;
 }
@@ -31,7 +30,7 @@
   width: 285px;
   height: fit-content;
   opacity: 80%;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--text-color-green);

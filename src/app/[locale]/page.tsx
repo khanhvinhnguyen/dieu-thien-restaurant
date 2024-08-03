@@ -31,23 +31,23 @@ const swiperData = [
 
 const swiper3Ddata = [
   {
-    image: "/images/specialfood_1.png",
+    image: "/images/special_1.png",
     alt: "special food 1",
   },
   {
-    image: "/images/specialfood_2.png",
+    image: "/images/special_2.png",
     alt: "special food 2",
   },
   {
-    image: "/images/specialfood_3.png",
+    image: "/images/special_3.png",
     alt: "special food 3",
   },
   {
-    image: "/images/specialfood_4.png",
+    image: "/images/special_4.png",
     alt: "special food 4",
   },
   {
-    image: "/images/specialfood_5.png",
+    image: "/images/special_5.png",
     alt: "special food 5",
   },
 ];
@@ -81,8 +81,8 @@ export default function Home() {
           slidesPerView={1}
           autoplay={{ delay: 2500 }}
           pagination={{ clickable: true }}
-          onSwiper={() => {}}
-          onSlideChange={() => {}}
+          onSwiper={() => { }}
+          onSlideChange={() => { }}
         >
           {swiperData.map((item, index) => {
             return (
@@ -153,7 +153,7 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
           dangerouslySetInnerHTML={{ __html: t("homePage.orderDesc") }}
         />
-        <div className="column-container">
+        <div className="column-container" style={{ position: "relative" }}>
           {orderData.map((item, index) => {
             return (
               <motion.div
@@ -166,12 +166,14 @@ export default function Home() {
                 }}
                 className="column"
                 key={index}
+                style={{ position: "relative" }}
               >
                 <Image
                   src={item.image}
                   alt={item.alt}
-                  width={400}
+                  width={500}
                   height={300}
+                  className={"responsiveImage"}
                 />
               </motion.div>
             );

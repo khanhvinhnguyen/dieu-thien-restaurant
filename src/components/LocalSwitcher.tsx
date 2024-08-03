@@ -17,14 +17,15 @@ const LocalSwitcher = () => {
   };
 
   return (
-    <div className="header__button--language">
+    <div className="header__button--language"
+      style={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
       <Image
         src={
           localActive === "vi"
             ? "/images/flags/Vietnam.svg"
             : localActive === "en"
-            ? "/images/flags/England.svg"
-            : "/images/flags/China.svg"
+              ? "/images/flags/England.svg"
+              : "/images/flags/China.svg"
         }
         height={20}
         width={30}

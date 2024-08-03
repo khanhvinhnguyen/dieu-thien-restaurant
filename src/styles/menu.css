@@ -9,7 +9,7 @@ img {
 }
 
 .menu--title {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--background-dark-yellow);
@@ -32,7 +32,7 @@ h1.menu--title {
   height: 40px;
   width: 200px;
   min-width: fit-content;
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-color-green);
@@ -70,7 +70,7 @@ h2 {
   }
 
   .item-info {
-    display: flex !important;
+    display: flex;
     gap: 2rem;
     align-items: center;
     padding-bottom: 2rem;
@@ -151,10 +151,12 @@ h2 {
   .section {
     margin: 4rem 0;
     height: fit-content;
-    padding: 0 3rem;
-    .section__content {
-      grid-template-columns: 1fr;
-      row-gap: 2rem;
-    }
+  }
+  .section__content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .section__text {
+    text-align: justify;
   }
 }

@@ -50,17 +50,28 @@ const Header = ({ scrollTop }: HeaderProps) => {
         } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0,
+        justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
+        gap: " 1.5rem",
+        height: "75px"
       }}
     >
       <div className="header__wrapper">
         {/* Desktop */}
         <div
           className="navbar_desktop header__container section__container cream-bg"
-          style={{ display: "flex", opacity: visible ? 1 : 0 }}
+          style={{
+            display: "flex", opacity: visible ? 1 : 0,
+            alignItems: "center"
+
+          }}
         >
           {/* Logo */}
-          <div className="logo__wrapper">
-            <a href="/">
+          <div className="logo__wrapper"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <a href="/" >
               <Image
                 id="Logo"
                 src="/logo.svg"
@@ -72,7 +83,9 @@ const Header = ({ scrollTop }: HeaderProps) => {
           </div>
 
           {/* Navigation */}
-          <div className="header__nav">
+          <div className="header__nav"
+            style={{ display: visible ? "flex" : "none", justifyContent: "center" }}
+          >
             <Link href="/">{t("general.home")}</Link>
             <Link href="/about">{t("general.aboutUs")}</Link>
             <Link href="/menu">{t("general.menu")}</Link>
@@ -81,7 +94,9 @@ const Header = ({ scrollTop }: HeaderProps) => {
           </div>
 
           {/* Language & Order */}
-          <div className="header__language_order">
+          <div className="header__language_order"
+            style={{ display: "flex", alignItems: "center", flexDirection: "row" }}
+          >
             {/* Language */}
             <LocalSwitcher />
 
@@ -91,7 +106,8 @@ const Header = ({ scrollTop }: HeaderProps) => {
             </Link>
           </div>
 
-          <div className="navbar_menu-icon" onClick={handleNav}>
+          <div className="navbar_menu-icon" onClick={handleNav}
+          >
             <MenuIcon sx={{ fontSize: 28 }} />
           </div>
         </div>
@@ -147,7 +163,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
           </div>
         </div>
       </div>
-    </header>
+    </header >
   );
 };
 

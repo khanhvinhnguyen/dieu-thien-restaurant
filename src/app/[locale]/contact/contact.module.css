@@ -19,10 +19,10 @@
   margin-bottom: 64px;
 }
 .contact-item {
-  display: flex;
+  display: flex !important;
 }
 .row {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   gap: 20px;
 }
@@ -31,7 +31,7 @@
   width: 285px;
   height: fit-content;
   opacity: 80%;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   color: var(--text-color-green);

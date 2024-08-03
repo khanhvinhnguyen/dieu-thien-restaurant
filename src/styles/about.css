@@ -29,7 +29,7 @@
   }
 
   .feedback {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@
     height: 80vh;
 
     .feedback__content {
-      display: flex;
+      display: flex !important;
       gap: 16px;
       text-align: center;
     }

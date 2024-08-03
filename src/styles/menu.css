@@ -9,7 +9,7 @@ img {
 }
 
 .menu--title {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   background-color: var(--background-dark-yellow);
@@ -32,7 +32,7 @@ h1.menu--title {
   height: 40px;
   width: 200px;
   min-width: fit-content;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   color: var(--text-color-green);
@@ -70,7 +70,7 @@ h2 {
   }
 
   .item-info {
-    display: flex;
+    display: flex !important;
     gap: 2rem;
     align-items: center;
     padding-bottom: 2rem;

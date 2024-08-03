@@ -55,7 +55,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
         alignItems: "center",
         display: "flex",
         gap: " 1.5rem",
-        height: "75px"
+        height: "75px",
       }}
     >
       <div className="header__wrapper">
@@ -63,16 +63,17 @@ const Header = ({ scrollTop }: HeaderProps) => {
         <div
           className="navbar_desktop header__container section__container cream-bg"
           style={{
-            display: "flex", opacity: visible ? 1 : 0,
-            alignItems: "center"
-
+            display: "flex",
+            opacity: visible ? 1 : 0,
+            alignItems: "center",
           }}
         >
           {/* Logo */}
-          <div className="logo__wrapper"
+          <div
+            className="logo__wrapper"
             style={{ display: "flex", alignItems: "center" }}
           >
-            <a href="/" >
+            <a href="/">
               <Image
                 id="Logo"
                 src="/logo.svg"
@@ -84,8 +85,12 @@ const Header = ({ scrollTop }: HeaderProps) => {
           </div>
 
           {/* Navigation */}
-          <div className="header__nav"
-            style={{ display: visible ? "flex" : "none", justifyContent: "center" }}
+          <div
+            className="header__nav"
+            style={{
+              display: visible ? "flex" : "none",
+              justifyContent: "center",
+            }}
           >
             <Link href="/">{t("general.home")}</Link>
             <Link href="/about">{t("general.aboutUs")}</Link>
@@ -95,8 +100,13 @@ const Header = ({ scrollTop }: HeaderProps) => {
           </div>
 
           {/* Language & Order */}
-          <div className="header__language_order"
-            style={{ display: "flex", alignItems: "center", flexDirection: "row" }}
+          <div
+            className="header__language_order"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
           >
             {/* Language */}
             <LocalSwitcher />
@@ -107,8 +117,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
             </Link>
           </div>
 
-          <div className="navbar_menu-icon" onClick={handleNav}
-          >
+          <div className="navbar_menu-icon" onClick={handleNav}>
             <MenuIcon sx={{ fontSize: 28 }} />
           </div>
         </div>
@@ -145,20 +154,20 @@ const Header = ({ scrollTop }: HeaderProps) => {
           {/* Navigation */}
           <div className="header__mobile-menu">
             <ul>
-              <Link href="/">
-                <li onClick={() => setNav(false)}>{t("general.home")}</li>
+              <Link href="/" onClick={() => setNav(false)}>
+                <li>{t("general.home")}</li>
               </Link>
-              <Link href="/about">
-                <li onClick={() => setNav(false)}>{t("general.aboutUs")}</li>
+              <Link href="/about" onClick={() => setNav(false)}>
+                <li>{t("general.aboutUs")}</li>
               </Link>
-              <Link href="/menu">
-                <li onClick={() => setNav(false)}>{t("general.menu")}</li>
+              <Link href="/menu" onClick={() => setNav(false)}>
+                <li>{t("general.menu")}</li>
               </Link>
-              <Link href="/order">
-                <li onClick={() => setNav(false)}>{t("general.order")}</li>
+              <Link href="/order" onClick={() => setNav(false)}>
+                <li>{t("general.order")}</li>
               </Link>
-              <Link href="/contact">
-                <li onClick={() => setNav(false)}>{t("general.contact")}</li>
+              <Link href="/contact" onClick={() => setNav(false)}>
+                <li>{t("general.contact")}</li>
               </Link>
             </ul>
           </div>
@@ -175,7 +184,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
           </div>
         </div>
       </div>
-    </header >
+    </header>
   );
 };
 

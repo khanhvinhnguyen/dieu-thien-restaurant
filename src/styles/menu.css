@@ -83,6 +83,15 @@ h2 {
 
     .item-info__text {
       width: 100%;
+
+      #menu-item--title {
+        text-transform: uppercase;
+      }
+
+      #menu-item--price {
+        font-weight: 700;
+        font-size: 3rem;
+      }
     }
   }
 }

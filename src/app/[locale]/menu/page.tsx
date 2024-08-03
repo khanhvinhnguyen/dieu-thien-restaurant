@@ -1,12 +1,12 @@
-// src/app/[locale]/menu/page.tsx
 "use client";
 import { useMenu } from "@/context/MenuContext";
+import useWindowDimensions from "@/hook/useWindowDimensions";
 import "@/styles/menu.css";
 import { Validate } from "@/utils/validate";
 import { Tabs } from "antd";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -14,14 +14,25 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+type TabPosition = "left" | "top";
 
 const Menu = () => {
   const t = useTranslations("menuPage");
   const localActive = useLocale();
   const { menu } = useMenu();
 
+  const { width } = useWindowDimensions();
   const [foodThumbsSwiper, setFoodThumbsSwiper] = useState<any>({});
   const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState<any>({});
+  const [tabPosition, setTabPosition] = useState<TabPosition>("left");
+
+  useEffect(() => {
+    if (width && width < 768) {
+      setTabPosition("top");
+    } else {
+      setTabPosition("left");
+    }
+  }, [width]);
 
   const renderMenuItems = useMemo(
     () =>
@@ -44,7 +55,7 @@ const Menu = () => {
               height={40}
             />
           ),
-          label: t(`${key}`),
+          label: tabPosition == "left" ? t(`${key}`) : "",
           key: String(i + 1),
           children: (
             <div className="menu-list">
@@ -161,7 +172,7 @@ const Menu = () => {
         <h1 className="menu--title">{t("beverage")}</h1>
       </div>
       <div className="menu--content">
-        <Tabs tabPosition={"left"} type="card" items={drinkMenuItems} />
+        <Tabs tabPosition={"top"} type="card" items={drinkMenuItems} />
       </div>
     </div>
   );

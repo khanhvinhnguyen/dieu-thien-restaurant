@@ -55,7 +55,7 @@ const Menu = () => {
               height={40}
             />
           ),
-          label: tabPosition == "left" ? t(`${key}`) : "",
+          label: tabPosition === "left" ? t(`${key}`) : "",
           key: String(i + 1),
           children: (
             <div className="menu-list">
@@ -166,13 +166,13 @@ const Menu = () => {
         <h1 className="menu--title">{t("food")}</h1>
       </div>
       <div className="menu--content">
-        <Tabs tabPosition={"top"} type="card" items={foodMenuItems} />
+        <Tabs tabPosition={tabPosition} type="card" items={foodMenuItems} />
       </div>
       <div className="menu--title">
         <h1 className="menu--title">{t("beverage")}</h1>
       </div>
       <div className="menu--content">
-        <Tabs tabPosition={"top"} type="card" items={drinkMenuItems} />
+        <Tabs tabPosition={tabPosition} type="card" items={drinkMenuItems} />
       </div>
     </div>
   );

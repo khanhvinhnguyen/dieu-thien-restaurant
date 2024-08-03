@@ -441,6 +441,12 @@ header {
       align-content: center;
     }
 
+    @media screen and(max-width: 576px) {
+      .section__text {
+        margin-top: 50% !important;
+      }
+    }
+
     .section__text > h1 {
       text-align: left;
     }
@@ -774,6 +780,24 @@ textarea.ant-input {
   header {
     .header__language_order {
       margin-left: -3rem !important;
+    }
+  }
+  .about-us {
+    .feedback {
+      .feedback__content {
+        width: 80% !important;
+        height: 100px !important;
+        margin: 1rem 2rem;
+      }
+    }
+  }
+  .feedback {
+    margin: 0 1rem;
+    height: 200vh !important;
+    .column-container {
+      .feedback__content {
+        padding: 1rem 0 !important;
+      }
     }
   }
 }

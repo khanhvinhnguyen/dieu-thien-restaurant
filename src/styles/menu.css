@@ -68,7 +68,12 @@ h2 {
   .swiper-slide-active {
     height: 100% !important;
   }
-
+  @media (max-width: 768px) {
+    .item-info {
+      flex-direction: column !important;
+      gap: 1rem;
+    }
+  }
   .item-info {
     display: flex;
     gap: 2rem;
@@ -78,7 +83,7 @@ h2 {
     img.swiper--item-img {
       min-height: 350px;
       min-width: 450px;
-      object-fit: contain;
+      border-radius: 5% !important;
     }
 
     .item-info__text {
@@ -90,7 +95,12 @@ h2 {
 
       #menu-item--price {
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 1.75rem;
+        border: 1px solid black;
+        padding: 1rem 0.5rem;
+        width: fit-content;
+        float: right;
+        border-radius: 0.2rem;
       }
     }
   }

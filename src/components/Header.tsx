@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "../navigation";
 import { LocalSwitcher } from ".";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 
 type HeaderProps = {
   scrollTop?: number;
@@ -46,8 +46,9 @@ const Header = ({ scrollTop }: HeaderProps) => {
 
   return (
     <header
-      className={`animate__animated header__container section__container cream-bg ${scrollTop! > 5 ? "bg-white" : "bg-transparent"
-        } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
+      className={`animate__animated header__container section__container cream-bg ${
+        scrollTop! > 5 ? "bg-white" : "bg-transparent"
+      } ${visible ? "animate__fadeInDown" : "animate__fadeOutUp"}`}
       style={{
         opacity: visible ? 1 : 0,
         justifyContent: "center",
@@ -136,7 +137,7 @@ const Header = ({ scrollTop }: HeaderProps) => {
             {/* <Link href="/">
               <Image src={"/logo.svg"} alt="" width="87" height="35" />
             </Link> */}
-            <div className="header__mobile-close" onClick={handleNav}>
+            <div className="header__mobile-close" onClick={() => setNav(false)}>
               <CloseIcon />
             </div>
           </div>

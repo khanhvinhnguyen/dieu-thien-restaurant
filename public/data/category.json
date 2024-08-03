@@ -1,6 +1,10 @@
 {
   "food": [
     {
+      "key": "special",
+      "icon": "/icons/special.svg"
+    },
+    {
       "key": "appetizer",
       "icon": "/icons/appetizer.svg"
     },

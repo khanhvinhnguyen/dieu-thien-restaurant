@@ -114,7 +114,18 @@ const Header = ({ scrollTop }: HeaderProps) => {
       </div>
 
       {/* Mobile */}
-      <div className={nav ? "header__overlay" : "header__overlay-hidden"}>
+      <div className={nav ? "header__overlay" : "header__overlay-hidden"}
+        style={{
+          display: nav ? 'block' : 'none',
+          position: "fixed",
+          left: 0,
+          top: 0,
+          width: "100%",
+          height: '100vh',
+          backgroundColor: "rgba(0, 0, 0, 0.9)",
+          zIndex: 11
+        }}
+      >
         <div
           className={
             nav ? "header__mobile" : "header__mobile header__mobile-hidden"

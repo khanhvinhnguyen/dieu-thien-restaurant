@@ -64,7 +64,7 @@ const Menu = () => {
                 <div className="menu--info__img">
                   <Swiper
                     slidesPerView={"auto"}
-                    spaceBetween={30}
+                    spaceBetween={100}
                     loop={true}
                     thumbs={{ swiper: thumbsSwiper[key] || null }}
                     modules={[FreeMode, Thumbs]}

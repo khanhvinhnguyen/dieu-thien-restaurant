@@ -24,8 +24,8 @@ const ContactPage = () => {
           {t("general.contactUs")}
         </h1>
 
-        <div className="row">
-          <div style={{ display: "grid", alignItems: "center" }}>
+        <div className="content">
+          <div className="content-info">
             <a
               className="column"
               href="https://maps.app.goo.gl/qy7BD4LF6tcTuQHi6"

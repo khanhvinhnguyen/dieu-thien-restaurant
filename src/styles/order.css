@@ -23,6 +23,10 @@
   box-sizing: border-box;
   padding: 0 2%;
 
+  .order-page--flex {
+    flex: 1 !important;
+  }
+
   .order-content__left--info {
     color: var(--text-color-cream);
     align-content: space-around;
@@ -35,6 +39,17 @@
       color: var(--text-color-cream);
       width: 50%;
       text-align: left;
+    }
+
+    .column-container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    @media screen and (max-width: 768px) {
+      .column-container {
+        display: none;
+      }
     }
 
     .order-content--contact {
@@ -159,6 +174,13 @@
     .order-content__right--form {
       width: 90%;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order-content {
+    display: flex;
+    flex-direction: column;
   }
 }
 

@@ -55,7 +55,7 @@ const Menu = () => {
               height={40}
             />
           ),
-          label: tabPosition === "left" && t(`${key}`),
+          label: t(`${key}`),
           key: String(i + 1),
           children: (
             <div className="menu-list">

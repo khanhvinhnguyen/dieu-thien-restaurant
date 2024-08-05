@@ -58,6 +58,7 @@
       width: 100%;
       height: fit-content;
       position: relative;
+      min-width: 160px;
 
       .order-content--icon {
         width: 70px;
@@ -110,7 +111,7 @@
     }
 
     .form-row {
-      display: flex;
+      display: flex !important;
       justify-content: space-between;
       align-items: center;
       gap: inherit;

@@ -25,9 +25,9 @@ const Menu = () => {
   const [foodThumbsSwiper, setFoodThumbsSwiper] = useState<any>({});
   const [drinkThumbsSwiper, setDrinkThumbsSwiper] = useState<any>({});
   const [tabPosition, setTabPosition] = useState<TabPosition>("left");
-  console.log("tabPosition: ", tabPosition);
+
   useEffect(() => {
-    if (width && width < 768) {
+    if (width && width <= 768) {
       setTabPosition("top");
     } else {
       setTabPosition("left");
